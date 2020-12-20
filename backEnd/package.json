@@ -1,0 +1,28 @@
+{
+  "name": "inventari",
+  "version": "1.0.0",
+  "description": "inventari material informatic",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmg1340/inventari.git"
+  },
+  "author": "jordi miserachs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmg1340/inventari/issues"
+  },
+  "homepage": "https://github.com/jmg1340/inventari#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.4",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
