@@ -1,37 +1,21 @@
 <template>
   <q-page class="q-pa-lg">
-    <div class="column">
-      <div class="row">
-        <q-card class="col-1 no-border-radius q-pa-xs bg-grey-9 text-white">Ed.</q-card>
-        <q-card class="col-1 no-border-radius q-pa-xs bg-grey-9 text-white">Pl.</q-card>
-        <q-card class="col no-border-radius q-pa-xs bg-grey-9 text-white">Departament.</q-card>
-        <q-card class="col no-border-radius q-pa-xs bg-grey-9 text-white">Lloc.</q-card>
-        <q-card class="col no-border-radius q-pa-xs bg-grey-9 text-white">Elements</q-card>
-        <div class="col-auto">&nbsp;</div>
-      </div>
-      <jmg_fila v-for="(doc, index) in docs" :key="index" :doc="doc"/>
-    </div>
+		<jmg_taulaGRID />
+		<!-- <jmg_taula /> -->
   </q-page>
 </template>
 
 <script>
-import jmg_fila from "../components/fila.vue";
+import jmg_taula from "../components/taulaQUASAR.vue";
+import jmg_taulaGRID from "../components/taulaQGRID.vue";
 export default {
-  components: { jmg_fila },
+  components: { jmg_taula, jmg_taulaGRID },
   data() {
     return {
     };
   },
 
-  created(){
-    this.$store.dispatch( "modulInventari/actGetDocs" );
-  },
 
-  computed: {
-    docs () {
-      return this.$store.state.modulInventari.docs;
-    },
-  },
 };
 </script>
 
