@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="hHh Lpr lFf">
     <q-header elevated>
       <q-toolbar>
         <q-btn
@@ -24,6 +24,7 @@
       show-if-above
       bordered
       content-class="bg-grey-1"
+			overlay
     >
       <q-list>
         <q-item-label
@@ -96,7 +97,7 @@ const linksData = [
 
 export default {
   name: 'MainLayout',
-  // components: { EssentialLink },
+	// components: { EssentialLink },
   data () {
     return {
       leftDrawerOpen: false,

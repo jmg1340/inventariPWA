@@ -29,3 +29,15 @@ export async function actRemoveDoc(context, id) {
 
 }
   
+export async function actAdd(context, obj) {
+  
+  try {
+		await Axios.post(server + "/api_inventari/")
+		
+  } catch (error) {
+    console.log("error a actPost")
+    console.log( error )
+  }
+
+}
+  

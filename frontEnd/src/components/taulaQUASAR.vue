@@ -8,7 +8,22 @@
       separator="cell"
       dense
       :pagination="initialPagination"
+			:filter="filter"
     >
+      <template v-slot:top-right>
+        <q-input borderless outlined rounded dense debounce="300" v-model="filter" placeholder="buscar" >
+          <template v-slot:append>
+            <q-icon name="search" />
+          </template>
+        </q-input>
+
+        <q-btn class="q-ml-sm" color="teal" noCaps label="Afegir..." @click="obrirFormulari=true" />
+        <q-space />
+
+      </template>
+
+
+
       <template v-slot:body="props">
         <q-tr :props="props">
           <q-td key="ed" :props="props">
@@ -24,7 +39,8 @@
             {{ props.row.lloc }}
           </q-td>
           <q-td key="el" :props="props">
-            {{ props.row.elements }}
+            <!-- {{ props.row.elements }} -->
+						<jmg_elements :objElements="props.row.elements" />
           </q-td>
           <q-td key="id" :props="props">
             <div class="row justify-center items-center q-gutter-xs">
@@ -40,29 +56,87 @@
         </q-tr>
       </template>
     </q-table>
+
+
+		
+		<jmg_formulari :obrirFormulari="obrirFormulari" @tancarFormulari="obrirFormulari=false" />
+		
+
   </div>
 </template>
 
 <script>
+import jmg_elements from "./taulaQGRID_elements.vue";
+import jmg_formulari from "./formulariDoc.vue"
 export default {
+  components: { jmg_elements, jmg_formulari },
   data() {
     return {
-      columnes: [
-        { name: "ed", label: "EDIFICI", field: "edifici", style: 'text-align: center', headerClasses: 'bg-grey-8 text-white', align: "center" },
-        { name: "pl", label: "PLANTA", field: "planta", style: 'text-align: center', headerClasses: 'bg-grey-8 text-white', align: "center" },
-        { name: "dpt", label: "DEPT", field: "dept", style: 'text-align: left', headerClasses: 'bg-grey-8 text-white', align: "left" },
-        { name: "lloc", label: "LLOC", field: "lloc", style: 'text-align: left', headerClasses: 'bg-grey-8 text-white', align: "left" },
-        { name: "el", label: "ELEMENTS", field: "elements", style: 'text-align: left', headerClasses: 'bg-grey-8 text-white', align: "left" },
-        { name: "id", label: "Accions", field: "_id", style: 'text-align: left', headerClasses: 'bg-grey-8 text-white', align: "center" },
-			],
-			
-			initialPagination: {
-        sortBy: 'desc',
+			obrirFormulari: false,
+			filter: '',
+			columnes: [
+        {
+          name: "ed",
+          label: "EDIFICI",
+          field: "edifici",
+          style: "text-align: center",
+          headerClasses: "bg-grey-8 text-white",
+          align: "center",
+					style: 'width: 5%'
+        },
+        {
+          name: "pl",
+          label: "PLANTA",
+          field: "planta",
+          style: "text-align: center",
+          headerClasses: "bg-grey-8 text-white",
+          align: "center",
+					style: 'width: 5%'
+        },
+        {
+          name: "dpt",
+          label: "DEPT",
+          field: "dept",
+          style: "text-align: left",
+          headerClasses: "bg-grey-8 text-white",
+          align: "left",
+					style: 'width: 20%'
+        },
+        {
+          name: "lloc",
+          label: "LLOC",
+          field: "lloc",
+          style: "text-align: left",
+          headerClasses: "bg-grey-8 text-white",
+          align: "left",
+					style: 'width: 30%'
+        },
+        {
+          name: "el",
+          label: "ELEMENTS",
+          field: "elements",
+          style: "text-align: left",
+          headerClasses: "bg-grey-8 text-white",
+          align: "left",
+					style: 'width: 30%'
+        },
+        {
+          name: "id",
+          label: "Accions",
+          field: "_id",
+          style: "text-align: left",
+          headerClasses: "bg-grey-8 text-white",
+          align: "center",
+					style: 'width: 10%'
+        },
+      ],
+
+      initialPagination: {
+        sortBy: "desc",
         descending: false,
         page: 1,
-        rowsPerPage: 25
-			}
-
+        rowsPerPage: 5,
+      },
     };
   },
 
@@ -74,18 +148,17 @@ export default {
     docs() {
       return this.$store.state.modulInventari.docs;
     },
-	},
+  },
 
-	methods: {
-		async eliminar(id) {
-			console.log(id)
-			
-			await this.$store.dispatch( "modulInventari/actRemoveDoc", id );
-			await this.$store.dispatch( "modulInventari/actGetDocs" );
+  methods: {
+    eliminar(id) {
+      console.log(id);
 
+      this.$store.dispatch("modulInventari/actRemoveDoc", id);
+      this.$store.dispatch("modulInventari/actGetDocs");
 		},
-	}
 
+  },
 };
 </script>
 

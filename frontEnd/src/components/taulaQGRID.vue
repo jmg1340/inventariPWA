@@ -9,7 +9,7 @@
     <q-toolbar>
 
         <q-toolbar-title class="example-title" style="padding: 5px 20px"
-          ><span class="ellipsis">Slot Demo</span></q-toolbar-title
+          ><span class="ellipsis">Llistat</span></q-toolbar-title
         >
 
     </q-toolbar>
@@ -19,25 +19,29 @@
         :columns="columnes"
         :columns_filter="true"
         :draggable="true"
+				dense
+				:pagination="initialPagination"
+				separator="cell"
       >
         <template v-slot:body="props">
           <q-tr :props="props">
-            <q-td key="ed" :props="props">
+            <q-td key="edifici">
               {{ props.row.edifici }}
             </q-td>
-            <q-td key="pl" :props="props">
+            <q-td key="pl">
               {{ props.row.planta }}
             </q-td>
-            <q-td key="dpt" :props="props">
+            <q-td key="dpt">
               {{ props.row.dept }}
             </q-td>
-            <q-td key="lloc" :props="props">
+            <q-td key="lloc">
               {{ props.row.lloc }}
             </q-td>
-            <q-td key="el" :props="props">
-              {{ props.row.elements }}
+            <q-td key="el">
+							<jmg_elements :objElements="props.row.elements" />
+              <!-- {{ props.row.elements }} -->
             </q-td>
-            <q-td key="id" :props="props">
+            <q-td key="id">
               <div class="row justify-center items-center q-gutter-xs">
                 <q-btn dense color="warning" icon="edit" />
                 <q-btn
@@ -56,9 +60,9 @@
 </template>
 
 <script>
-
+import jmg_elements from "./taulaQGRID_elements.vue";
 export default {
-
+  components: { jmg_elements },
   data() {
     return {
       columnes: [
@@ -68,7 +72,9 @@ export default {
           field: "edifici",
           style: "text-align: center",
           headerClasses: "bg-grey-8 text-white",
-          align: "center",
+					align: "center",
+					sortable: true,
+					style: 'width: 5%'
         },
         {
           name: "pl",
@@ -76,7 +82,9 @@ export default {
           field: "planta",
           style: "text-align: center",
           headerClasses: "bg-grey-8 text-white",
-          align: "center",
+					align: "center",
+					sortable: true,
+					style: 'width: 5%'
         },
         {
           name: "dpt",
@@ -84,7 +92,9 @@ export default {
           field: "dept",
           style: "text-align: left",
           headerClasses: "bg-grey-8 text-white",
-          align: "left",
+					align: "left",
+					sortable: true,
+					style: 'width: 20%'
         },
         {
           name: "lloc",
@@ -92,7 +102,9 @@ export default {
           field: "lloc",
           style: "text-align: left",
           headerClasses: "bg-grey-8 text-white",
-          align: "left",
+					align: "left",
+					sortable: true,
+					style: 'width: 30%'
         },
         {
           name: "el",
@@ -101,6 +113,7 @@ export default {
           style: "text-align: left",
           headerClasses: "bg-grey-8 text-white",
           align: "left",
+					style: 'width: 30%'
         },
         {
           name: "id",
@@ -109,6 +122,7 @@ export default {
           style: "text-align: left",
           headerClasses: "bg-grey-8 text-white",
           align: "center",
+					style: 'width: 10%'
         },
 			],
 
@@ -124,7 +138,7 @@ export default {
         sortBy: "desc",
         descending: false,
         page: 1,
-        rowsPerPage: 25,
+        rowsPerPage: 5,
       },
     };
   },

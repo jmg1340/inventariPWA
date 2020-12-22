@@ -1,7 +1,7 @@
 <template>
   <q-page class="q-pa-lg">
-		<jmg_taulaGRID />
-		<!-- <jmg_taula /> -->
+		<!-- <jmg_taulaGRID /> -->
+		<jmg_taula />
   </q-page>
 </template>
 

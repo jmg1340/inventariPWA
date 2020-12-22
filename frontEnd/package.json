@@ -2,7 +2,7 @@
   "name": "inventari_front_end",
   "version": "0.0.1",
   "description": "A Quasar Framework app",
-  "productName": "Quasar App",
+  "productName": "InventariPWA",
   "author": "jmg1340 <jordi.miserachs@gmail.com>",
   "private": true,
   "scripts": {
