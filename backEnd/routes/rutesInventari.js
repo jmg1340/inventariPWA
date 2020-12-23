@@ -18,18 +18,29 @@ router.get("/:id", async (req, res) => {
 
 // inserta nou document
 router.post("/", async (req, res) => {
-    const nouDocument = new modelInv(req.body)
-    await nouDocument.save()
-    res.json({status: "S'ha insertit nou document"})
+	console.log("estic al ROUTER.POST del servidor")
+	console.log(req.body)
+	try {
+		const nouDocument =  new modelInv(req.body)
+		console.log("nouDocument:")
+		console.log(nouDocument)
+		await nouDocument.save()
+		res.json({status: "S'ha insertit nou document"})	
+	} catch (error) {
+		console.log("ERROR: \n" + error)
+	}
+
 });
 
 // actualitza un document
 router.put("/:id", async (req, res) => {
-    const resultatInv = await modelInv.findByIdAndUpdate(req.params.id, req.body)
-    res.json({status: "S'ha actualitzat document"})
+	console.log("estic al ROUTER.PUT del servidor")
+	console.log(req.body)
+	const resultatInv = await modelInv.findByIdAndUpdate(req.params.id, req.body)
+	res.json({status: "S'ha actualitzat document" + resultatInv})
 });
 
-// actualitza un document
+// elimina un document
 router.delete("/:id", async (req, res) => {
     const resultatInv = await modelInv.findByIdAndRemove(req.params.id)
     res.json({status: "S'ha eliminat document"})

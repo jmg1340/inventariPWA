@@ -17,7 +17,7 @@
           </template>
         </q-input>
 
-        <q-btn class="q-ml-sm" color="teal" noCaps label="Afegir..." @click="obrirFormulari=true" />
+        <q-btn class="q-ml-sm" color="teal" noCaps label="Afegir..." @click="add" />
         <q-space />
 
       </template>
@@ -44,7 +44,7 @@
           </q-td>
           <q-td key="id" :props="props">
             <div class="row justify-center items-center q-gutter-xs">
-              <q-btn dense color="warning" icon="edit" />
+              <q-btn dense color="warning" icon="edit" @click="editar(props.row._id)"/>
               <q-btn
                 dense
                 color="negative"
@@ -59,7 +59,7 @@
 
 
 		
-		<jmg_formulari :obrirFormulari="obrirFormulari" @tancarFormulari="obrirFormulari=false" />
+		<jmg_formulari :obrirFormulari="obrirFormulari" :idMongo="idMongo" @tancarFormulari="obrirFormulari=false" />
 		
 
   </div>
@@ -73,6 +73,7 @@ export default {
   data() {
     return {
 			obrirFormulari: false,
+			idMongo: null,
 			filter: '',
 			columnes: [
         {
@@ -152,11 +153,19 @@ export default {
 
   methods: {
     eliminar(id) {
-      console.log(id);
-
       this.$store.dispatch("modulInventari/actRemoveDoc", id);
-      this.$store.dispatch("modulInventari/actGetDocs");
 		},
+    editar(id) {
+			this.idMongo = id
+			this.obrirFormulari= true
+		},
+    add() {
+			this.idMongo = null
+			this.obrirFormulari= true
+		},
+		
+
+
 
   },
 };
