@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@quasar/app": "^2.0.0",
-    "quasar-app-extension-qgrid": "0.0.6",
+    "quasar-app-extension-qgrid": "^0.0.6",
     "workbox-webpack-plugin": "^5.1.4"
   },
   "browserslist": [

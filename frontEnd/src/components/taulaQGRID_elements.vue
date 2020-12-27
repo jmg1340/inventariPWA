@@ -20,7 +20,7 @@ export default {
 <style lang="css" scoped>
 
     .borde{
-        border: 1px solid black;
+        border: 1px solid rgb(59, 59, 59);
     }
 
 </style>

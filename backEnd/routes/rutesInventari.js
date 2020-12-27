@@ -6,7 +6,7 @@ const modelInv = require('../models/modelInventari')
 // llistat de tots els documents
 router.get("/", async (req, res) => {
     // res.send("L'API de l'inventari va aqui");
-    const resultatInv = await modelInv.find()
+    const resultatInv = await modelInv.find({}, "edifici planta dept lloc elements")
     res.json(resultatInv)
 });
 
