@@ -1,5 +1,5 @@
 import Axios from "axios";
-const server = "http://localhost:3000";
+const server = "http://localhost:3001";
 
 export async function actGetDocs(context) {
   try {
