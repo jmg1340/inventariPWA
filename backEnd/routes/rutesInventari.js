@@ -1,27 +1,31 @@
 const express = require("express");
 const router = express.Router();
 
-const modelInv = require('../models/modelInventari')
+
+/* INVENTARI HOSPITAL */
+
+const modelInvHosp = require('../models/modelInventariHospital')
 
 // llistat de tots els documents
-router.get("/", async (req, res) => {
+router.get("/hospital", async (req, res) => {
     // res.send("L'API de l'inventari va aqui");
-    const resultatInv = await modelInv.find({}, "edifici planta dept lloc elements")
+    const resultatInv = await modelInvHosp.find({}, "edifici planta dept lloc elements")
+		console.log(`nº registres: ${resultatInv.length}`)
     res.json(resultatInv)
 });
 
 // llista un sol document
-router.get("/:id", async (req, res) => {
-    const resultatInv = await modelInv.findById(req.params.id)
+router.get("/hospital/:id", async (req, res) => {
+    const resultatInv = await modelInvHosp.findById(req.params.id)
     res.json(resultatInv)
 });
 
 // inserta nou document
-router.post("/", async (req, res) => {
+router.post("/hospital", async (req, res) => {
 	console.log("estic al ROUTER.POST del servidor")
 	console.log(req.body)
 	try {
-		const nouDocument =  new modelInv(req.body)
+		const nouDocument =  new modelInvHosp(req.body)
 		console.log("nouDocument:")
 		console.log(nouDocument)
 		await nouDocument.save()
@@ -33,18 +37,43 @@ router.post("/", async (req, res) => {
 });
 
 // actualitza un document
-router.put("/:id", async (req, res) => {
+router.put("/hospital/:id", async (req, res) => {
 	console.log("estic al ROUTER.PUT del servidor")
 	console.log(req.body)
-	const resultatInv = await modelInv.findByIdAndUpdate(req.params.id, req.body)
+	const resultatInv = await modelInvHosp.findByIdAndUpdate(req.params.id, req.body)
 	res.json({status: "S'ha actualitzat document" + resultatInv})
 });
 
 // elimina un document
-router.delete("/:id", async (req, res) => {
-    const resultatInv = await modelInv.findByIdAndRemove(req.params.id)
+router.delete("/hospital/:id", async (req, res) => {
+    const resultatInv = await modelInvHosp.findByIdAndRemove(req.params.id)
     res.json({status: "S'ha eliminat document"})
 });
+
+
+
+
+
+/* INVENTARI ASEPEYO */
+
+const modelInvAsep = require('../models/modelInventariAsepeyo')
+
+// llistat de tots els documents
+router.get("/asepeyo", async (req, res) => {
+		console.log("Estic a la ruta /ASEPEYO")
+    // res.send("L'API de l'inventari va aqui");
+    try {
+			const resultatInv = await modelInvAsep.find({})
+			console.log(resultatInv)
+    	res.json(resultatInv)
+			// res.send("funciona!!!")
+		} catch (error) {
+			console.log("S'HA PRODUIT UN ERROR a la ruta /asepeyo:")
+			console.log(error)
+		}
+
+});
+
 
 
 

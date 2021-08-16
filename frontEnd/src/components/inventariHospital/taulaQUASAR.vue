@@ -1,7 +1,7 @@
 <template>
   <div>
     <q-table
-      title="Inventari"
+      title="Inventari HOSPITAL"
       :data="docs"
       :columns="columnes"
       row-key="__id"
@@ -275,20 +275,23 @@ export default {
         // console.log('I am triggered on both OK and Cancel')
       })
      },
+
+
     editar(id) {
+			console.log("id mongo: " + id)
       this.idMongo = id;
       this.obrirFormulari = true;
     },
+
     add() {
       this.idMongo = null;
       this.obrirFormulari = true;
     },
 
-    myfilterMethod() {
+    
+		myfilterMethod() {
 
       return this.docs.filter(row => {
-
-
         if (
           new RegExp(this.filter.fedifici, "i").test(row.edifici) &&
           new RegExp(this.filter.fplanta, "i").test(row.planta) &&

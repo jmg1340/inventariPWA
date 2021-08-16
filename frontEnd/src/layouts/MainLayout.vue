@@ -38,6 +38,33 @@
           :key="link.title"
           v-bind="link"
         /> -->
+
+				<q-item to="/">
+					<q-item-section avatar>
+						<q-icon name="code" />
+					</q-item-section>
+					<q-item-section>
+						<q-item-label>Inventari Hospital</q-item-label>
+						<q-item-label caption>Inventari elaborat per nosaltres</q-item-label>
+					</q-item-section>
+				</q-item>
+
+
+				<q-item to="/inventariAsepeyo">
+					<q-item-section avatar>
+						<q-icon name="code" />
+					</q-item-section>
+					<q-item-section>
+						<q-item-label>Inventari Asepeyo</q-item-label>
+						<q-item-label caption>Inventari oficial Asepeyo</q-item-label>
+					</q-item-section>
+				</q-item>
+
+
+
+
+
+
       </q-list>
     </q-drawer>
 

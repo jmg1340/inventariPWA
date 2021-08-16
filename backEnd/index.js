@@ -12,7 +12,7 @@ mongoose.connect('mongodb://localhost/inventaridb', { useNewUrlParser: true, use
 
 
 // SETTINGS
-server.set("port", process.env.port || 3000);
+server.set("port", process.env.port || 3001);
 
 // MIDLEWARES
 server.use(morgan('dev'));

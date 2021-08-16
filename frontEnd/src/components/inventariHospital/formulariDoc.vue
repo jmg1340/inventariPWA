@@ -108,7 +108,7 @@
 
 <script>
 import Axios from "axios";
-const server = "http://localhost:3000";
+const server = "http://localhost:3001";
 
 class Element{
 	constructor(clau, valor){
@@ -178,7 +178,7 @@ export default {
 			if (this.idMongo != null){
 				this.nouRegistre = false;
 				try {
-					const result = await Axios.get(server + "/api_inventari/"+ this.idMongo)
+					const result = await Axios.get(server + "/api_inventari/hospital/"+ this.idMongo)
 					const data = result.data;
 
 					this.edifici = data.edifici;

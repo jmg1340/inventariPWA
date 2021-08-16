@@ -6,10 +6,10 @@
 </template>
 
 <script>
-import jmg_taula from "../components/taulaQUASAR.vue";
-import jmg_taulaGRID from "../components/taulaQGRID.vue";
+import jmg_taula from "../components/inventariHospital/taulaQUASAR.vue";
+// import jmg_taulaGRID from "../components/taulaQGRID.vue";
 export default {
-  components: { jmg_taula, jmg_taulaGRID },
+  components: { jmg_taula },
   data() {
     return {
     };
