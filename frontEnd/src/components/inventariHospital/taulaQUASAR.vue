@@ -10,109 +10,168 @@
       :pagination="initialPagination"
       :filter="filter"
       :filter-method="myfilterMethod"
-      class="my-sticky-header-table"
-    >
+      class="bg-brown-2"
+    > 
+		<!-- my-sticky-header-table -->
       <template v-slot:top-right>
-        <div class="row q-gutter-md">
+				
+				
+				<div class="row q-gutter-md">
+					
+					<div class="column q-pa-md bordered">
+						<q-card>
+							<q-card-section class="q-pb-none">
+								Claus a mostrar
+							</q-card-section>
+							<q-separator inset />
+							<q-card-section class="q-pt-xs">
+								<q-option-group
+									v-model="clausAMostrar"
+									:options="opcionsClaus"
+									type="checkbox"
+									dense
+								/>
+							</q-card-section>
+
+						</q-card>
+					</div>        
+
+
           <div class="column q-gutter-md">
-            <div class="col-2">
-              <q-input
-                borderless
-                outlined
-                rounded
-                dense
-                debounce="30"
-                label="Edifici"
-                v-model="filter.fedifici"
-              >
-                <template v-slot:append>
-                  <q-icon name="search" />
-                </template>
-              </q-input>
-            </div>
-            <div class="col-2">
-              <q-input
-                borderless
-                outlined
-                rounded
-                dense
-                debounce="30"
-                label="Planta"
-                v-model="filter.fplanta"
-              >
-                <template v-slot:append>
-                  <q-icon name="search" />
-                </template>
-              </q-input>
-            </div>
-            <div class="col-2">
-              <q-input
-                borderless
-                outlined
-                rounded
-                dense
-                debounce="30"
-                label="Dept"
-                v-model="filter.fdept"
-              >
-                <template v-slot:append>
-                  <q-icon name="search" />
-                </template>
-              </q-input>
-            </div>
+						<q-card>
+							<q-card-section class="q-pb-none">
+								Filtres...
+							</q-card-section>
+							<q-separator inset />
+							<q-card-section class="q-pt-xs q-pb-none">
+								<div class="row  q-gutter-md">
+									<div class="column q-gutter-md">
+
+										<div class="col-2">
+											<q-input
+												borderless
+												outlined
+												rounded
+												dense
+												debounce="30"
+												label="Edifici"
+												v-model="filter.fedifici"
+											>
+												<template v-slot:append>
+													<q-icon name="search" />
+												</template>
+											</q-input>
+										</div>
+										<div class="col-2">
+											<q-input
+												borderless
+												outlined
+												rounded
+												dense
+												debounce="30"
+												label="Planta"
+												v-model="filter.fplanta"
+											>
+												<template v-slot:append>
+													<q-icon name="search" />
+												</template>
+											</q-input>
+										</div>
+										<div class="col-2">
+											<q-input
+												borderless
+												outlined
+												rounded
+												dense
+												debounce="30"
+												label="Dept"
+												v-model="filter.fdept"
+											>
+												<template v-slot:append>
+													<q-icon name="search" />
+												</template>
+											</q-input>
+										</div>
+
+									</div>
+
+
+
+									<div class="column q-gutter-md">
+
+										<div class="col-2">
+											<q-input
+												borderless
+												outlined
+												rounded
+												dense
+												debounce="30"
+												label="Lloc"
+												v-model="filter.flloc"
+											>
+												<template v-slot:append>
+													<q-icon name="search" />
+												</template>
+											</q-input>
+										</div>
+
+
+										<div class="col-2">
+											<q-input
+												borderless
+												outlined
+												rounded
+												dense
+												debounce="30"
+												label="element.CLAU"
+												v-model="filter.felement.clau"
+											>
+												<template v-slot:append>
+													<q-icon name="search" />
+												</template>
+											</q-input>
+										</div>
+										<div class="col-2">
+											<q-input
+												borderless
+												outlined
+												rounded
+												dense
+												debounce="30"
+												label="element.VALOR"
+												v-model="filter.felement.valor"
+											>
+												<template v-slot:append>
+													<q-icon name="search" />
+												</template>
+											</q-input>
+
+										</div>
+									</div>
+
+
+
+
+
+
+
+
+
+								</div>
+
+							</q-card-section>
+						</q-card>
+
 
           </div>  
-          <div class="column q-gutter-md">
-
-            <div class="col-2">
-              <q-input
-                borderless
-                outlined
-                rounded
-                dense
-                debounce="30"
-                label="Lloc"
-                v-model="filter.flloc"
-              >
-                <template v-slot:append>
-                  <q-icon name="search" />
-                </template>
-              </q-input>
-            </div>
 
 
-            <div class="col-2">
-              <q-input
-                borderless
-                outlined
-                rounded
-                dense
-                debounce="30"
-                label="element.CLAU"
-                v-model="filter.felement.clau"
-              >
-                <template v-slot:append>
-                  <q-icon name="search" />
-                </template>
-              </q-input>
-            </div>
-            <div class="col-2">
-              <q-input
-                borderless
-                outlined
-                rounded
-                dense
-                debounce="30"
-                label="element.VALOR"
-                v-model="filter.felement.valor"
-              >
-                <template v-slot:append>
-                  <q-icon name="search" />
-                </template>
-              </q-input>
 
-            </div>
-          </div>
+
+
+
+
+
         </div>
 
         <q-btn
@@ -141,7 +200,7 @@
           </q-td>
           <q-td key="el" :props="props">
             <!-- {{ props.row.elements }} -->
-            <jmg_elements :objElements="props.row.elements" />
+            <jmg_elements :objElements="props.row.elements" :clausAMostrar="clausAMostrar" />
           </q-td>
           <q-td key="id" :props="props">
             <div class="row justify-center items-center q-gutter-xs">
@@ -243,7 +302,17 @@ export default {
         descending: false,
         page: 1,
         rowsPerPage: 75
-      }
+      },
+
+      clausAMostrar: ["pc","monitor", "teclat", "ratoli"],
+      opcionsClaus: [
+        { label: 'PC', value: 'pc', color: 'green' },
+        { label: 'Monitor', value: 'monitor', color: 'green' },
+        { label: 'Teclat', value: 'teclat', color: 'green' },
+        { label: 'Ratoli', value: 'ratoli', color: 'green' }
+      ]
+
+
     };
   },
 
@@ -341,6 +410,10 @@ export default {
 
 <style lang="sass" scoped>
   tr:nth-child(even) 
-    background-color: #f5f5f579 !important
+    background-color: #f5f5f579 !important 
+
+  tr:nth-child(odd) 
+    background-color: #f9f2ec !important 
+
  
 </style>
