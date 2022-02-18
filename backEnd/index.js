@@ -20,7 +20,7 @@ server.use(express.json());
 server.use(cors())
 
 // ROUTES
-server.use("/api_inventari", require("./routes/rutesInventari"))
+server.use("/api_inventari", require("./routes/rutesIndex"))
 
 // STATICS FILES
 server.use(express.static(__dirname + "/public"));

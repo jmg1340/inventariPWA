@@ -1,0 +1,9 @@
+PER FER UN DUPLICAT D'UNA COLLECTION
+db.HospitalElements.aggregate( [ {$out: "copiaHE"}  ])
+
+ELIMINAR TOTS ELS DOCUMENTS D'UNA COLLECTION
+db.HospitalElements.deleteMany({})
+
+
+INSERTAR UN DOCUMENTS A UNA collection
+db.HospitalElements.insertOne( {edifici: "2", planta: "1", dept: "departament CCC", lloc: "lloc CCC", elements: {"pc: {"ns": "aaaa"}} }  )

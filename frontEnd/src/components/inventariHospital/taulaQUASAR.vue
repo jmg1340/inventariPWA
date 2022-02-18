@@ -1,6 +1,10 @@
 <template>
   <div>
-    <q-table
+    <div v-for="el in elementsUnics" :key="el">
+			{{ el }}
+		</div>
+		<!-- TAULA DE LLOCS DE TREBALL + ELEMENTS -->
+		<q-table
       title="Inventari HOSPITAL"
       :data="docs"
       :columns="columnes"
@@ -12,12 +16,13 @@
       :filter-method="myfilterMethod"
       class="bg-brown-2"
     > 
-		<!-- my-sticky-header-table -->
+			<!-- CAPÇALERA DE LA TAULA -->
       <template v-slot:top-right>
 				
 				
 				<div class="row q-gutter-md">
 					
+					<!-- CLAUS A MOSTRAR -->
 					<div class="column q-pa-md bordered">
 						<q-card>
 							<q-card-section class="q-pb-none">
@@ -36,7 +41,7 @@
 						</q-card>
 					</div>        
 
-
+					<!-- FILTRES -->
           <div class="column q-gutter-md">
 						<q-card>
 							<q-card-section class="q-pb-none">
@@ -123,7 +128,7 @@
 												rounded
 												dense
 												debounce="30"
-												label="element.CLAU"
+												label="element"
 												v-model="filter.felement.clau"
 											>
 												<template v-slot:append>
@@ -138,7 +143,7 @@
 												rounded
 												dense
 												debounce="30"
-												label="element.VALOR"
+												label="Valor PROP. element"
 												v-model="filter.felement.valor"
 											>
 												<template v-slot:append>
@@ -153,10 +158,6 @@
 
 
 
-
-
-
-
 								</div>
 
 							</q-card-section>
@@ -166,14 +167,9 @@
           </div>  
 
 
-
-
-
-
-
-
         </div>
 
+				<!-- BOTO AFEGIR -->
         <q-btn
           class="q-ml-sm"
           color="teal"
@@ -183,6 +179,9 @@
         />
         <q-space />
       </template>
+
+
+			<!-- COLUMNES DE LA TAULA -->
 
       <template v-slot:body="props">
         <q-tr :props="props">
@@ -222,6 +221,8 @@
       </template>
     </q-table>
 
+
+		<!-- FORMULARI EDICIO / AFEGIR LLOCS DE TREBALL + ELEMENTS -->
     <jmg_formulari
       :obrirFormulari="obrirFormulari"
       :idMongo="idMongo"
@@ -275,7 +276,7 @@ export default {
           style: "text-align: left",
           headerClasses: "bg-grey-8 text-white",
           align: "left",
-          style: "width: 30%"
+          style: "width: 20%"
         },
         {
           name: "el",
@@ -323,7 +324,33 @@ export default {
   computed: {
     docs() {
       return this.$store.state.modulInventari.docs;
-    }
+    },
+
+		elementsUnics () {
+			console.log("CLAUS A MOSTRAR 2")
+
+			const docs = this.$store.state.modulInventari.docs;
+			var arrElementsUnics = []
+
+			for (let doc of docs) {
+				console.log(doc)
+				// per cada Doc obtenim array de CLAUS d'elements
+				for (let clau in Object.keys(doc.elements)) {
+					console.log(clau, arrElementsUnics.includes(clau))
+					if ( ! arrElementsUnics.includes(clau) )  {
+						console.log("SIIII") 
+						arrElementsUnics.push(clau)
+						
+					}
+				}
+			}
+			console.log("arrElementsUnics", arrElementsUnics)
+			return arrElementsUnics
+		},
+
+		clausAMostrar2 () {
+			this.elementsUnics
+		}
   },
 
   methods: {
@@ -396,8 +423,25 @@ export default {
         if (elements == undefined) {
           return false;
         } else {
-          console.log(elements)
-          return Object.keys(elements).some( (clau) => new RegExp(this.filter.felement.valor, "i").test(elements[clau])  )
+          // console.log(elements)
+					// obtenim array de claus dels elements
+					const arrClaus = Object.keys(elements)
+
+					return arrClaus.some( clau => {
+          	// obtenim array de les propietats de cada clau dels elements
+						const arrProps = Object.keys( elements[clau] )
+						// mirem si existeix algun valor de propietat coincident
+						
+						return arrProps.some( (prop) =>{ 
+							// if (new RegExp(this.filter.felement.valor, "i").test(elements[clau][prop])){
+							// 	console.log("elements[clau][prop]", elements[clau][prop])
+							// 	console.log("this.filter.felement.valor", this.filter.felement.valor)
+							// }
+							return new RegExp(this.filter.felement.valor, "i").test(elements[clau][prop])  
+						})
+					})
+
+					
         }
       }
     }

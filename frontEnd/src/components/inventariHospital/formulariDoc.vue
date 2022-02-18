@@ -1,9 +1,14 @@
 <template>
-  <q-dialog v-model="obrirFormulari" full-width @show="onShow">
-    <q-card class="q-pa-md" style="max-width: 600px">
+  <q-dialog v-model="obrirFormulari"  @show="onShow">
+    <q-card class="q-pa-md" style="max-width: 900px">
       <q-form @submit="onSubmit" class="q-gutter-md">
-        <div class="row q-gutter-md">
-          <div class="col">
+        
+				
+				
+				<div class="row q-gutter-md">
+
+					<!-- EDIFICI, PLANTA, DEPT, LLOC -->
+          <div class="col-4">
             <q-input
               filled
 							dense
@@ -49,42 +54,41 @@
           </div>
 
 
+					<!-- ELEMENTS -->
           <div class="col">
-						<q-card>
-							<q-card-section>
-								<div class="row q-gutter-sm">
-									
-										<div class="col">
-											<q-input dense label="Clau" type="text" v-model="element.clau" />
-										</div>
-										<div class="col">
-											<q-input dense label="Valor" type="text" v-model="element.valor" />
-										</div>
-										<div class="col-auto">
-											<q-btn icon="add_circle" dense color="teal" v-if="nouElement" @click="afegirActualitzarElement"/>
-											<q-btn icon="check_circle" dense color="teal" v-if="!nouElement" @click="afegirActualitzarElement"/>
-										</div>
-									
-								</div>
-							</q-card-section>
-							<q-card-section>
-								<q-table
-									:data="elements"
-									:columns="columnes"
-									row-key="clau"
-									dense
-									separator="cell"
-									selection="single"
-      						:selected.sync="elementSeleccionat"
-									
-									>
-										<template v-slot:body-selection="scope">
-											<q-checkbox v-model="scope.selected" @input="edicioElement(scope)" />
-											<q-btn icon="delete_forever" dense color="red" @click="eliminarElement(scope.rowIndex)" />
-										</template>
-								</q-table>
-							</q-card-section>
-						</q-card>
+
+							<q-btn label="+ CLAU" color="positive" size="xs" class="q-mb-xs" @click="addClau" />
+
+							<q-markup-table>
+								<thead>
+									<tr>
+										<th class="text-left">Element</th>
+										<th class="text-left">Propietats</th>
+
+									</tr>
+								</thead>
+								<tbody>
+									<tr v-for="(valorObj, clau, index) in elements" :key="index">
+										<td class="text-left">
+											<!-- {{ clau }} -->
+											<jmg_clau 
+												:clau="clau" 
+												@actualitzarClau="updateClau" 
+											/>
+										</td>
+										<td class="q-pa-xs">
+											<jmg_propietats 
+												
+												:objValor="valorObj" 
+												@novaPropietat="addProp(clau)"
+												@eliminaPropietat="prop => deleProp (clau, prop)"
+												@actualitzarProp2 ="obj => updateProp2 (clau, obj)"
+												@actualitzarVal2  ="obj => updateVal2 (clau, obj)"
+												/>
+										</td>
+									</tr>
+								</tbody>
+							</q-markup-table>
 
 					</div>
         </div>
@@ -107,17 +111,22 @@
 
 
 <script>
+import Vue from 'vue'
+import jmg_clau from './formulariDoc_edicioClau.vue'
+import jmg_propietats from './formulariDoc_edicioPropietats.vue'
+
 import Axios from "axios";
 const server = "http://localhost:3001";
 
-class Element{
-	constructor(clau, valor){
-		this.clau = clau;
-		this.valor = valor;
-	}
-}
+// class Element{
+// 	constructor(clau, valor){
+// 		this.clau = clau;
+// 		this.valor = valor;
+// 	}
+// }
 
 export default {
+	components: { jmg_clau, jmg_propietats },
 	props: ["obrirFormulari", "idMongo"],
 
   data() {
@@ -129,72 +138,37 @@ export default {
 			planta: "",
 			dept: "",
 			lloc: "",
+			elements: {},
 
-			element: new Element(),
-			elements: [],
+			// element: new Element(),
 			nouElement: true,
 			indexElementEditat: null,
 			
-			
-			columnes: [
-        {
-          name: "clau",
-          label: "Clau",
-          field: "clau",
-          style: "text-align: left",
-          headerClasses: "bg-grey-8 text-white",
-          align: "left",
-					//style: 'width: 5%'
-        },
-        {
-          name: "valor",
-          label: "Valor",
-          field: "valor",
-          style: "text-align: left",
-          headerClasses: "bg-grey-8 text-white",
-          align: "left",
-					//style: 'width: 5%'
-        },
-        // {
-        //   name: "accio",
-        //   label: "",
-        //   field: row => this.elements.indexOf(row),
-        //   style: "text-align: left",
-        //   headerClasses: "bg-grey-8 text-white",
-        //   align: "left",
-				// 	style: 'width: 5%'
-        // },
-
-			]
-    };
+    }
   },
 
 
 
   methods: {
 
+		// al mostrar el quadre de dialeg
 		async onShow(){
 			console.log("estic onShow del Formulari")
 			if (this.idMongo != null){
 				this.nouRegistre = false;
+
+				// recuperacio de les dades de la base de dades
 				try {
 					const result = await Axios.get(server + "/api_inventari/hospital/"+ this.idMongo)
-					const data = result.data;
+					const objDoc = result.data;
 
-					this.edifici = data.edifici;
-					this.planta = data.planta;
-					this.dept = data.dept;
-					this.lloc = data.lloc;
+					console.log ("objDoc:", objDoc)
 
-					// transformem propietats - valors de l'objecte Elements a array tipus [{clau: propietat, valor: valorPropietat}]
-					console.log(data.elements)
-					console.log(data.elements.keys)
-					Object.keys(data.elements).forEach( elemKey => {
-						this.elements.push({
-							clau: elemKey,
-							valor: data.elements[elemKey]
-						})
-					}, this)
+					this.edifici = objDoc.edifici;
+					this.planta = objDoc.planta;
+					this.dept = objDoc.dept;
+					this.lloc = objDoc.lloc;
+					this.elements = (objDoc.elements === undefined) ? {} : objDoc.elements; // si a la bdd "elements" = {}, no apareix la propietat "elements" a objDoc. Es per això que faig condicional ternari
 
 				
 
@@ -208,24 +182,49 @@ export default {
 		},
 
 
+		addClau () { Vue.set(this.elements, "nova clau", {}) },
+		updateClau (obj) { 
+			console.log ("oldVal", obj.oldVal, "newVal", obj.newVal)
+			if ( obj.oldVal !== null) {
+				Vue.set(this.elements, obj.newVal, this.elements[obj.oldVal])
+				Vue.delete(this.elements, obj.oldVal)
+			}
+		},
 
+		addProp (clau) { Vue.set(this.elements[clau], "nova prop", "") 	},
+		deleProp (clau, prop) { Vue.delete (this.elements[clau], prop) 	},
+
+		updateProp2 (clau, obj) { 
+			// console.log("--- updateProp2 ----")
+			// console.log ("oldProp", obj.oldProp, "newProp", obj.newProp)
+			// console.log("JSON.stringify(obj)", JSON.stringify(obj))
+			if ( obj.oldProp !== null) {
+				Vue.set(this.elements[clau], obj.newProp, this.elements[clau][obj.oldProp])
+				Vue.delete(this.elements[clau], obj.oldProp)
+			}
+		},
+
+		updateVal2 (clau, obj) { 
+			// console.log ("oldVal", obj.oldVal, "newVal", obj.newVal)
+			if ( obj.oldVal !== null) {
+				Vue.set(this.elements[clau], obj.actualProp, obj.newVal)
+			}
+		},
 
 
 
 
 
     async onSubmit() {
-			
-			let obj = {}
-			this.elements.forEach((elem, index, arr) =>{
-				obj[elem.clau] = elem.valor;
-			}, this);
+			// this.elements.forEach((elem, index, arr) =>{
+			// 	obj[elem.clau] = elem.valor;
+			// }, this);
 			let registre = {
 				edifici: this.edifici,
 				planta: this.planta,
 				dept: this.dept,
 				lloc: this.lloc,
-				elements: obj
+				elements: this.elements
 			}
 			
 			
@@ -238,13 +237,13 @@ export default {
 			}
 
 
-			this.element = new Element();
+			// this.element = new Element();
 
 			this.edifici = null;
 			this.planta = null;
 			this.dept = null;
 			this.lloc = null;
-			this.elements = []
+			this.elements = {}
 
 			this.nouRegistre = true;
 
@@ -254,13 +253,11 @@ export default {
 
 
     onCancel() {
-			this.element = new Element();
-
 			this.edifici = null;
 			this.planta = null;
 			this.dept = null;
 			this.lloc = null;
-			this.elements = []
+			this.elements = {}
 
 			this.nouRegistre = true;
 
