@@ -45,7 +45,15 @@
           <div class="column q-gutter-md">
 						<q-card>
 							<q-card-section class="q-pb-none">
-								Filtres...
+								<div class="row">
+                  <div class="col">
+                    Filtres...
+                  </div>
+                  <div class="col text-right text-caption">
+                    Registres: <q-chip dense color="yellow">{{ recompte }}</q-chip> 
+                  </div>
+                </div>
+                
 							</q-card-section>
 							<q-separator inset />
 							<q-card-section class="q-pt-xs q-pb-none">
@@ -305,13 +313,17 @@ export default {
         rowsPerPage: 75
       },
 
-      clausAMostrar: ["pc","monitor", "teclat", "ratoli"],
+      clausAMostrar: [
+        // "pc","monitor", "teclat", "ratoli"
+        ],
       opcionsClaus: [
-        { label: 'PC', value: 'pc', color: 'green' },
-        { label: 'Monitor', value: 'monitor', color: 'green' },
-        { label: 'Teclat', value: 'teclat', color: 'green' },
-        { label: 'Ratoli', value: 'ratoli', color: 'green' }
-      ]
+        // { label: 'PC', value: 'pc', color: 'green' },
+        // { label: 'Monitor', value: 'monitor', color: 'green' },
+        // { label: 'Teclat', value: 'teclat', color: 'green' },
+        // { label: 'Ratoli', value: 'ratoli', color: 'green' }
+      ],
+
+      recompte: 0
 
 
     };
@@ -329,23 +341,52 @@ export default {
 		elementsUnics () {
 			console.log("CLAUS A MOSTRAR 2")
 
-			const docs = this.$store.state.modulInventari.docs;
-			var arrElementsUnics = []
+      const obtencioArrayElementsUnics = new Promise ( (resolve, reject) => {
+        resolve (this.$store.state.modulInventari.docs)
+      })
 
-			for (let doc of docs) {
-				console.log(doc)
-				// per cada Doc obtenim array de CLAUS d'elements
-				for (let clau in Object.keys(doc.elements)) {
-					console.log(clau, arrElementsUnics.includes(clau))
-					if ( ! arrElementsUnics.includes(clau) )  {
-						console.log("SIIII") 
-						arrElementsUnics.push(clau)
-						
-					}
-				}
-			}
-			console.log("arrElementsUnics", arrElementsUnics)
-			return arrElementsUnics
+      obtencioArrayElementsUnics
+      .then ( resultat => {
+        // console.log("RESULTAT", resultat)
+
+        const docs = resultat
+        let arrElementsUnics = []
+        let arrOpcionsClaus = []
+
+        for (let doc of docs) {
+          // console.log(doc)
+          // per cada Doc obtenim array de CLAUS d'elements
+          // console.log("doc.elements", doc.elements)
+          for (let clau of Object.keys(doc.elements)) {
+            // console.log(clau, arrElementsUnics.includes(clau))
+            if ( ! arrElementsUnics.includes(clau) )  {
+              console.log("CLAU", clau) 
+
+              arrElementsUnics.push(clau)
+              arrOpcionsClaus.push( {label: clau.toUpperCase(), value: clau, color: "green"} )
+
+              console.log("arrElementsUnics --- ", arrElementsUnics)
+              this.clausAMostrar = arrElementsUnics
+              this.opcionsClaus = arrOpcionsClaus
+              
+            }
+          }
+        }
+
+        console.log("=======")
+        console.log("arrElementsUnics", arrElementsUnics)
+        return arrElementsUnics       
+      })
+      .then (arr => {
+        console.log("arr", arr)
+      })
+      .catch((error) => {
+        console.log("ERROR a la Promesa:", error)
+        return "Algo a fallat"
+      })
+      
+      
+
 		},
 
 		clausAMostrar2 () {
@@ -387,7 +428,7 @@ export default {
     
 		myfilterMethod() {
 
-      return this.docs.filter(row => {
+      const arrFiletered = this.docs.filter(row => {
         if (
           new RegExp(this.filter.fedifici, "i").test(row.edifici) &&
           new RegExp(this.filter.fplanta, "i").test(row.planta) &&
@@ -401,6 +442,9 @@ export default {
           return false;
         }
       });
+
+      this.recompte = arrFiletered.length
+      return arrFiletered
     },
 
     comprovarClau (elements) {
