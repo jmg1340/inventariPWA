@@ -1,11 +1,8 @@
 <template>
   <div>
-    <div v-for="el in elementsUnics" :key="el">
-			{{ el }}
-		</div>
+
 		<!-- TAULA DE LLOCS DE TREBALL + ELEMENTS -->
 		<q-table
-      title="Inventari HOSPITAL"
       :data="docs"
       :columns="columnes"
       row-key="__id"
@@ -17,175 +14,190 @@
       class="bg-brown-2"
     > 
 			<!-- CAPÇALERA DE LA TAULA -->
+      <template v-slot:top-left>
+				<!-- <div class="row justify-between "> -->
+					<div class="column ">
+						<div class="text-h5">Inventari HOSPITAL</div>
+						<!-- BOTO AFEGIR -->
+						<div class="col-3 q-mt-sm">
+							<q-btn
+								class=""
+								color="teal"
+								noCaps
+								label="Afegir..."
+								@click="add"
+							/>
+						</div>	
+					</div>
+      </template>
       <template v-slot:top-right>
-				
-				
-				<div class="row q-gutter-md">
-					
-					<!-- CLAUS A MOSTRAR -->
-					<div class="column q-pa-md bordered">
-						<q-card>
-							<q-card-section class="q-pb-none">
-								Claus a mostrar
-							</q-card-section>
-							<q-separator inset />
-							<q-card-section class="q-pt-xs">
-								<q-option-group
-									v-model="clausAMostrar"
-									:options="opcionsClaus"
-									type="checkbox"
-									dense
-								/>
-							</q-card-section>
 
-						</q-card>
-					</div>        
+					<!-- <div class="col-6 "> -->
 
-					<!-- FILTRES -->
-          <div class="column q-gutter-md">
-						<q-card>
-							<q-card-section class="q-pb-none">
-								<div class="row">
-                  <div class="col">
-                    Filtres...
-                  </div>
-                  <div class="col text-right text-caption">
-                    Registres: <q-chip dense color="yellow">{{ recompte }}</q-chip> 
-                  </div>
-                </div>
-                
-							</q-card-section>
-							<q-separator inset />
-							<q-card-section class="q-pt-xs q-pb-none">
-								<div class="row  q-gutter-md">
-									<div class="column q-gutter-md">
-
-										<div class="col-2">
-											<q-input
-												borderless
-												outlined
-												rounded
+						<div class="row q-gutter-xs justify-end items-start ">	
+							<div class="col-4">	
+								<!-- CLAUS A MOSTRAR -->
+								<div class="column q-pa-md bordered">
+									<q-card>
+										<q-card-section class="q-pb-none">
+											Elements a mostrar
+										</q-card-section>
+										<q-separator inset />
+										<q-card-section class="q-pt-xs">
+											<q-option-group
+												v-model="clausAMostrar"
+												:options="opcionsClaus"
+												type="checkbox"
 												dense
-												debounce="30"
-												label="Edifici"
-												v-model="filter.fedifici"
-											>
-												<template v-slot:append>
-													<q-icon name="search" />
-												</template>
-											</q-input>
-										</div>
-										<div class="col-2">
-											<q-input
-												borderless
-												outlined
-												rounded
-												dense
-												debounce="30"
-												label="Planta"
-												v-model="filter.fplanta"
-											>
-												<template v-slot:append>
-													<q-icon name="search" />
-												</template>
-											</q-input>
-										</div>
-										<div class="col-2">
-											<q-input
-												borderless
-												outlined
-												rounded
-												dense
-												debounce="30"
-												label="Dept"
-												v-model="filter.fdept"
-											>
-												<template v-slot:append>
-													<q-icon name="search" />
-												</template>
-											</q-input>
-										</div>
+											/>
+										</q-card-section>
 
-									</div>
+									</q-card>
+								</div>        
+							</div>
 
-
-
-									<div class="column q-gutter-md">
-
-										<div class="col-2">
-											<q-input
-												borderless
-												outlined
-												rounded
-												dense
-												debounce="30"
-												label="Lloc"
-												v-model="filter.flloc"
-											>
-												<template v-slot:append>
-													<q-icon name="search" />
-												</template>
-											</q-input>
-										</div>
-
-
-										<div class="col-2">
-											<q-input
-												borderless
-												outlined
-												rounded
-												dense
-												debounce="30"
-												label="element"
-												v-model="filter.felement.clau"
-											>
-												<template v-slot:append>
-													<q-icon name="search" />
-												</template>
-											</q-input>
-										</div>
-										<div class="col-2">
-											<q-input
-												borderless
-												outlined
-												rounded
-												dense
-												debounce="30"
-												label="Valor PROP. element"
-												v-model="filter.felement.valor"
-											>
-												<template v-slot:append>
-													<q-icon name="search" />
-												</template>
-											</q-input>
-
-										</div>
-									</div>
+							<div class="col-7">
+								<!-- FILTRES -->
+								<div class="column q-gutter-md">
+									<q-card>
+										<q-card-section class="q-pb-none">
+											<div class="row">
+												<div class="col">
+													Filtres...
+												</div>
+												<div class="col text-right text-caption">
+													Registres: <q-chip dense color="yellow">{{ recompte }}</q-chip> 
+												</div>
+											</div>
+											
+										</q-card-section>
+										
+										<q-card-section class="q-pt-none ">
+											<div class="row  q-gutter-xs">
+												<div class="col">
+													<div class="column q-gutter-xs">
+														<div class="col-2">
+															<q-input
+																borderless
+																outlined
+																rounded
+																dense
+																debounce="30"
+																label="Edifici"
+																v-model="filter.fedifici"
+																hide-bottom-space
+																style="{ 'width': '10px' }"
+															>
+																<template v-slot:append>
+																	<q-icon name="search" />
+																</template>
+															</q-input>
+														</div>
+														<div class="col-2">
+															<q-input
+																borderless
+																outlined
+																rounded
+																dense
+																debounce="30"
+																label="Planta"
+																v-model="filter.fplanta"
+															>
+																<template v-slot:append>
+																	<q-icon name="search" />
+																</template>
+															</q-input>
+														</div>
+														<div class="col-2">
+															<q-input
+																borderless
+																outlined
+																rounded
+																dense
+																debounce="30"
+																label="Dept"
+																v-model="filter.fdept"
+															>
+																<template v-slot:append>
+																	<q-icon name="search" />
+																</template>
+															</q-input>
+														</div>
+													</div>
+												</div>
 
 
+												<div class="col">
+													<div class="column q-gutter-xs">
+
+														<div class="col-2">
+															<q-input
+																borderless
+																outlined
+																rounded
+																dense
+																debounce="30"
+																label="Lloc"
+																v-model="filter.flloc"
+															>
+																<template v-slot:append>
+																	<q-icon name="search" />
+																</template>
+															</q-input>
+														</div>
+
+
+														<div class="col-2">
+															<q-input
+																borderless
+																outlined
+																rounded
+																dense
+																debounce="30"
+																label="element"
+																v-model="filter.felement.clau"
+															>
+																<template v-slot:append>
+																	<q-icon name="search" />
+																</template>
+															</q-input>
+														</div>
+														<div class="col-2">
+															<q-input
+																borderless
+																outlined
+																rounded
+																dense
+																debounce="30"
+																label="Valor PROP. element"
+																v-model="filter.felement.valor"
+															>
+																<template v-slot:append>
+																	<q-icon name="search" />
+																</template>
+															</q-input>
+
+														</div>
+													</div>
+												</div>
 
 
 
-								</div>
 
-							</q-card-section>
-						</q-card>
+											</div>
 
-
-          </div>  
+										</q-card-section>
+									</q-card>
 
 
-        </div>
+								</div> 
+							</div>	
+							
+						</div>
 
-				<!-- BOTO AFEGIR -->
-        <q-btn
-          class="q-ml-sm"
-          color="teal"
-          noCaps
-          label="Afegir..."
-          @click="add"
-        />
-        <q-space />
+					<!-- </div> -->
+				<!-- </div> -->
+
       </template>
 
 
@@ -337,15 +349,21 @@ export default {
     docs() {
       return this.$store.state.modulInventari.docs;
     },
-
-		elementsUnics () {
+	},
+	
+	watch: {
+		docs() {
 			console.log("CLAUS A MOSTRAR 2")
 
-      const obtencioArrayElementsUnics = new Promise ( (resolve, reject) => {
-        resolve (this.$store.state.modulInventari.docs)
+      new Promise ( (resolve, reject) => {
+				const dades = this.$store.state.modulInventari.docs
+				if ( dades.length !== 0 ) {
+					resolve (dades)
+				} else {
+					reject ("No hi ha dades")
+				}
+        
       })
-
-      obtencioArrayElementsUnics
       .then ( resultat => {
         // console.log("RESULTAT", resultat)
 
@@ -354,45 +372,33 @@ export default {
         let arrOpcionsClaus = []
 
         for (let doc of docs) {
-          // console.log(doc)
           // per cada Doc obtenim array de CLAUS d'elements
-          // console.log("doc.elements", doc.elements)
           for (let clau of Object.keys(doc.elements)) {
-            // console.log(clau, arrElementsUnics.includes(clau))
-            if ( ! arrElementsUnics.includes(clau) )  {
-              console.log("CLAU", clau) 
-
+						if ( ! arrElementsUnics.includes(clau) )  {
               arrElementsUnics.push(clau)
               arrOpcionsClaus.push( {label: clau.toUpperCase(), value: clau, color: "green"} )
-
-              console.log("arrElementsUnics --- ", arrElementsUnics)
-              this.clausAMostrar = arrElementsUnics
-              this.opcionsClaus = arrOpcionsClaus
-              
             }
           }
         }
-
-        console.log("=======")
-        console.log("arrElementsUnics", arrElementsUnics)
-        return arrElementsUnics       
-      })
-      .then (arr => {
-        console.log("arr", arr)
-      })
+				return { arrElementsUnics, arrOpcionsClaus}
+     
+      }).then((obj) => {
+				this.clausAMostrar = obj.arrElementsUnics
+				this.opcionsClaus = obj.arrOpcionsClaus
+			})
       .catch((error) => {
         console.log("ERROR a la Promesa:", error)
-        return "Algo a fallat"
+        // return "Algo a fallat"
+				this.clausAMostrar = []
+				this.opcionsClaus = []
+
       })
       
       
 
 		},
 
-		clausAMostrar2 () {
-			this.elementsUnics
-		}
-  },
+},
 
   methods: {
     eliminar(id) {
@@ -502,6 +508,7 @@ export default {
 
   tr:nth-child(odd) 
     background-color: #f9f2ec !important 
+  .borde
+    border: 1px solid red
 
- 
 </style>
