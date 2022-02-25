@@ -49,6 +49,16 @@
 					</q-item-section>
 				</q-item>
 
+				<q-item to="/dadesExternes">
+					<q-item-section avatar>
+						<q-icon name="code" />
+					</q-item-section>
+					<q-item-section>
+						<q-item-label>Dades Externes</q-item-label>
+						<q-item-label caption>Incorporació de dades externes</q-item-label>
+					</q-item-section>
+				</q-item>
+
 
 				<q-item to="/inventariAsepeyo">
 					<q-item-section avatar>

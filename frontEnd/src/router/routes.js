@@ -8,6 +8,13 @@ const routes = [
     ]
   },
   {
+    path: '/dadesExternes',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/DadesExternes.vue') }
+    ]
+  },
+  {
     path: '/inventariAsepeyo',
     component: () => import('layouts/MainLayout.vue'),
     children: [

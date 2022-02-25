@@ -5,8 +5,10 @@ const cors = require('cors')
 
 const server = express();
 
+const objConnexio = require('./dadesConexioBD')
+
 // BBDD CONNECTION
-mongoose.connect('mongodb://localhost/inventaridb', { useNewUrlParser: true, useUnifiedTopology: true  })
+mongoose.connect(objConnexio.servidor.ruta, objConnexio.servidor.opcions)
 .then (db => console.log( "*** BDD connectada ***"))
 .catch (err => console.log(err))
 

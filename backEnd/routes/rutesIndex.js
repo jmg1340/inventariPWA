@@ -3,6 +3,7 @@ const router = express.Router();
 
 const contrInvHosp = require("../controllers/controllerInventariHospital")
 const contrInvAsep = require("../controllers/controllerInventariAsepeyo")
+const contrDadesExt = require("../controllers/controllerDadesExternes")
 
 
 
@@ -18,6 +19,11 @@ router.delete("/hospital/:id", contrInvHosp.eliminaUn)
 /* INVENTARI ASEPEYO */
 router.get("/asepeyo", contrInvAsep.llistaTots)
 
+
+/* DADES EXTERNES */
+router.get("/dadesExternes/:fitxer", contrDadesExt.llista)
+router.get("/eliminarColeccio/:coleccio", contrDadesExt.eliminarColeccio)
+router.get("/crearColeccio/:coleccio", contrDadesExt.crearColeccio)
 
 
 module.exports = router;
