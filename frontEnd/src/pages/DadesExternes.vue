@@ -4,7 +4,7 @@
 			<q-btn color="teal" noCaps dense @click="importar('dadesES.csv')">Importar</q-btn>
 		</div>
 
-		<div class="col text-h6">Dades Externes <span class="text-caption"> ( {{ arrJSONcsv.length }} registres )</span></div>
+		<div class="col text-h6">Dades Externes <span class="text-caption"> ( {{ arrJSON.length }} registres )</span></div>
 
 		<div class="column">
 
@@ -19,7 +19,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr v-for="(obj, index) in arrJSONcsv" :key="index">
+						<tr v-for="(obj, index) in arrJSON" :key="index">
 							<td  v-for="(camp2, id) in Object.keys(obj)" :key="'id'+id">
 								{{ obj[camp2] }}
 							</td>
@@ -46,7 +46,7 @@ export default {
 
 	data() {
 		return {
-			arrJSONcsv: [],
+			arrJSON: [],
 			arrCamps: []
 		}
 	},
@@ -56,10 +56,15 @@ export default {
 			this.$store.dispatch("modulInventari/actGetCSV", fitxer)
 			.then ( objResultat => {
 				console.log("Estic a promesa resolta")
+				console.log("-- ObjResultat--", objResultat)
+				console.log("objResultat.error: ", objResultat.error)
 				
-				this.arrCamps = objResultat.arrNomCamps
-				const arrJSON = objResultat.arrJSON
-				
+				if ( objResultat.error === undefined ){
+					this.arrJSON = objResultat.arrJSON
+					this.arrCamps = objResultat.arrCamps
+				} else {
+					console.log("Error a l'importar: ", objResultat.error)
+				}
 /* 
 				// 1. de totes els registres (arrJSON) fem un array de ns PC unics de
 				const arrNSUnics = arrJSON.reduce((acc,item)=>{

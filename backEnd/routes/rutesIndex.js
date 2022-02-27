@@ -21,9 +21,10 @@ router.get("/asepeyo", contrInvAsep.llistaTots)
 
 
 /* DADES EXTERNES */
-router.get("/dadesExternes/:fitxer", contrDadesExt.llista)
-router.get("/eliminarColeccio/:coleccio", contrDadesExt.eliminarColeccio)
-router.get("/crearColeccio/:coleccio", contrDadesExt.crearColeccio)
+router.get("/dadesExternes/:fitxer", contrDadesExt.importar)
+router.delete("/eliminarRegistresES", contrDadesExt.eliminarRegistresES)
+router.post("/inserirRegistresES", contrDadesExt.inserirRegistresES)
+router.get("/llistarRegistresES", contrDadesExt.llistaTots)
 
 
 module.exports = router;

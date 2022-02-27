@@ -6,14 +6,15 @@ const server = "http://localhost:3001";
 
 export async function actGetCSV(context, fitxer) {
   try {
-    const result = await Axios.get(server + "/api_inventari/dadesExternes/" + fitxer)
+    
+	// Obtencio de les dades en brut del fitxer
+	const result = await Axios.get(server + "/api_inventari/dadesExternes/" + fitxer)
     const data = result.data;
-		console.log("data (actGetCSV)");
 
-		// *** TRANSFORMACIO A FITXER JSON ***
+		// *** TRANSFORMACIO A FITXER JSON per despres importar-lo a la coleccio ES_registres***
 
 		// 1. separem per linies
-		const arrLinies = data.split("\r\n")
+		const arrLinies = data.split("\n")
 		// console.log("arrLinies", arrLinies)
 
 		let arrNomCamps = []
@@ -38,8 +39,6 @@ export async function actGetCSV(context, fitxer) {
 
 
 
-
-
 		// Les dades de arrJSON fins ara, son un historial dels inicis de sessió dels ordinadors. Per tant ens interessa fer un llistat unic de NS de cpus i sobre aquest llistat trobar la dada més actual de arrJSON.
 
 		// 1. de totes els registres (arrJSON) fem un array de ns PC unics
@@ -57,7 +56,7 @@ export async function actGetCSV(context, fitxer) {
 		})
 
 
-		// Aprofite per modificar la propietat on apareix al info del SW per a que quan sigui una mac de telf (*.asepeyo.site) modifiqui aquest valor per a que sigui nomes la mac (sense el 'SEP' i el '.asepeyo.site')
+		// Aprofito per modificar la propietat on apareix al info del SW per a que quan sigui una mac de telf (*.asepeyo.site) modifiqui aquest valor per a que sigui nomes la mac (sense el 'SEP' i el '.asepeyo.site')
 
 		arrObjsDadesCSV.map ( obj => {
 			if (  /.asepeyo.site$/.test(obj.LLDP_RID1_SWITCH_SYSNAME) ) {
@@ -66,6 +65,7 @@ export async function actGetCSV(context, fitxer) {
 			return obj
 		})
 		
+		console.log("3. arrObjsDadesCSV", arrObjsDadesCSV)
 
 
 
@@ -73,32 +73,35 @@ export async function actGetCSV(context, fitxer) {
 
 
 
-		// GUARDAR LES DADES A LA COLECCIÓ "ES_temporal"
+		// GUARDAR LES DADES A LA COLECCIÓ "ES_registres"
 		
 		try {
 
-			// 1. Eliminar la colecció "ES_temporal" cas de que existeixi
-			const objResultat = await Axios.get(server + "/api_inventari/eliminarColeccio/ES_temporal")
-			// const data = objResultat.snEliminada;  // false: la coleccio no existeix i no l'ha pogut eliminar
-																						 // true: sí existeix i l'ha pogut eliminar.
+			// 1. Eliminar registres de "ES_registres"
+			const objResultat = await Axios.delete(server + "/api_inventari//eliminarRegistresES")
+			console.log("objResultat", objResultat)
 
-			// context.commit( "Eliminada coleccio 'ES_temporal'?", objResultat.snEliminada);
 
-			// 2. Creem de nou la colecció amb les dades de arrJSON
-			const objResultat2 = await Axios.get(server + "/api_inventari/crearColeccio", { params: { coleccio: "ES_temporal", dades: JSON.stringify(arrJSON) } })
+			// 2. Afegim noves dades de arrObjsDadesCSV a la colecció ES_registres
+			const objResultat2 = await Axios.post(server + "/api_inventari/inserirRegistresES", { dades: JSON.stringify(arrObjsDadesCSV)  })
+			console.log("objResultat2", objResultat2)
 
+
+			// 3. Recuperació de les dades de ES_registres"
+			const objResultat3 = await Axios.get(server + "/api_inventari/llistarRegistresES")
+			console.log("objResultat3", objResultat3)
+			arrJSON = objResultat3.data
+			const arrCamps = Object.keys(arrJSON[0])
+
+			return {arrJSON, arrCamps}
 	
 		} catch (error) {
-			console.log("error a actGetDocs")
+			console.log("error al eliminar / inserir a ES_registres")
 			console.log( error )
+			return { error: error }
 		}		
 
 
-
-
-
-
-    return {arrObjsDadesCSV, arrNomCamps}
 
   } catch (error) {
     console.log("error a actGetCSV")
