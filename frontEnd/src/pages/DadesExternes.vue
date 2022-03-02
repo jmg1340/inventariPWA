@@ -46,7 +46,20 @@
 <script>
 export default {
 	created() {
-		// this.importar ("dadesES.csv")
+
+		this.$store.dispatch("modulInventari/actLlistarDades")
+		.then ( objResultat => {
+		
+			if ( objResultat.error === undefined ){
+				this.arrJSON = objResultat.arrJSON
+				this.arrCamps = objResultat.arrCamps
+			} else {
+				console.log("Error a l'importar: ", objResultat.error)
+			}
+		}).catch ( err => {
+			console.log("error a CREATED")
+		})
+
 	},
 
 	data() {
@@ -65,14 +78,18 @@ export default {
 	methods: { 
 		importar (fitxer) {
 			this.$store.dispatch("modulInventari/actGetCSV", fitxer)
-			.then ( objResultat => {
+			.then ( () => {
 			
-				if ( objResultat.error === undefined ){
-					this.arrJSON = objResultat.arrJSON
-					this.arrCamps = objResultat.arrCamps
-				} else {
-					console.log("Error a l'importar: ", objResultat.error)
-				}
+				this.$store.dispatch("modulInventari/actLlistarDades")
+				.then ( objResultat => {
+				
+					if ( objResultat.error === undefined ){
+						this.arrJSON = objResultat.arrJSON
+						this.arrCamps = objResultat.arrCamps
+					} else {
+						console.log("Error a l'importar: ", objResultat.error)
+					}
+				})
 
 			}).catch ( error  => {
 				console.log( "no ha pillat les dades", error )
@@ -91,11 +108,13 @@ export default {
 				// el valor de cada propietat de l'obj el convertim en un objecte on les propietats seran VALOR i SEMAFOR
 				// Per ex: obj.LLDP_RID1_SWITCH_SYSNAME = "XXXXX" el convetrim a obj.LLDP_RID1_SWITCH_SYSNAME = {valor: "XXXXX", semafor=""} 
 				
+				if (obj.HARDWARE_NAME === "S4AV0146") console.log("obj", obj)
+
 				Object.keys(obj).forEach( prop => obj[prop] = { valor: obj[prop], semafor: "" })
 				
 				
 				const objTrobat = arrDocsHosp.find( objDocHosp => objDocHosp.elements.pc.ns.includes(obj.HARDWARE_NAME.valor))
-				console.log("objTrobat",objTrobat)
+				// console.log("objTrobat",objTrobat)
 				if ( objTrobat === undefined) {
 					// el ns del pc de les dades de Elastic Search no existeix al array de documents de inventari Hospital
 					obj.HARDWARE_NAME.semafor = "vermell"
@@ -106,20 +125,22 @@ export default {
 					
 					switch ( objTrobat.elements.pc.switch ) {
 						case undefined:
-							obj.LLDP_RID1_SWITCH_SYSNAME.semafor = "vermell"
+							obj.LLDP_RID1_SWITCH_SYSNAME.semafor =  (obj.LLDP_RID1_SWITCH_SYSNAME.valor === '-') ? "" : "vermell"
 							break
 						case obj.LLDP_RID1_SWITCH_SYSNAME.valor:
 							break
+
 						default:
 							obj.LLDP_RID1_SWITCH_SYSNAME.semafor = "groc"
 					}
 				
 					switch ( objTrobat.elements.pc.portsw ) {
 						case undefined:
-							obj.LLDP_RID1_SWITCH_PORTDESCR.semafor = "vermell"
+							obj.LLDP_RID1_SWITCH_PORTDESCR.semafor = (['-', 'PC Port'].includes(obj.LLDP_RID1_SWITCH_PORTDESCR.valor) ) ? "" : "vermell"
 							break
 						case obj.LLDP_RID1_SWITCH_PORTDESCR.valor:
 							break
+
 						default:
 							obj.LLDP_RID1_SWITCH_PORTDESCR.semafor = "groc"
 					}

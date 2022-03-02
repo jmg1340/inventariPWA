@@ -3,6 +3,17 @@ const server = "http://localhost:3001";
 
 /* DADES EXTERNES */
 
+export async function actLlistarDades ( context) {
+      // 3. Recuperació de les dades de ES_registres"
+      const objResultat3 = await Axios.get( server + "/api_inventari/llistarRegistresES" );
+      console.log("objResultat3", objResultat3);
+      const arrJSON = objResultat3.data;
+      const arrCamps = Object.keys(arrJSON[0]);
+
+      return { arrJSON, arrCamps };
+}
+
+
 export async function actGetCSV(context, fitxer) {
   try {
     // Obtencio de les dades en brut del fitxer
@@ -15,7 +26,7 @@ export async function actGetCSV(context, fitxer) {
 
     // 1. separem per linies
     const arrLinies = data.split("\n");
-    console.log("arrLinies", arrLinies);
+    // console.log("arrLinies", arrLinies);
 
     let arrNomCamps = [];
     let arrJSON = [];
@@ -86,15 +97,8 @@ export async function actGetCSV(context, fitxer) {
       );
       console.log("objResultat2", objResultat2);
 
-      // 3. Recuperació de les dades de ES_registres"
-      const objResultat3 = await Axios.get(
-        server + "/api_inventari/llistarRegistresES"
-      );
-      console.log("objResultat3", objResultat3);
-      arrJSON = objResultat3.data;
-      const arrCamps = Object.keys(arrJSON[0]);
+      return
 
-      return { arrJSON, arrCamps };
     } catch (error) {
       console.log("error al eliminar / inserir a ES_registres");
       console.log(error);
