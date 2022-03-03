@@ -13,7 +13,9 @@
 				<q-markup-table dense bordered separator="cell">
 					<thead>
 						<tr>
-							<th  v-for="camp in arrCamps" :key="camp">
+							<th  v-for="camp in arrCamps" :key="camp"
+							class="bg-grey-9 text-white bordeCamps"
+							>
 								{{ camp }}
 							</th>
 						</tr>
@@ -21,12 +23,25 @@
 					<tbody>
 						<tr v-for="(obj, index) in arrJSON2" :key="index">
 							<td 
-								v-for="(camp2, id) in Object.keys(obj)" :key="'id'+id"
-								
+								v-for="(camp2, id) in Object.keys(obj)" 
+								:key="'id'+id"
+								:class="{ 'bg-yellow': obj[camp2].semafor == 'groc', 'bg-red text-white': obj[camp2].semafor == 'vermell'}"
 								>
-									<div :class="{ fonsGroc: obj[camp2].semafor == 'groc', fonsVermell: obj[camp2].semafor == 'vermell'}">
-										{{ obj[camp2].valor }}
-									</div>
+									<q-btn 
+										v-if="obj['HARDWARE_NAME'].semafor === 'vermell' && camp2 === '_id'"
+										label="Afegir" 
+										dense noCaps
+										size="sm"
+										color="teal"
+										@click="afegirRegistreInventariHospital()" />	
+									<q-btn 
+										v-else-if="obj['HARDWARE_NAME'].semafor === '' && camp2 === '_id'"
+										label="Modificar" 
+										dense noCaps
+										size="sm"
+										color="primary"
+										@click="modificarRegistreInventariHospital(obj[camp2].valor)" />	
+									<span v-else>  {{ obj[camp2].valor }} </span>
 							</td>
 						</tr>
 					</tbody>
@@ -94,9 +109,21 @@ export default {
 			}).catch ( error  => {
 				console.log( "no ha pillat les dades", error )
 			})
-		}
-	},
+		},
 
+
+
+		afegirRegistreInventariHospital (idInvHosp) { 
+			console.log("afegir registre")
+		},
+
+		modificarRegistreInventariHospital (idInvHosp) { 
+			console.log("idInvHosp", idInvHosp)
+		}
+
+
+
+	},
 
 	computed: { 
 		arrJSON2 () { 
@@ -117,19 +144,20 @@ export default {
 				// console.log("objTrobat",objTrobat)
 				if ( objTrobat === undefined) {
 					// el ns del pc de les dades de Elastic Search no existeix al array de documents de inventari Hospital
+					obj._id.valor = ""
 					obj.HARDWARE_NAME.semafor = "vermell"
-
+					obj.LLDP_RID1_SWITCH_SYSNAME.semafor =  (obj.LLDP_RID1_SWITCH_SYSNAME.valor === '-') ? "" : "vermell"
+					obj.LLDP_RID1_SWITCH_PORTDESCR.semafor = (['-', 'PC Port'].includes(obj.LLDP_RID1_SWITCH_PORTDESCR.valor) ) ? "" : "vermell"
 				} else {
 					// el ns del pc de les dades de Elastic Search SI existeix. 
 					// Ara cal mirar si la resta de camps equivalents existeixen o s'ha de modificar el seu valor
-					
+					obj._id.valor = objTrobat._id
 					switch ( objTrobat.elements.pc.switch ) {
 						case undefined:
 							obj.LLDP_RID1_SWITCH_SYSNAME.semafor =  (obj.LLDP_RID1_SWITCH_SYSNAME.valor === '-') ? "" : "vermell"
 							break
 						case obj.LLDP_RID1_SWITCH_SYSNAME.valor:
 							break
-
 						default:
 							obj.LLDP_RID1_SWITCH_SYSNAME.semafor = "groc"
 					}
@@ -140,7 +168,6 @@ export default {
 							break
 						case obj.LLDP_RID1_SWITCH_PORTDESCR.valor:
 							break
-
 						default:
 							obj.LLDP_RID1_SWITCH_PORTDESCR.semafor = "groc"
 					}
@@ -159,17 +186,10 @@ export default {
 
 <style>
 	.bordeCamps {
-		border: 1px solid grey;
-		background-color: rgb(71, 71, 71);
-		color: white
+		border: 1px solid rgb(245, 209, 6);
 	}
 	.bordeDades {
 		border: 1px solid grey;
 	}
-	.fonsVermell{
-		background-color: red
-	}
-	.fonsGroc{
-		background-color: yellow
-	}
+
 </style>
