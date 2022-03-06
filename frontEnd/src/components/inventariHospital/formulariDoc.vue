@@ -234,6 +234,10 @@ export default {
 			} else {
 				console.log("Estic a la actualitzacio del registre")
 				this.$store.dispatch("modulInventari/actActualitzarDoc", {idMongo: this.idMongo, registre})
+				then ( result => {
+					console.log("result ---", result)
+					this.$store.dispatch("actGetDocs");
+				})
 			}
 
 

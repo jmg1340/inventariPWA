@@ -111,6 +111,18 @@ export async function actGetCSV(context, fitxer) {
 }
 
 
+export async function actModifRegInvHosp(context, objRegistre) {
+  try {
+    
+    // Obtencio de les dades en brut del fitxer
+    const modificacioFeta = await Axios.get(
+      server + "/api_inventari/dadesExternes/" + fitxer
+    );
+  } catch (error) {
+    console.log("error a actGetDoc");
+    console.log(error);
+  }
+}
 
 
 
@@ -129,6 +141,19 @@ export async function actGetDocs(context) {
   }
 }
 
+export async function actGetDoc(context, id) {
+  try {
+    const result = await Axios.get(server + "/api_inventari/hospital/" + id);
+    const registreObtingut = result.data;
+    context.commit("mutGetDoc", registreObtingut);
+    return registreObtingut
+
+  } catch (error) {
+    console.log("error a actGetDoc");
+    console.log(error);
+  }
+}
+
 export async function actRemoveDoc(context, id) {
   try {
     await Axios.delete(server + "/api_inventari/hospital/" + id);
@@ -141,11 +166,13 @@ export async function actRemoveDoc(context, id) {
 
 export async function actActualitzarDoc(context, payload) {
   try {
-    await Axios.put(
+    const result = await Axios.put(
       server + "/api_inventari/hospital/" + payload.idMongo,
       payload.registre
     );
-    await context.dispatch("actGetDocs");
+    // await context.dispatch("actGetDocs");
+    return result
+
   } catch (error) {
     console.log("error a actActualitzarDoc");
     console.log(error);

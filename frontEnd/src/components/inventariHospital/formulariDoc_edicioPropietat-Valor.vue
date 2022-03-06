@@ -38,6 +38,7 @@ export default {
 					{label: "mac", value: "mac"},
 					{label: "marca", value: "marca"},
 					{label: "model", value: "model"},
+					{label: "macTelf", value: "macTelf"},
 					{label: "switch", value: "switch"},
 					{label: "portSw", value: "portSw"},
 					{label: "roseta", value: "roseta"},
