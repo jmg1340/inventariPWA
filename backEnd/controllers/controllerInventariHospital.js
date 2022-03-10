@@ -1,6 +1,9 @@
 const modelInvHosp = require('../models/modelInventariHospital')
 
-// llistat de tots els documents
+/** 
+* Recupera tots els documents
+* @return {json} documents recuperats.
+*/
 exports.llistaTots = async  (req, res) => {
     // res.send("L'API de l'inventari va aqui");
     const resultatInv = await modelInvHosp.find({}, "edifici planta dept lloc elements")
@@ -9,7 +12,10 @@ exports.llistaTots = async  (req, res) => {
 }
 
 
-// llista un document
+/** 
+* recupera un document
+* @return {json} document recuperat.
+*/
 exports.llistaUn = async (req, res) => {
 	const resultatInv = await modelInvHosp.findById(req.params.id)
 	res.json(resultatInv)
@@ -17,7 +23,10 @@ exports.llistaUn = async (req, res) => {
 
 
 
-// inserta un document
+/** 
+* Inserta un document
+* @return {json} status de la operació d'inserció.
+*/
 exports.insertaUn = async (req, res) => {
 	// console.log("estic al ROUTER.POST del servidor")
 	// console.log(req.body)
@@ -33,7 +42,10 @@ exports.insertaUn = async (req, res) => {
 }
 
 
-// actualitza un document
+/** 
+* Actualitza un document
+* @return {json} status de la operació d'actualitzacio.
+*/
 exports.actualitzaUn = async (req, res) => {
 	console.log("estic al ROUTER.PUT del servidor")
 	console.log(req.body)
@@ -43,7 +55,10 @@ exports.actualitzaUn = async (req, res) => {
 
 
 
-// elimina un document
+/** 
+* Elimina un document
+* @return {json} status de la operació d'eliminació.
+*/
 exports.eliminaUn = async (req, res) => {
 	const resultatInv = await modelInvHosp.findByIdAndRemove(req.params.id)
 	res.json({status: "S'ha eliminat document"})

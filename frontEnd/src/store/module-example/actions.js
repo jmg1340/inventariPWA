@@ -1,16 +1,23 @@
 import Axios from "axios";
 const server = "http://localhost:3001";
 
+
+
 /* DADES EXTERNES */
 
 export async function actLlistarDades ( context) {
-      // 3. Recuperació de les dades de ES_registres"
-      const objResultat3 = await Axios.get( server + "/api_inventari/llistarRegistresES" );
-      console.log("objResultat3", objResultat3);
-      const arrJSON = objResultat3.data;
-      const arrCamps = Object.keys(arrJSON[0]);
+  console.log("context", context)
+  try {
+    const objResultat3 = await Axios.get( server + "/api_inventari/llistarRegistresES" );
+    console.log("objResultat3", objResultat3);
+    const arrJSON = objResultat3.data;
+    context.commit("mutGetDocsES", arrJSON)
+    
+    return "Num documents ES recuperats: " + arrJSON.length;    
+  } catch (error) {
+    return "ERROR al recuperar documents de ES" + error
+  }
 
-      return { arrJSON, arrCamps };
 }
 
 
@@ -170,8 +177,8 @@ export async function actActualitzarDoc(context, payload) {
       server + "/api_inventari/hospital/" + payload.idMongo,
       payload.registre
     );
-    // await context.dispatch("actGetDocs");
-    return result
+    console.log("result", result) 
+    await context.dispatch("actGetDocs");
 
   } catch (error) {
     console.log("error a actActualitzarDoc");

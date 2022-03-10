@@ -59,6 +59,10 @@ export default {
 		},
 
 		methods: {
+
+			/** 
+			* Elimina una propietat del element.
+			*/
 			eliminarPropietat () {
 				this.$emit("eliminarProp", this.propietat)
 			}

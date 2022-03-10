@@ -14,3 +14,10 @@ export function mutGetDocsAsepeyo(state, data) {
 }
 
 
+/*  DADES EXTERNES */
+
+export function mutGetDocsES(state, data) {
+  state.docsES = data;
+}
+
+

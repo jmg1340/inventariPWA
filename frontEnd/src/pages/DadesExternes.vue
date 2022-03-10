@@ -25,23 +25,29 @@
 							<td 
 								v-for="(camp2, id) in Object.keys(obj)" 
 								:key="'id'+id"
-								:class="{ 'bg-yellow': obj[camp2].accio == 'modificar', 'bg-red text-white': obj[camp2].accio == 'afegir'}"
+								:class="{ 
+													'bg-yellow': obj[camp2].accio == 'modificar' && camp2 !== '_id', 
+													'bg-red text-white': obj[camp2].accio == 'afegir' && camp2 !== '_id'
+												}"
 								>
 									<q-btn 
-										v-if="obj['HARDWARE_NAME'].accio === 'afegir' && camp2 === '_id'"
-										label="Afegir" 
+										v-if="obj[camp2].accio === 'afegir' && camp2 === '_id'"
 										dense noCaps
 										size="sm"
 										color="teal"
-										@click="afegirRegistreInventariHospital()" />	
+										@click="afegirRegistreInventariHospital()" >
+											{{ obj[camp2].accio }}
+									</q-btn>	
 									<q-btn 
-										v-else-if="obj['HARDWARE_NAME'].accio === '' && camp2 === '_id'"
-										label="Modificar" 
+										v-else-if="obj[camp2].accio === 'modificar' && camp2 === '_id'"
 										dense noCaps
 										size="sm"
 										color="primary"
-										@click="modificarRegistreInventariHospital(obj)" />	
-									<span v-else>  {{ obj[camp2].valor }} </span>
+										@click="modificarRegistreInventariHospital(obj)" >
+											{{ obj[camp2].accio }}
+									</q-btn>	
+									<!-- <span v-else-if="camp2.accio === '' && camp2 === '_id'"> obj[camp2].accio  &nbsp; </span> -->
+									<span v-else-if="camp2 !== '_id'"> {{ obj[camp2].valor }} </span>
 							</td>
 						</tr>
 					</tbody>
@@ -60,39 +66,37 @@
 
 <script>
 export default {
-	created() {
-		this.carregarRegistres()
+	beforeCreate() {
+		console.log("ESTIC A beforeCREATED")
+		this.$store.dispatch("modulInventari/actLlistarDades")
+		.then ( objResultat => {
+			
+		}).catch ( err => {
+			console.log("error a CREATED")
+		})
 	},
 
 	data() {
 		return {
-			arrJSON: [],
-			arrCamps: [],
+			// arrJSON: [],
+			// arrCamps: [],
 
-			equivalencies: {
-				HARDWARE_NAME:              { element: "pc", propietat: "ns" },
-				LLDP_RID1_SWITCH_SYSNAME:   { element: "pc", propietat: "switch" },
-				LLDP_RID1_SWITCH_PORTDESCR: { element: "pc", propietat: "portsw" },
-			}
+			// equivalencies: {
+			// 	HARDWARE_NAME:              { element: "pc", propietat: "ns" },
+			// 	LLDP_RID1_SWITCH_SYSNAME:   { element: "pc", propietat: "switch" },
+			// 	LLDP_RID1_SWITCH_PORTDESCR: { element: "pc", propietat: "portsw" },
+			// }
 		}
 	},
 
 	methods: { 
-		carregarRegistres() {
-			this.$store.dispatch("modulInventari/actLlistarDades")
-			.then ( objResultat => {
-			
-				if ( objResultat.error === undefined ){
-					this.arrJSON = objResultat.arrJSON
-					this.arrCamps = objResultat.arrCamps
-				} else {
-					console.log("Error a l'importar: ", objResultat.error)
-				}
-			}).catch ( err => {
-				console.log("error a CREATED")
-			})
-		},
 
+
+		/** 
+		* Acció d'importar fitxer csv.
+		* @summary If the description is long, write your summary here. Otherwise, feel free to remove this.
+		* @param {String} fitxet - nom del fitxer a importar.
+		*/
 
 		importar (fitxer) {
 			this.$store.dispatch("modulInventari/actGetCSV", fitxer)
@@ -102,7 +106,7 @@ export default {
 				.then ( objResultat => {
 				
 					if ( objResultat.error === undefined ){
-						this.arrJSON = objResultat.arrJSON
+						arrJSON = objResultat.arrJSON
 						this.arrCamps = objResultat.arrCamps
 					} else {
 						console.log("Error a l'importar: ", objResultat.error)
@@ -120,6 +124,13 @@ export default {
 			console.log("afegir registre")
 		},
 
+
+		/** 
+		* Modificar document quan ELEMENTS.PC.NS == HARDWARE_NAME.
+		* @summary If the description is long, write your summary here. Otherwise, feel free to remove this.
+		* @param {ParamDataTypeHere} parameterNameHere - Brief description of the parameter here. Note: For other notations of data types, please refer to JSDocs: DataTypes command.
+		* @return {ReturnValueDataTypeHere} Brief description of the returning value here.
+		*/
 
 		modificarRegistreInventariHospital (objRegistre) { 
 			console.log("objRegistre", objRegistre)
@@ -158,7 +169,7 @@ export default {
 				this.$store.dispatch("modulInventari/actActualitzarDoc", {idMongo, registre: registreObtingut})
 				.then( result => {
 					console.log("resultat de dades actualizades", result.data)
-					this.carregarRegistres()
+					// this.carregarRegistres()
 				})
 
 			})
@@ -169,57 +180,85 @@ export default {
 	},
 
 	computed: { 
+		arrCamps () { 
+			
+			try {
+				console.log("docsES:", this.$store.state.modulInventari.docsES)
+				return Object.keys(this.$store.state.modulInventari.docsES[0]);  // al primer registre hi ha els noms dels camp
+			} catch (error) {
+				return []
+			}
+			
+		},
+
 		arrJSON2 () { 
 
-			// array documents de inventari hospital
-			const arrDocsHosp = this.$store.state.modulInventari.docs;
+			try {
+				// arr documents de Elastic search
+				const arrJSON = this.$store.state.modulInventari.docsES;
+				
+				// array documents de inventari hospital
+				const arrDocsHosp = this.$store.state.modulInventari.docs;
 
-			return this.arrJSON.map( obj => {
-				// el valor de cada propietat de l'obj el convertim en un objecte on les propietats seran VALOR i SEMAFOR
-				// Per ex: obj.LLDP_RID1_SWITCH_SYSNAME = "XXXXX" el convetrim a obj.LLDP_RID1_SWITCH_SYSNAME = {valor: "XXXXX", accio=""} 
-				
-				if (obj.HARDWARE_NAME === "S4AV0146") console.log("obj", obj)
+				return arrJSON.map( obj => {
+					// el valor de cada propietat de l'obj el convertim en un objecte on les propietats seran VALOR i SEMAFOR
+					// Per ex: obj.LLDP_RID1_SWITCH_SYSNAME = "XXXXX" el convetrim a obj.LLDP_RID1_SWITCH_SYSNAME = {valor: "XXXXX", accio=""} 
+					
+					if (obj.HARDWARE_NAME === "S4AV0146") console.log("obj", obj)
 
-				Object.keys(obj).forEach( prop => obj[prop] = { valor: obj[prop], accio: "" })
-				
-				
-				const objTrobat = arrDocsHosp.find( objDocHosp => objDocHosp.elements.pc.ns.includes(obj.HARDWARE_NAME.valor))
-				// console.log("objTrobat",objTrobat)
-				if ( objTrobat === undefined) {
-					// el ns del pc de les dades de Elastic Search no existeix al array de documents de inventari Hospital
-					obj._id.valor = ""
-					obj.HARDWARE_NAME.accio = "afegir"
-					obj.LLDP_RID1_SWITCH_SYSNAME.accio =  (obj.LLDP_RID1_SWITCH_SYSNAME.valor === '-') ? "" : "afegir"
-					obj.LLDP_RID1_SWITCH_PORTDESCR.accio = (['-', 'PC Port'].includes(obj.LLDP_RID1_SWITCH_PORTDESCR.valor) ) ? "" : "afegir"
-				} else {
-					// el ns del pc de les dades de Elastic Search SI existeix. 
-					// Ara cal mirar si la resta de camps equivalents existeixen o s'ha de modificar el seu valor
-					obj._id.valor = objTrobat._id
-					switch ( objTrobat.elements.pc.switch ) {
-						case undefined:
-							obj.LLDP_RID1_SWITCH_SYSNAME.accio =  (obj.LLDP_RID1_SWITCH_SYSNAME.valor === '-') ? "" : "afegir"
-							break
-						case obj.LLDP_RID1_SWITCH_SYSNAME.valor:
-							break
-						default:
-							obj.LLDP_RID1_SWITCH_SYSNAME.accio = "modificar"
+					Object.keys(obj).forEach( prop => obj[prop] = { valor: obj[prop], accio: "" })
+					
+					
+					const objTrobat = arrDocsHosp.find( objDocHosp => objDocHosp.elements.pc.ns.includes(obj.HARDWARE_NAME.valor))
+					// console.log("objTrobat",objTrobat)
+					if ( objTrobat === undefined) {
+						// el ns del pc de les dades de Elastic Search no existeix al array de documents de inventari Hospital
+						obj._id.valor = ""
+						obj._id.accio = "afegir"
+						obj.HARDWARE_NAME.accio = "afegir"
+						obj.LLDP_RID1_SWITCH_SYSNAME.accio =   (obj.LLDP_RID1_SWITCH_SYSNAME.valor === '-') ? "" : "afegir"
+						obj.LLDP_RID1_SWITCH_PORTDESCR.accio = (['-', 'PC Port'].includes(obj.LLDP_RID1_SWITCH_PORTDESCR.valor) ) ? "" : "afegir"
+					} else {
+						// el ns del pc de les dades de Elastic Search SI existeix. 
+						obj._id.valor = objTrobat._id 	// ens servirà despres per trobar el registre a la colecció inventariHospital
+						
+						// Ara cal mirar si la resta de camps equivalents existeixen o s'ha de modificar el seu valor
+						
+						switch ( objTrobat.elements.pc.switch ) {
+							case undefined:
+								if (obj.LLDP_RID1_SWITCH_SYSNAME.valor !== '-') obj.LLDP_RID1_SWITCH_SYSNAME.accio =  "afegir"
+								break
+							case obj.LLDP_RID1_SWITCH_SYSNAME.valor:
+								break
+							default:
+								obj.LLDP_RID1_SWITCH_SYSNAME.accio = "modificar"
+						}
+					
+						switch ( objTrobat.elements.pc.portsw ) {
+							case undefined:
+								if (! ['-', 'PC Port'].includes(obj.LLDP_RID1_SWITCH_PORTDESCR.valor) ) obj.LLDP_RID1_SWITCH_PORTDESCR.accio =  "afegir"
+								break
+							case obj.LLDP_RID1_SWITCH_PORTDESCR.valor:
+								break
+							default:
+								obj.LLDP_RID1_SWITCH_PORTDESCR.accio = "modificar"
+						}
+
+
+						// si hi ha alguna accio diferent de "", posar _id.accio = "modificar". Aixo fara que aparegui el boto "modificar"
+						if ( obj.LLDP_RID1_SWITCH_PORTDESCR.accio.length !== 0 ||
+								obj.LLDP_RID1_SWITCH_SYSNAME.accio.length   !== 0) {
+										obj._id.accio = "modificar"
+						}
 					}
-				
-					switch ( objTrobat.elements.pc.portsw ) {
-						case undefined:
-							obj.LLDP_RID1_SWITCH_PORTDESCR.accio = (['-', 'PC Port'].includes(obj.LLDP_RID1_SWITCH_PORTDESCR.valor) ) ? "" : "afegir"
-							break
-						case obj.LLDP_RID1_SWITCH_PORTDESCR.valor:
-							break
-						default:
-							obj.LLDP_RID1_SWITCH_PORTDESCR.accio = "modificar"
-					}
-				
-				}
 
-				// console.log(obj)
-				return obj
-			})
+					// console.log(obj)
+					return obj
+				})
+				
+			} catch (error) {
+				return []
+			}
 		}
 	}
 

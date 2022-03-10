@@ -1,6 +1,7 @@
 export default function () {
   return {
     docs: [],
-		docsAsepeyo: []
+		docsAsepeyo: [],
+    docsES: []
   }
 }
