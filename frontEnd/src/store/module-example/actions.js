@@ -13,9 +13,11 @@ export async function actLlistarDades ( context) {
     const arrJSON = objResultat3.data;
     context.commit("mutGetDocsES", arrJSON)
     
-    return "Num documents ES recuperats: " + arrJSON.length;    
+    // return "Num documents ES recuperats: " + arrJSON.length;    
   } catch (error) {
-    return "ERROR al recuperar documents de ES" + error
+    console.log("Error actLlistaDAdes")
+    console.log(error)
+    // return "ERROR al recuperar documents de ES" + error
   }
 
 }
@@ -152,7 +154,7 @@ export async function actGetDoc(context, id) {
   try {
     const result = await Axios.get(server + "/api_inventari/hospital/" + id);
     const registreObtingut = result.data;
-    context.commit("mutGetDoc", registreObtingut);
+    // context.commit("mutGetDoc", registreObtingut);
     return registreObtingut
 
   } catch (error) {
@@ -179,7 +181,8 @@ export async function actActualitzarDoc(context, payload) {
     );
     console.log("result", result) 
     await context.dispatch("actGetDocs");
-
+    return result
+    
   } catch (error) {
     console.log("error a actActualitzarDoc");
     console.log(error);

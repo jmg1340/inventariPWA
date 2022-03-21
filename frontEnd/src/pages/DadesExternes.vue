@@ -53,6 +53,7 @@
 					</tbody>
 				</q-markup-table>
 
+
 			</div>
 		</div>
 
@@ -66,11 +67,11 @@
 
 <script>
 export default {
-	beforeCreate() {
-		console.log("ESTIC A beforeCREATED")
+	created() {
+		console.log("ESTIC A CREATED")
 		this.$store.dispatch("modulInventari/actLlistarDades")
 		.then ( objResultat => {
-			
+			this.$store.dispatch("modulInventari/actGetDocs")
 		}).catch ( err => {
 			console.log("error a CREATED")
 		})
@@ -78,7 +79,7 @@ export default {
 
 	data() {
 		return {
-			// arrJSON: [],
+			arrJSON: [],
 			// arrCamps: [],
 
 			// equivalencies: {
@@ -148,7 +149,7 @@ export default {
 				if ( objRegistre.LLDP_RID1_SWITCH_SYSNAME.accio === "afegir" || 
 						 objRegistre.LLDP_RID1_SWITCH_SYSNAME.accio === "modificar") {
 
-					// veure si es tracta d'un swithc o de la mac d'un telefon
+					// veure si es tracta d'un switch o de la mac d'un telefon
 					if ( /^SW-/.test(objRegistre.LLDP_RID1_SWITCH_SYSNAME.valor) ) {
 						registreObtingut.elements.pc.switch = objRegistre.LLDP_RID1_SWITCH_SYSNAME.valor
 					} else {
@@ -195,12 +196,14 @@ export default {
 
 			try {
 				// arr documents de Elastic search
-				const arrJSON = this.$store.state.modulInventari.docsES;
+				this.arrJSON = JSON.parse(JSON.stringify(this.$store.state.modulInventari.docsES));
 				
 				// array documents de inventari hospital
 				const arrDocsHosp = this.$store.state.modulInventari.docs;
 
-				return arrJSON.map( obj => {
+				
+
+				return this.arrJSON.map( obj => {
 					// el valor de cada propietat de l'obj el convertim en un objecte on les propietats seran VALOR i SEMAFOR
 					// Per ex: obj.LLDP_RID1_SWITCH_SYSNAME = "XXXXX" el convetrim a obj.LLDP_RID1_SWITCH_SYSNAME = {valor: "XXXXX", accio=""} 
 					
@@ -211,6 +214,7 @@ export default {
 					
 					const objTrobat = arrDocsHosp.find( objDocHosp => objDocHosp.elements.pc.ns.includes(obj.HARDWARE_NAME.valor))
 					// console.log("objTrobat",objTrobat)
+					
 					if ( objTrobat === undefined) {
 						// el ns del pc de les dades de Elastic Search no existeix al array de documents de inventari Hospital
 						obj._id.valor = ""
@@ -224,15 +228,34 @@ export default {
 						
 						// Ara cal mirar si la resta de camps equivalents existeixen o s'ha de modificar el seu valor
 						
-						switch ( objTrobat.elements.pc.switch ) {
-							case undefined:
-								if (obj.LLDP_RID1_SWITCH_SYSNAME.valor !== '-') obj.LLDP_RID1_SWITCH_SYSNAME.accio =  "afegir"
-								break
-							case obj.LLDP_RID1_SWITCH_SYSNAME.valor:
-								break
-							default:
-								obj.LLDP_RID1_SWITCH_SYSNAME.accio = "modificar"
+						if (obj.LLDP_RID1_SWITCH_SYSNAME.valor !== '-') {
+
+							if ( /^SW-/.test(obj.LLDP_RID1_SWITCH_SYSNAME.valor) ) {    // es tracta d'un switch
+								if (objTrobat.elements.pc.switch === undefined)  {
+									obj.LLDP_RID1_SWITCH_SYSNAME.accio = "afegir"
+								} else if ( objTrobat.elements.pc.switch !== obj.LLDP_RID1_SWITCH_SYSNAME.valor) {
+									obj.LLDP_RID1_SWITCH_SYSNAME.accio = "modificar"
+								}
+							} else {	// es tracta de la mac d'un telf
+								if (objTrobat.elements.pc.macTelf === undefined)  {
+									obj.LLDP_RID1_SWITCH_SYSNAME.accio = "afegir"
+								} else if ( objTrobat.elements.pc.macTelf !== obj.LLDP_RID1_SWITCH_SYSNAME.valor) {
+									obj.LLDP_RID1_SWITCH_SYSNAME.accio = "modificar"
+								}
+
+							}
 						}
+
+						// switch ( objTrobat.elements.pc.switch ) {
+						// 	case undefined:
+						// 		if (obj.LLDP_RID1_SWITCH_SYSNAME.valor !== '-') obj.LLDP_RID1_SWITCH_SYSNAME.accio =  "afegir"
+						// 		break
+						// 	case obj.LLDP_RID1_SWITCH_SYSNAME.valor:
+						// 		break
+						// 	default:
+						// 		obj.LLDP_RID1_SWITCH_SYSNAME.accio = "modificar"
+						// }
+					
 					
 						switch ( objTrobat.elements.pc.portsw ) {
 							case undefined:
