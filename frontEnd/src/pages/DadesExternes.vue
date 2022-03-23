@@ -2,6 +2,7 @@
 	<q-page class="q-pa-lg">
 		<div class="col">
 			<q-btn color="teal" noCaps dense @click="importar('dadesES.csv')">Importar</q-btn>
+			<q-btn color="orange" noCaps dense @click="modificarTots()" class="q-ml-md">Modificar TOTS</q-btn>
 		</div>
 
 		<div class="col text-h6">Dades Externes <span class="text-caption"> ( {{ arrJSON2.length }} registres )</span></div>
@@ -126,6 +127,13 @@ export default {
 		},
 
 
+		modificarTots () {
+			this.arrJSON.filter( obj => obj._id.accio === "modificar")
+			.forEach( obj => this.modificarRegistreInventariHospital(obj))
+		},
+
+
+
 		/** 
 		* Modificar document quan ELEMENTS.PC.NS == HARDWARE_NAME.
 		* @summary If the description is long, write your summary here. Otherwise, feel free to remove this.
@@ -149,12 +157,25 @@ export default {
 				if ( objRegistre.LLDP_RID1_SWITCH_SYSNAME.accio === "afegir" || 
 						 objRegistre.LLDP_RID1_SWITCH_SYSNAME.accio === "modificar") {
 
-					// veure si es tracta d'un switch o de la mac d'un telefon
-					if ( /^SW-/.test(objRegistre.LLDP_RID1_SWITCH_SYSNAME.valor) ) {
-						registreObtingut.elements.pc.switch = objRegistre.LLDP_RID1_SWITCH_SYSNAME.valor
+					if ( objRegistre.LLDP_RID1_SWITCH_SYSNAME.valor === "-" ){
+						// seria el cas de que a document de la coleccio fins ara havien propietats switch, portsw, mactelf, macDX. Ara el valor es "-" per lo que s'han d'eliminar dites propietats
+						if ( registreObtingut.elements.pc.macDX ) 		delete registreObtingut.elements.pc.macDX
+						if ( registreObtingut.elements.pc.macTelf ) 	delete registreObtingut.elements.pc.macTelf
+						if ( registreObtingut.elements.pc.switch ) 		delete registreObtingut.elements.pc.switch
+						if ( registreObtingut.elements.pc.portsw ) 		delete registreObtingut.elements.pc.portsw
+
 					} else {
-						registreObtingut.elements.pc.macTelf = objRegistre.LLDP_RID1_SWITCH_SYSNAME.valor
+						// veure si es tracta d'un switch, la mac d'una DX o la mac d'un telefon
+						if ( /^SW-/.test(objRegistre.LLDP_RID1_SWITCH_SYSNAME.valor) ) {
+							registreObtingut.elements.pc.switch = objRegistre.LLDP_RID1_SWITCH_SYSNAME.valor
+						} else if ( /^SEP/.test(objRegistre.LLDP_RID1_SWITCH_SYSNAME.valor) ) {   // mac DX
+							registreObtingut.elements.pc.macDX = objRegistre.LLDP_RID1_SWITCH_SYSNAME.valor.substring(3)  // omitim el "SEP"
+						} else {    // mac Telf
+							registreObtingut.elements.pc.macTelf = objRegistre.LLDP_RID1_SWITCH_SYSNAME.valor
+						}
+
 					}
+					
 					
 				} 
 
@@ -207,12 +228,12 @@ export default {
 					// el valor de cada propietat de l'obj el convertim en un objecte on les propietats seran VALOR i SEMAFOR
 					// Per ex: obj.LLDP_RID1_SWITCH_SYSNAME = "XXXXX" el convetrim a obj.LLDP_RID1_SWITCH_SYSNAME = {valor: "XXXXX", accio=""} 
 					
-					if (obj.HARDWARE_NAME === "S4AV0146") console.log("obj", obj)
+					// if (obj.HARDWARE_NAME === "S4AV0146") console.log("obj", obj)
 
 					Object.keys(obj).forEach( prop => obj[prop] = { valor: obj[prop], accio: "" })
 					
 					
-					const objTrobat = arrDocsHosp.find( objDocHosp => objDocHosp.elements.pc.ns.includes(obj.HARDWARE_NAME.valor))
+					const objTrobat = arrDocsHosp.find( objDocHosp => objDocHosp.elements.pc.ns.toLowerCase().includes(obj.HARDWARE_NAME.valor.toLowerCase()))
 					// console.log("objTrobat",objTrobat)
 					
 					if ( objTrobat === undefined) {
@@ -221,30 +242,52 @@ export default {
 						obj._id.accio = "afegir"
 						obj.HARDWARE_NAME.accio = "afegir"
 						obj.LLDP_RID1_SWITCH_SYSNAME.accio =   (obj.LLDP_RID1_SWITCH_SYSNAME.valor === '-') ? "" : "afegir"
-						obj.LLDP_RID1_SWITCH_PORTDESCR.accio = (['-', 'PC Port'].includes(obj.LLDP_RID1_SWITCH_PORTDESCR.valor) ) ? "" : "afegir"
+						obj.LLDP_RID1_SWITCH_PORTDESCR.accio = ( /^gi/.test(obj.LLDP_RID1_SWITCH_PORTDESCR.valor) ) ? "afegir" : ""
+					
 					} else {
 						// el ns del pc de les dades de Elastic Search SI existeix. 
 						obj._id.valor = objTrobat._id 	// ens servirà despres per trobar el registre a la colecció inventariHospital
 						
 						// Ara cal mirar si la resta de camps equivalents existeixen o s'ha de modificar el seu valor
-						
 						if (obj.LLDP_RID1_SWITCH_SYSNAME.valor !== '-') {
 
-							if ( /^SW-/.test(obj.LLDP_RID1_SWITCH_SYSNAME.valor) ) {    // es tracta d'un switch
+							if ( /^SW-/.test(obj.LLDP_RID1_SWITCH_SYSNAME.valor) ) { 
+								// es tracta d'un switch   
 								if (objTrobat.elements.pc.switch === undefined)  {
 									obj.LLDP_RID1_SWITCH_SYSNAME.accio = "afegir"
 								} else if ( objTrobat.elements.pc.switch !== obj.LLDP_RID1_SWITCH_SYSNAME.valor) {
 									obj.LLDP_RID1_SWITCH_SYSNAME.accio = "modificar"
 								}
-							} else {	// es tracta de la mac d'un telf
+
+							} else if( /^SEP/.test(obj.LLDP_RID1_SWITCH_SYSNAME.valor) ) {	
+								// es tracta de la mac d'una DX
+								if (objTrobat.elements.pc.macDX === undefined)  {
+									obj.LLDP_RID1_SWITCH_SYSNAME.accio = "afegir"
+								} else if ( objTrobat.elements.pc.macDX !== obj.LLDP_RID1_SWITCH_SYSNAME.valor.substring(3)) {
+									obj.LLDP_RID1_SWITCH_SYSNAME.accio = "modificar"
+								}
+
+							} else {	
+								// es tracta de la mac d'un telf
 								if (objTrobat.elements.pc.macTelf === undefined)  {
 									obj.LLDP_RID1_SWITCH_SYSNAME.accio = "afegir"
 								} else if ( objTrobat.elements.pc.macTelf !== obj.LLDP_RID1_SWITCH_SYSNAME.valor) {
 									obj.LLDP_RID1_SWITCH_SYSNAME.accio = "modificar"
 								}
-
 							}
+
+						} else {
+							// Per ex. seria el cas de que es posi un telf fixe, que fins ara estava associat a aquest ordinador, a un altre ordinador.
+							// Per tant, hem de mirar si al registre de objTrobat existeix propietat macTelf i/o macDX, Cas de que sí, s'han d'eliminar
+						
+							if ( objTrobat.elements.pc.macTelf || objTrobat.elements.pc.macDX)  
+								obj.LLDP_RID1_SWITCH_SYSNAME.accio = "modificar"
+
+
 						}
+
+
+
 
 						// switch ( objTrobat.elements.pc.switch ) {
 						// 	case undefined:
@@ -259,7 +302,8 @@ export default {
 					
 						switch ( objTrobat.elements.pc.portsw ) {
 							case undefined:
-								if (! ['-', 'PC Port'].includes(obj.LLDP_RID1_SWITCH_PORTDESCR.valor) ) obj.LLDP_RID1_SWITCH_PORTDESCR.accio =  "afegir"
+								if ( /^gi/.test(obj.LLDP_RID1_SWITCH_PORTDESCR.valor) ) 
+									obj.LLDP_RID1_SWITCH_PORTDESCR.accio =  "afegir"
 								break
 							case obj.LLDP_RID1_SWITCH_PORTDESCR.valor:
 								break
