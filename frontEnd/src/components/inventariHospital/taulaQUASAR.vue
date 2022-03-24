@@ -246,6 +246,7 @@
     <jmg_formulari
       :obrirFormulari="obrirFormulari"
       :idMongo="idMongo"
+      objESNou= null
       @tancarFormulari="obrirFormulari = false"
     />
   </div>
@@ -434,7 +435,7 @@ export default {
     
 		myfilterMethod() {
 
-      const arrFiletered = this.docs.filter(row => {
+      const arrFiltered = this.docs.filter(row => {
         if (
           new RegExp(this.filter.fedifici, "i").test(row.edifici) &&
           new RegExp(this.filter.fplanta, "i").test(row.planta) &&
@@ -449,8 +450,8 @@ export default {
         }
       });
 
-      this.recompte = arrFiletered.length
-      return arrFiletered
+      this.recompte = arrFiltered.length
+      return arrFiltered
     },
 
     comprovarClau (elements) {

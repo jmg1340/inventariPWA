@@ -36,7 +36,7 @@
 										dense noCaps
 										size="sm"
 										color="teal"
-										@click="afegirRegistreInventariHospital()" >
+										@click="afegirRegistreInventariHospital(obj)" >
 											{{ obj[camp2].accio }}
 									</q-btn>	
 									<q-btn 
@@ -60,14 +60,26 @@
 
 
 
-
+		<!-- FORMULARI EDICIO / AFEGIR LLOCS DE TREBALL + ELEMENTS -->
+    <jmg_formulari
+      :obrirFormulari="obrirFormulari"
+      :idMongo="null"
+			:objESNou="objNouES"
+      @tancarFormulari="obrirFormulari = false"
+    />
 
 
 	</q-page>
 </template>
 
 <script>
+import jmg_formulari from "../components/inventariHospital/formulariDoc.vue";
+
+
+
 export default {
+	components: { jmg_formulari },
+
 	created() {
 		console.log("ESTIC A CREATED")
 		this.$store.dispatch("modulInventari/actLlistarDades")
@@ -78,9 +90,13 @@ export default {
 		})
 	},
 
+
+
 	data() {
 		return {
 			arrJSON: [],
+			obrirFormulari: false,
+			objNouES: null     // utilitzat al formulariDoc.vue per als nous elements (ns de pc) que no estan a la coleccio HospitalElements
 			// arrCamps: [],
 
 			// equivalencies: {
@@ -122,8 +138,10 @@ export default {
 
 
 
-		afegirRegistreInventariHospital (idInvHosp) { 
-			console.log("afegir registre")
+		afegirRegistreInventariHospital (obj) { 
+			console.log("--- afegir registre ---")
+			this.objNouES = obj
+			this.obrirFormulari = true
 		},
 
 

@@ -127,7 +127,14 @@ const server = "http://localhost:3001";
 
 export default {
 	components: { jmg_clau, jmg_propietats },
-	props: ["obrirFormulari", "idMongo"],
+	props: [
+		"obrirFormulari",
+	 	"idMongo",  // utilitzat desde taulaQuasar.vue
+	 	"objESNou"	// utilitzat desde DadesExternes.vue per a nous elements no trobats a la colecció HospitalElements
+	 ],
+
+	created () {
+	},
 
   data() {
     return {
@@ -154,6 +161,10 @@ export default {
 		// al mostrar el quadre de dialeg
 		async onShow(){
 			console.log("estic onShow del Formulari")
+			console.log("idMongo:", this.idMongo)
+			console.log("objESNou:", this.objESNou)
+
+
 			if (this.idMongo != null){
 				this.nouRegistre = false;
 
@@ -176,7 +187,46 @@ export default {
 					console.log("error a actGetDocs")
 					console.log( error )
 				}
+
 			} else {
+				// es tracta d'un nou document on hem d'informar les dades al formulari
+
+				if (this.objESNou !== null) {
+					// de DadesExternes.vue omplim automaticament els elements, propietats i valors que siguin
+					const obj = {}
+
+					// obj.pc = { ns: this.objESNou.HARDWARE_NAME.valor }
+
+					obj.pc = {}
+					obj.pc.ns = this.objESNou.HARDWARE_NAME.valor
+
+					if ( this.objESNou.LLDP_RID1_SWITCH_SYSNAME.accio === "afegir") {
+						// Diferenciar entre switch, mac telefon o mac DX
+
+						if ( /^SW-/.test(this.objESNou.LLDP_RID1_SWITCH_SYSNAME.valor) ) {
+							obj.pc.switch = this.objESNou.LLDP_RID1_SWITCH_SYSNAME.valor
+						} else if ( /^SEP/.test(this.objESNou.LLDP_RID1_SWITCH_SYSNAME.valor) ) {   // mac DX
+							obj.pc.macDX = this.objESNou.LLDP_RID1_SWITCH_SYSNAME.valor.substring(3)  // omitim el "SEP"
+						} else {    // mac Telf
+							obj.pc.macTelf = this.objESNou.LLDP_RID1_SWITCH_SYSNAME.valor
+						}
+
+					}
+
+
+
+					if ( this.objESNou.LLDP_RID1_SWITCH_PORTDESCR.accio === "afegir") {
+						obj.pc.portsw = this.objESNou.LLDP_RID1_SWITCH_PORTDESCR.valor
+					}
+
+
+
+					this.elements = obj
+					console.log("this.elements:", this.elements)
+				}
+
+
+
 				this.nouRegistre = true;
 			}
 		},
