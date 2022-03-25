@@ -11,9 +11,10 @@ export async function actLlistarDades ( context) {
     const objResultat3 = await Axios.get( server + "/api_inventari/llistarRegistresES" );
     console.log("objResultat3", objResultat3);
     const arrJSON = objResultat3.data;
+		console.log("arrJSON", arrJSON)
     context.commit("mutGetDocsES", arrJSON)
     
-    // return "Num documents ES recuperats: " + arrJSON.length;    
+    return "Num documents ES recuperats: " + arrJSON.length;    
   } catch (error) {
     console.log("Error actLlistaDAdes")
     console.log(error)
@@ -41,7 +42,7 @@ export async function actGetCSV(context, fitxer) {
     let arrJSON = [];
     // 2. per cada linia, seprarem per comes i creem objecte JSON amb les dades com a propietats
     arrLinies.forEach((linia, indice) => {
-      const arrDades = linia.split(",");
+      const arrDades = linia.trim().split(",");
 
       if (indice === 0) {
         // a la primera linia hi ha els noms dels camps
@@ -97,14 +98,14 @@ export async function actGetCSV(context, fitxer) {
       const objResultat = await Axios.delete(
         server + "/api_inventari//eliminarRegistresES"
       );
-      console.log("objResultat", objResultat);
+      console.log("objResultat eliminacio registres/docs ES: ", objResultat);
 
       // 2. Afegim noves dades de arrObjsDadesCSV a la colecció ES_registres
       const objResultat2 = await Axios.post(
         server + "/api_inventari/inserirRegistresES",
         { dades: JSON.stringify(arrObjsDadesCSV) }
       );
-      console.log("objResultat2", objResultat2);
+      console.log("objResultat2 insercio de registres de Elastic Search", objResultat2);
 
       return
 

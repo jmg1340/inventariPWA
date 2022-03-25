@@ -113,7 +113,7 @@ export default {
 		/** 
 		* Acció d'importar fitxer csv.
 		* @summary If the description is long, write your summary here. Otherwise, feel free to remove this.
-		* @param {String} fitxet - nom del fitxer a importar.
+		* @param {String} fitxer - nom del fitxer a importar.
 		*/
 
 		importar (fitxer) {
@@ -124,11 +124,13 @@ export default {
 				.then ( objResultat => {
 				
 					if ( objResultat.error === undefined ){
-						arrJSON = objResultat.arrJSON
-						this.arrCamps = objResultat.arrCamps
+						const arrJSON = objResultat.arrJSON
+						// this.arrCamps = objResultat.arrCamps
 					} else {
 						console.log("Error a l'importar: ", objResultat.error)
 					}
+				}).catch ( error  => {
+					console.log( "Error 1", error )
 				})
 
 			}).catch ( error  => {

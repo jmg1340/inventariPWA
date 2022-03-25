@@ -1,9 +1,15 @@
 PER FER UN DUPLICAT D'UNA COLLECTION
 db.HospitalElements.aggregate( [ {$out: "copiaHE"}  ])
 
+db.HospitalElements.copyTo("copiaHE")     // deprecated
+
 ELIMINAR TOTS ELS DOCUMENTS D'UNA COLLECTION
 db.HospitalElements.deleteMany({})
 
 
 INSERTAR UN DOCUMENTS A UNA collection
 db.HospitalElements.insertOne( {edifici: "2", planta: "1", dept: "departament CCC", lloc: "lloc CCC", elements: {"pc: {"ns": "aaaa"}} }  )
+
+
+VERIFICAR SI EXISTEIX UNA PROPIETAT I QUE NO SIGUI NULA
+db.HospitalElements.find({"elements.pc.portSw": {$exists: true, $ne: null }})
