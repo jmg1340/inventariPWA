@@ -26,17 +26,36 @@ export async function actLlistarDades ( context) {
 
 export async function actGetCSV(context, fitxer) {
   try {
+
+    let formData = new FormData();
+    formData.append("file", fitxer);
+
+    // pujar el fitxer al servidor
+    const resultPujarFitxer = await Axios.post(
+      server + "/api_inventari/upload/", 
+      formData,
+      {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      }
+    );
+    
+    console.log("ACTIONS - actGetCSV - resultPujarFitxer", resultPujarFitxer)
+
     // Obtencio de les dades en brut del fitxer
+    console.log("ACTIONS - actGetCSV - fitxer.name = ", fitxer.name)
     const result = await Axios.get(
-      server + "/api_inventari/dadesExternes/" + fitxer
+      server + "/api_inventari/dadesExternes/" + fitxer.name
     );
     const data = result.data;
+    console.log("ACTIONS - actGetCSV - data = ", data)
 
     // *** TRANSFORMACIO A FITXER JSON per despres importar-lo a la coleccio ES_registres***
 
     // 1. separem per linies
     const arrLinies = data.split("\n");
-    // console.log("arrLinies", arrLinies);
+    // console.log("ACTIONS - actGetCSV - arrLinies", arrLinies);
 
     let arrNomCamps = [];
     let arrJSON = [];
@@ -46,12 +65,12 @@ export async function actGetCSV(context, fitxer) {
 
       if (indice === 0) {
         // a la primera linia hi ha els noms dels camps
-        arrNomCamps = arrDades;
+        arrNomCamps = arrDades.map( (element) => element.replace(/["]+/g, '')); // treiem les " si en te
       } else {
         // per cada dada, anem construint objecte on cada propietat sera un camp
         let obj = {};
         arrDades.forEach((dada, index) => {
-          obj[arrNomCamps[index]] = dada;
+          obj[arrNomCamps[index]] = dada.replace(/["]+/g, '');  // treiem les " si en te
         });
 
         // un cop construit l'objecte, l'afegim al array
@@ -59,22 +78,36 @@ export async function actGetCSV(context, fitxer) {
       }
     });
 
+    console.log("ACTIONS - actGetCSV - arrJSON", arrJSON);
+
     // Les dades de arrJSON fins ara, son un historial dels inicis de sessió dels ordinadors. Per tant ens interessa fer un llistat unic de NS de cpus i sobre aquest llistat trobar la dada més actual de arrJSON.
 
     // 1. de totes els registres (arrJSON) fem un array de ns PC unics
     const arrNSUnics = arrJSON.reduce((acc, item) => {
-      if (!acc.includes(item.HARDWARE_NAME)) {
-        acc.push(item.HARDWARE_NAME);
+      // console.log("item", item)
+      // console.log("item.HARDWARE_NAME", item["HARDWARE_NAME"])
+      if ( item.HARDWARE_NAME !== undefined) {
+        if (!acc.includes(item["HARDWARE_NAME"])) {
+          acc.push(item["HARDWARE_NAME"]);
+        }        
       }
+
       return acc;
     }, []);
 
+    console.log("ACTIONS - actGetCSV - arrNSUnics", arrNSUnics);
+
+
     // 2. Per cada ns de arrNSUnics, obtenim el primer objecte coincident (que serà el més actual) per ns segons obj.HARDWARE_NAME
     const arrObjsDadesCSV = arrNSUnics.map(ns => {
-      return arrJSON.find(obj =>
-        obj.HARDWARE_NAME.toUpperCase().includes(ns.toUpperCase())
-      );
+      return arrJSON.find(obj =>{
+        // console.log("obj.HARDWARE_NAME" , obj.HARDWARE_NAME, "ns:", ns)
+        if (obj.HARDWARE_NAME !== undefined || ns !== undefined)
+          return obj.HARDWARE_NAME.toUpperCase().includes(ns.toUpperCase())
+      });
     });
+
+    console.log("ACTIONS - actGetCSV - arrObjsDadesCSV", arrObjsDadesCSV);
 
     // Aprofito per modificar la propietat on apareix al info del SW per a que quan sigui una mac de telf (*.asepeyo.site) modifiqui aquest valor per a que sigui nomes la mac (sense el 'SEP' i el '.asepeyo.site')
 

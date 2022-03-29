@@ -1,7 +1,19 @@
 <template>
 	<q-page class="q-pa-lg">
 		<div class="col">
-			<q-btn color="teal" noCaps dense @click="importar('dadesES.csv')">Importar</q-btn>
+
+			<!-- <q-uploader
+        url="http://localhost:3001//api_inventari/dadesExternes/"
+        style="max-width: 300px"
+      /> -->
+
+      <q-file color="purple-12" v-model="fitxer" label="Label">
+        <template v-slot:prepend>
+          <q-icon name="attach_file" />
+        </template>
+      </q-file>
+
+			<q-btn color="teal" noCaps dense @click="importar()">Importar</q-btn>
 			<q-btn color="orange" noCaps dense @click="modificarTots()" class="q-ml-md">Modificar TOTS</q-btn>
 		</div>
 
@@ -94,6 +106,7 @@ export default {
 
 	data() {
 		return {
+			fitxer: null,
 			arrJSON: [],
 			obrirFormulari: false,
 			objNouES: null     // utilitzat al formulariDoc.vue per als nous elements (ns de pc) que no estan a la coleccio HospitalElements
@@ -116,8 +129,10 @@ export default {
 		* @param {String} fitxer - nom del fitxer a importar.
 		*/
 
-		importar (fitxer) {
-			this.$store.dispatch("modulInventari/actGetCSV", fitxer)
+		importar () {
+			console.log("DADESEXTERNES - importar - fitxer", this.fitxer)
+
+			this.$store.dispatch("modulInventari/actGetCSV", this.fitxer)
 			.then ( () => {
 			
 				this.$store.dispatch("modulInventari/actLlistarDades")

@@ -3,6 +3,40 @@ const fs = require('fs');
 
 
 
+exports.pujarFitxer = async (req, res) => {
+	console.log("CONTROLLER_DADESEXTERNES - pujarFitxer")
+	console.log("req.files", req.files)
+	
+	try {
+		if(!req.files) {
+			res.send({
+				status: false,
+				message: 'No file uploaded'
+			});
+		} else {
+			//Use the name of the input field (i.e. "objFitxer") to retrieve the uploaded file
+			let objFitxer = req.files.file;
+			
+			//Use the mv() method to place the file in upload directory (i.e. "uploads")
+			objFitxer.mv('./dadesExternes/' + objFitxer.name);
+
+			//send response
+			res.send({
+					status: true,
+					message: 'File is uploaded',
+					data: {
+							name: objFitxer.name,
+							mimetype: objFitxer.mimetype,
+							size: objFitxer.size
+					}
+			});
+		}
+	} catch (err) {
+		res.status(500).send(err);
+	}	
+}
+
+
 // llistar contingut fitxer
 exports.importar = async (req, res) => {
 	console.log("Estic a la ruta /DADES EXTERNES")

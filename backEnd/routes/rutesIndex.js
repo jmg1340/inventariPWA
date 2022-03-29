@@ -21,6 +21,7 @@ router.get("/asepeyo", contrInvAsep.llistaTots)
 
 
 /* DADES EXTERNES */
+router.post("/upload", contrDadesExt.pujarFitxer)
 router.get("/dadesExternes/:fitxer", contrDadesExt.importar)
 router.delete("/eliminarRegistresES", contrDadesExt.eliminarRegistresES)
 router.post("/inserirRegistresES", contrDadesExt.inserirRegistresES)

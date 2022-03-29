@@ -2,6 +2,8 @@ const express = require("express");
 const morgan = require("morgan");
 const mongoose = require ('mongoose')
 const cors = require('cors')
+const fileUpload = require('express-fileupload');
+// const fileUpload = require('file-upload');
 
 const server = express();
 
@@ -20,6 +22,13 @@ server.set("port", process.env.port || 3001);
 server.use(morgan('dev'));
 server.use(express.json());
 server.use(cors())
+// enable files upload
+server.use(fileUpload({
+    createParentPath: false
+}));
+
+
+
 
 // ROUTES
 server.use("/api_inventari", require("./routes/rutesIndex"))
