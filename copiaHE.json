@@ -1,2217 +1,4654 @@
 [{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1309a"
+  },
   "edifici": "2",
   "planta": "-1B",
   "dept": "Comite empresa",
   "lloc": "comite empresa",
   "elements": {
-    "pc": {"ns": "S4pl4519"},
-    "monitor": {"ns": "sv305dfmg"},
-    "teclat": {"ns": "skm0m84893ag0000p8h"},
-    "ratoli": {"ns": "skm0m84893ag0000r51"}
+    "pc": {
+      "ns": "S4pl4519",
+      "switch": "SW-AMU139V0-16",
+      "portsw": "gi2"
+    },
+    "monitor": {
+      "ns": "sv305dfmg"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000p8h"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r51"
+    },
+    "escaner": {
+      "dossier": "asfasf"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1309b"
+  },
   "edifici": "2",
   "planta": "-1B",
   "dept": "Informatica",
   "lloc": "David Jara",
   "elements": {
-    "pc": {"ns": "ss4pl4192"},
-    "monitor": {"ns": "sv305dflm"},
-    "teclat": {"ns": "ag0000r41"},
-    "ratoli": {"ns": "ag0000r07"}
+    "pc": {
+      "ns": "ss4pl4192"
+    },
+    "monitor": {
+      "ns": "sv305dflm"
+    },
+    "teclat": {
+      "ns": "ag0000r41"
+    },
+    "ratoli": {
+      "ns": "ag0000r07"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1309c"
+  },
   "edifici": "2",
   "planta": "-1B",
   "dept": "Informatica",
   "lloc": "Antonio Gerena",
   "elements": {
-    "pc": {"ns": "ss4pl4597"},
-    "monitor": {"ns": "sv305bk1v"},
-    "teclat": {"ns": "ag0000l40"},
-    "ratoli": {"ns": "ag0000r2m"}
+    "pc": {
+      "ns": "ss4pl4597",
+      "macTelf": "2C0BE904935F"
+    },
+    "monitor": {
+      "ns": "sv305bk1v"
+    },
+    "teclat": {
+      "ns": "ag0000l40"
+    },
+    "ratoli": {
+      "ns": "ag0000r2m"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1309d"
+  },
   "edifici": "2",
   "planta": "-1B",
   "dept": "Informatica",
   "lloc": "Jordi Miserachs",
   "elements": {
-    "pc": {"ns": "ss4pl4554"},
-    "monitor": {"ns": "sv305dfm9"},
-    "teclat": {"ns": "avlc03t902x"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl4554",
+      "portsw": "gi2",
+      "switch": "SWITCH-INFORMATICA"
+    },
+    "monitor": {
+      "ns": "sv305dfm9"
+    },
+    "teclat": {
+      "ns": "avlc03t902x"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1309e"
+  },
   "edifici": "2",
   "planta": "-1",
   "dept": "DPV",
   "lloc": "JP Esplugas",
   "elements": {
-    "pc": {"ns": "S4pl8838"},
-    "monitor": {"ns": "sv305dfmc"},
-    "teclat": {"ns": "skm0m84893ag0000r0m"},
-    "ratoli": {"ns": "ag0000l7g"}
+    "pc": {
+      "ns": "S4pl8838",
+      "switch": "SW-AMU139V0-12",
+      "portsw": "gi7"
+    },
+    "monitor": {
+      "ns": "sv305dfmc"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000r0m"
+    },
+    "ratoli": {
+      "ns": "ag0000l7g"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1309f"
+  },
   "edifici": "2",
   "planta": "-1",
   "dept": "DPV",
   "lloc": "Santos Huertas",
   "elements": {
-    "pc": {"ns": "ss4pl4530"},
-    "monitor": {"ns": "sv305dfma"},
-    "teclat": {"ns": "skm0m84893ag0000r1y"},
-    "ratoli": {"ns": "AVLC03T"}
+    "pc": {
+      "ns": "ss4pl4530",
+      "switch": "SW-AMU139V0-12",
+      "portsw": "gi14"
+    },
+    "monitor": {
+      "ns": "sv305dfma"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000r1y"
+    },
+    "ratoli": {
+      "ns": "AVLC03T"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130a0"
+  },
   "edifici": "2",
   "planta": "-1",
   "dept": "DPV",
   "lloc": "Jodi Serra Pallisa",
   "elements": {
-    "pc": {"ns": "ss4pl8854"},
-    "monitor": {"ns": "sv305dflt"},
-    "teclat": {"ns": "skm0m84893ag0000r0n"},
-    "ratoli": {"ns": "8sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl8854"
+    },
+    "monitor": {
+      "ns": "sv305dflt"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000r0n"
+    },
+    "ratoli": {
+      "ns": "8sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130a1"
+  },
   "edifici": "2",
   "planta": "-1",
   "dept": "DPV",
   "lloc": "Toni Perramon",
   "elements": {
-    "pc": {"ns": "S4pl4222"},
-    "monitor": {"ns": "sv305dflw"},
-    "teclat": {"ns": "skm0m84893ag0000r25"},
-    "ratoli": {"ns": "ag0000r5l"}
+    "pc": {
+      "ns": "S4pl4222"
+    },
+    "monitor": {
+      "ns": "sv305dflw"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000r25"
+    },
+    "ratoli": {
+      "ns": "ag0000r5l"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130a2"
+  },
   "edifici": "2",
   "planta": "-1",
   "dept": "DPV",
   "lloc": "Xavier Panades",
   "elements": {
-    "pc": {"ns": "S4pl4183"},
-    "monitor": {"ns": "sv305dfll"},
-    "teclat": {"ns": "skm0m84893ag0000phb"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "S4pl4183",
+      "switch": "SW-AMU139V0-13",
+      "portsw": "gi2"
+    },
+    "monitor": {
+      "ns": "sv305dfll"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000phb"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130a3"
+  },
   "edifici": "2",
   "planta": "-1",
   "dept": "DPV",
   "lloc": "Evarist",
   "elements": {
-    "pc": {"ns": "S4pl8700"},
-    "monitor": {"ns": "sv305dfmf"},
-    "teclat": {"ns": "8sskm0m84893avlc03t908e"},
-    "ratoli": {"ns": "ag0000pxn"}
+    "pc": {
+      "ns": "S4pl8700",
+      "switch": "SW-AMU139V0-13",
+      "portsw": "gi14"
+    },
+    "monitor": {
+      "ns": "sv305dfmf"
+    },
+    "teclat": {
+      "ns": "8sskm0m84893avlc03t908e"
+    },
+    "ratoli": {
+      "ns": "ag0000pxn"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130a4"
+  },
   "edifici": "2",
   "planta": "-1",
   "dept": "DPV",
   "lloc": "Joan Lluis Rodr. Vilaro",
   "elements": {
-    "pc": {"ns": "ss4pl4539"},
-    "monitor": {"ns": "sv305dfly"},
-    "teclat": {"ns": "skm0m84893ag0000pkg"},
-    "ratoli": {"ns": "ag0000l59"}
+    "pc": {
+      "ns": "ss4pl4539",
+      "switch": "SW-AMU139V0-12",
+      "portsw": "gi4"
+    },
+    "monitor": {
+      "ns": "sv305dfly"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pkg"
+    },
+    "ratoli": {
+      "ns": "ag0000l59"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130a5"
+  },
   "edifici": "2",
   "planta": "-1",
   "dept": "DPV",
   "lloc": "J. Galindo",
   "elements": {
-    "pc": {"ns": "ss4pl4759"},
-    "monitor": {"ns": "sv305dfm0"},
-    "teclat": {"ns": "skm0m84893ag0000l4k"},
-    "ratoli": {"ns": "skm0m84893ag0000r1z"}
+    "pc": {
+      "ns": "ss4pl4759",
+      "switch": "SW-AMU139V0-12",
+      "portsw": "gi17"
+    },
+    "monitor": {
+      "ns": "sv305dfm0"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000l4k"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r1z"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130a6"
+  },
   "edifici": "2",
   "planta": "-1",
   "dept": "DPV",
   "lloc": "A. Cobos",
   "elements": {
-    "pc": {"ns": "ss4pl4528"},
-    "monitor": {"ns": "sv305dfm8"},
-    "teclat": {"ns": "skm0m84893ag0000r29"},
-    "ratoli": {"ns": "skm0m84893ag0000le6"}
+    "pc": {
+      "ns": "ss4pl4528"
+    },
+    "monitor": {
+      "ns": "sv305dfm8"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000r29"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000le6"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130a7"
+  },
   "edifici": "2",
   "planta": "-1",
   "dept": "DPV",
   "lloc": "Sergi",
   "elements": {
-    "pc": {"ns": "ss4pl0167"},
-    "monitor": {"ns": "sv305dflx"},
-    "teclat": {"ns": "skm0m84893ag0000la1"},
-    "ratoli": {"ns": "skm0m84893ag0000rcw"}
+    "pc": {
+      "ns": "ss4pl0167",
+      "switch": "SW-AMU139V0-12",
+      "portsw": "gi12"
+    },
+    "monitor": {
+      "ns": "sv305dflx"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000la1"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000rcw"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130a8"
+  },
   "edifici": "2",
   "planta": "-1",
   "dept": "DPV",
   "lloc": "F. Pons",
   "elements": {
-    "pc": {"ns": "ss4pl8845"},
-    "monitor": {"ns": "sv305bk1k"},
-    "teclat": {"ns": "skm0m84893ag0000pz9"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl8845"
+    },
+    "monitor": {
+      "ns": "sv305bk1k"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pz9"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130a9"
+  },
   "edifici": "2",
   "planta": "-1",
   "dept": "DPV",
   "lloc": "M A. Riguera",
   "elements": {
-    "pc": {"ns": "ss4pl8588"},
-    "monitor": {"ns": "sv305bhrh"},
-    "teclat": {"ns": "skm0m84893ag0000r0k"},
-    "ratoli": {"ns": "skm0m84893ag0000r5b"}
+    "pc": {
+      "ns": "ss4pl8588"
+    },
+    "monitor": {
+      "ns": "sv305bhrh"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000r0k"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r5b"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130aa"
+  },
   "edifici": "2",
   "planta": "-1",
   "dept": "DPV",
   "lloc": "Jordi Oliveras",
   "elements": {
-    "pc": {"ns": "ss4pl0174"},
-    "monitor": {"ns": "sv305dfmb"},
-    "teclat": {"ns": "skm0m84893ag0000pgk"},
-    "ratoli": {"ns": "skm0m84893ag0000rcr"}
+    "pc": {
+      "ns": "ss4pl0174",
+      "switch": "SW-AMU139V0-13",
+      "portsw": "gi16"
+    },
+    "monitor": {
+      "ns": "sv305dfmb"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pgk"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000rcr"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130ab"
+  },
   "edifici": "2",
   "planta": "-1",
   "dept": "DPV",
   "lloc": "Santi Rosell",
   "elements": {
-    "pc": {"ns": "ss4pl4373"},
-    "monitor": {"ns": "sv305bk1d"},
-    "teclat": {"ns": "8sskm0m84893avlc03t905g"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl4373",
+      "switch": "SW-AMU139V0-12",
+      "portsw": "gi6"
+    },
+    "monitor": {
+      "ns": "sv305bk1d"
+    },
+    "teclat": {
+      "ns": "8sskm0m84893avlc03t905g"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130ac"
+  },
   "edifici": "2",
   "planta": "-1",
   "dept": "DPV",
   "lloc": "Xavier Anies",
   "elements": {
-    "pc": {"ns": "ss4pl4540"},
-    "monitor": {"ns": "sv305bfcr"},
-    "teclat": {"ns": "skm0m84893ag0000p96"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl4540"
+    },
+    "monitor": {
+      "ns": "sv305bfcr"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000p96"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130ad"
+  },
   "edifici": "2",
   "planta": "-1",
   "dept": "DPV",
   "lloc": "Cristina Simon",
   "elements": {
-    "pc": {"ns": "ss4pl5078"},
-    "monitor": {"ns": "sv305dfm2"},
-    "teclat": {"ns": "skm0m84893ag0000pbk"},
-    "ratoli": {"ns": "skm0m84893ag0000r44"}
+    "pc": {
+      "ns": "ss4pl5078",
+      "switch": "SW-AMU139V0-13",
+      "portsw": "gi10"
+    },
+    "monitor": {
+      "ns": "sv305dfm2"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pbk"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r44"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130ae"
+  },
   "edifici": "2",
   "planta": "-1",
   "dept": "DPV",
   "lloc": "Miquel Moscardo",
   "elements": {
-    "pc": {"ns": "ss4pl8693"},
-    "monitor": {"ns": "sv305dflr"},
-    "teclat": {"ns": "8sskm0m84893avlc03t9087"},
-    "ratoli": {"ns": "skm0m84893ag0000r61"}
+    "pc": {
+      "ns": "ss4pl8693",
+      "switch": "SW-AMU139V0-12",
+      "portsw": "gi10"
+    },
+    "monitor": {
+      "ns": "sv305dflr"
+    },
+    "teclat": {
+      "ns": "8sskm0m84893avlc03t9087"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r61"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130af"
+  },
   "edifici": "2",
   "planta": "-1",
   "dept": "DPV",
   "lloc": "Sala proves (davant de Santos)",
   "elements": {
-    "pc": {"ns": ""},
-    "monitor": {"ns": ""}
+    "pc": {
+      "ns": ""
+    },
+    "monitor": {
+      "ns": ""
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130b0"
+  },
   "edifici": "1",
   "planta": "1",
   "dept": "UH1",
   "lloc": "FINESTRA DRETA",
   "elements": {
-    "pc": {"ns": "s4ay2870"},
-    "monitor": {"ns": "v902z2wk"}
+    "pc": {
+      "ns": "s4ay2870"
+    },
+    "monitor": {
+      "ns": "v902z2wk"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130b1"
+  },
   "edifici": "1",
   "planta": "1",
   "dept": "UH1",
   "lloc": "FINESTRA ESQUERRE",
   "elements": {
-    "pc": {"ns": "S4AY2971"},
-    "monitor": {"ns": "V902VPFH"}
+    "pc": {
+      "ns": "S4AY2971"
+    },
+    "monitor": {
+      "ns": "V902VPFH"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130b2"
+  },
   "edifici": "1",
   "planta": "1",
   "dept": "UH1",
   "lloc": "MOSTRADOR DRETA",
   "elements": {
-    "pc": {"ns": "ss4pl8837"},
-    "monitor": {"ns": "sv305dfm6"},
-    "teclat": {"ns": "8sskm0m84893avlc03t9030"},
-    "ratoli": {"ns": "skm0m84893ag0000l6h"}
+    "pc": {
+      "ns": "ss4pl8837"
+    },
+    "monitor": {
+      "ns": "sv305dfm6"
+    },
+    "teclat": {
+      "ns": "8sskm0m84893avlc03t9030"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000l6h"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130b3"
+  },
   "edifici": "1",
   "planta": "1",
   "dept": "UH1",
   "lloc": "MOSTRADOR ESQUERRE",
   "elements": {
-    "pc": {"ns": "s4ay2986"},
-    "monitor": {"ns": "v902z2xv"}
+    "pc": {
+      "ns": "s4ay2986"
+    },
+    "monitor": {
+      "ns": "v902z2xv"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130b4"
+  },
   "edifici": "1",
   "planta": "1",
   "dept": "Assistenta social",
   "lloc": "Patricia Rubio",
   "elements": {
-    "pc": {"ns": "S4pl3814"},
-    "monitor": {"ns": "sv305bk3p"},
-    "teclat": {"ns": "skm0m84893ag0000lb8"},
-    "ratoli": {"ns": "skm0m84893ag0000r1l"}
+    "pc": {
+      "ns": "S4pl3814"
+    },
+    "monitor": {
+      "ns": "sv305bk3p"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000lb8"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r1l"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130b5"
+  },
   "edifici": "1",
   "planta": "1",
   "dept": "Sala metges",
   "lloc": "Dr. Ardevol",
   "elements": {
-    "pc": {"ns": "ss4pl4563"},
-    "monitor": {"ns": "sv305bh8c"},
-    "teclat": {"ns": "skm0m84893ag0000lbm"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl4563"
+    },
+    "monitor": {
+      "ns": "sv305bh8c"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000lbm"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130b6"
+  },
   "edifici": "1",
   "planta": "1",
   "dept": "Sala metges",
   "lloc": "DR. RAVENTOS",
   "elements": {
-    "pc": {"ns": "ss4pl3827"},
-    "monitor": {"ns": "sv305bk3v"},
-    "teclat": {"ns": "skm0m84893ag0000pm0"},
-    "ratoli": {"ns": "skm0m84893ag0000p8z"}
+    "pc": {
+      "ns": "ss4pl3827",
+      "switch": "SW-AMU139V0-23",
+      "portsw": "gi13"
+    },
+    "monitor": {
+      "ns": "sv305bk3v"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pm0"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000p8z"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130b7"
+  },
   "edifici": "1",
   "planta": "1",
   "dept": "Sala metges",
   "lloc": "DR. SECULI",
   "elements": {
-    "pc": {"ns": "ss4pl3854"},
-    "monitor": {"ns": "sv305bh8a"},
-    "teclat": {"ns": "skm0m84893ag0000l99"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl3854",
+      "switch": "SW-AMU139V0-23",
+      "portsw": "gi5"
+    },
+    "monitor": {
+      "ns": "sv305bh8a"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000l99"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130b8"
+  },
   "edifici": "1",
   "planta": "1",
   "dept": "UH2",
   "lloc": "Despatx Medic 2",
   "elements": {
-    "pc": {"ns": "ss4pl4553"},
-    "monitor": {"ns": "sv305bk32"},
-    "teclat": {"ns": "skm0m84893ag0000lbl"},
-    "ratoli": {"ns": "skm0m84893ag0000pzb"}
+    "pc": {
+      "ns": "ss4pl4553",
+      "switch": "SW-AMU139V0-24",
+      "portsw": "gi2"
+    },
+    "monitor": {
+      "ns": "sv305bk32"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000lbl"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000pzb"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130b9"
+  },
   "edifici": "1",
   "planta": "1",
   "dept": "UH2",
   "lloc": "FINESTRA DRETA",
   "elements": {
-    "pc": {"ns": "s4au7095"},
-    "monitor": {"ns": "sv305bk1k"}
+    "pc": {
+      "ns": "s4au7095"
+    },
+    "monitor": {
+      "ns": "sv305bk1k"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130ba"
+  },
   "edifici": "1",
   "planta": "1",
   "dept": "UH2",
   "lloc": "FINESTRA ESQUERRE",
   "elements": {
-    "pc": {"ns": "s4ay2966"},
-    "monitor": {"ns": "sv305dflr"}
+    "pc": {
+      "ns": "s4ay2966"
+    },
+    "monitor": {
+      "ns": "sv305dflr"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130bb"
+  },
   "edifici": "1",
   "planta": "1",
   "dept": "UH2",
   "lloc": "MOSTRADOR DRETA",
   "elements": {
-    "pc": {"ns": "ss4pl3954"},
-    "monitor": {"ns": "sv305bk1y"}
+    "pc": {
+      "ns": "ss4pl3954",
+      "macTelf": "B4A8B969C80B"
+    },
+    "monitor": {
+      "ns": "sv305bk1y"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130bc"
+  },
   "edifici": "1",
   "planta": "1",
   "dept": "UH2",
   "lloc": "MOSTRADOR ESQUERRE",
   "elements": {
-    "pc": {"ns": "ss4pl4555"},
-    "monitor": {"ns": "sv305dfm5"},
-    "teclat": {"ns": "skm0m84893ag0000ph9"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl4555"
+    },
+    "monitor": {
+      "ns": "sv305dfm5"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000ph9"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130bd"
+  },
   "edifici": "1",
   "planta": "2",
   "dept": "UH3",
   "lloc": "DESPATX MEDIC",
   "elements": {
-    "pc": {"ns": "ss4pl3831"},
-    "monitor": {"ns": "sv305bk3m"},
-    "teclat": {"ns": "skm0m84893ag0000l4r"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl3831",
+      "macTelf": "F87B204FBB03"
+    },
+    "monitor": {
+      "ns": "sv305bk3m"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000l4r"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130be"
+  },
   "edifici": "1",
   "planta": "2",
   "dept": "UH3",
   "lloc": "FINESTRA DRETA",
   "elements": {
-    "pc": {"ns": "S4AY2960"},
-    "monitor": {"ns": "V90222Y4"},
-    "teclat": {"ns": "1638LZN04FV8"}
+    "pc": {
+      "ns": "S4AY2960"
+    },
+    "monitor": {
+      "ns": "V90222Y4"
+    },
+    "teclat": {
+      "ns": "1638LZN04FV8"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130bf"
+  },
   "edifici": "1",
   "planta": "2",
   "dept": "UH3",
   "lloc": "FINESTRA ESQUERRE",
   "elements": {
-    "pc": {"ns": "S4AV0211"},
-    "monitor": {"ns": "V902Y4KF"},
-    "teclat": {"ns": "KIT00536"}
+    "pc": {
+      "ns": "S4AV0211"
+    },
+    "monitor": {
+      "ns": "V902Y4KF"
+    },
+    "teclat": {
+      "ns": "KIT00536"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130c0"
+  },
   "edifici": "1",
   "planta": "2",
   "dept": "UH3",
   "lloc": "MOSTRADOR DRETA",
   "elements": {
-    "pc": {"ns": "ss4pl4540"},
-    "monitor": {"ns": "sv305bfcr"}
+    "pc": {
+      "ns": "ss4pl4540"
+    },
+    "monitor": {
+      "ns": "sv305bfcr"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130c1"
+  },
   "edifici": "1",
   "planta": "2",
   "dept": "UH3",
   "lloc": "MOSTRADOR ESQUERRE",
   "elements": {
-    "pc": {"ns": "ss4pl4191"},
-    "monitor": {"ns": "sv305dfl9"},
-    "teclat": {"ns": "skm0m84893ag0000l3b"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl4191"
+    },
+    "monitor": {
+      "ns": "sv305dfl9"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000l3b"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130c2"
+  },
   "edifici": "1",
   "planta": "2",
   "dept": "UH4",
   "lloc": "FINESTRA DRETA",
   "elements": {
-    "pc": {"ns": "s4ay2872"},
-    "monitor": {"ns": "v902z3xc"}
+    "pc": {
+      "ns": "s4ay2872"
+    },
+    "monitor": {
+      "ns": "v902z3xc"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130c3"
+  },
   "edifici": "1",
   "planta": "2",
   "dept": "UH4",
   "lloc": "FINESTRA ESQUERRE",
   "elements": {
-    "pc": {"ns": "s4ay2860"},
-    "monitor": {"ns": "v902z3xd"}
+    "pc": {
+      "ns": "s4ay2860"
+    },
+    "monitor": {
+      "ns": "v902z3xd"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130c4"
+  },
   "edifici": "1",
   "planta": "2",
   "dept": "UH4",
   "lloc": "Marta Casanovas",
   "elements": {
-    "pc": {"ns": ""},
-    "monitor": {"ns": ""}
+    "pc": {
+      "ns": ""
+    },
+    "monitor": {
+      "ns": ""
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130c5"
+  },
   "edifici": "1",
   "planta": "2",
   "dept": "UH4",
   "lloc": "MOSTRADOR DRETA",
   "elements": {
-    "pc": {"ns": "s4ay2874"},
-    "monitor": {"ns": "v902z3xf"}
+    "pc": {
+      "ns": "s4ay2874"
+    },
+    "monitor": {
+      "ns": "v902z3xf"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130c6"
+  },
   "edifici": "1",
   "planta": "2",
   "dept": "UH4",
   "lloc": "MOSTRADOR ESQUERRE",
   "elements": {
-    "pc": {"ns": "S4pl4556"},
-    "monitor": {"ns": "sv305dflp"},
-    "teclat": {"ns": "skm0m84893ag0000r3n"},
-    "ratoli": {"ns": "skm0m84893ag0000r57"}
+    "pc": {
+      "ns": "S4pl4556"
+    },
+    "monitor": {
+      "ns": "sv305dflp"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000r3n"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r57"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130c7"
+  },
   "edifici": "2",
   "planta": "-1B",
   "dept": "UCA",
   "lloc": "Carolina Espuny",
   "elements": {
-    "pc": {"ns": ""},
-    "monitor": {"ns": ""}
+    "pc": {
+      "ns": ""
+    },
+    "monitor": {
+      "ns": ""
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130c8"
+  },
   "edifici": "2",
   "planta": "-1B",
   "dept": "UCA",
   "lloc": "Leire",
   "elements": {
-    "pc": {"ns": "ss4pl3826"},
-    "monitor": {"ns": "sv305bk38"},
-    "teclat": {"ns": "skm0m84893ag0000pmf"},
-    "ratoli": {"ns": "skm0m84893ag0000phb"}
+    "pc": {
+      "ns": "ss4pl3826",
+      "switch": "SW-AMU139V0-10",
+      "portsw": "gi11"
+    },
+    "monitor": {
+      "ns": "sv305bk38"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pmf"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000phb"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130c9"
+  },
   "edifici": "2",
   "planta": "-1B",
   "dept": "UCA",
   "lloc": "M. Vilarroig",
   "elements": {
-    "pc": {"ns": "ss4pl3810"},
-    "monitor": {"ns": "sv305bk2n"},
-    "teclat": {"ns": "skm0m84893ag0000pm5"},
-    "ratoli": {"ns": "skm0m84893ag0000pmc"}
+    "pc": {
+      "ns": "ss4pl3810",
+      "switch": "SW-AMU139V0-11",
+      "portsw": "gi5"
+    },
+    "monitor": {
+      "ns": "sv305bk2n"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pm5"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000pmc"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130ca"
+  },
   "edifici": "2",
   "planta": "-1B",
   "dept": "UCA",
   "lloc": "Carlos Simon",
   "elements": {
-    "pc": {"ns": "ss4pl3948"},
-    "monitor": {"ns": "sv305bk1m"},
-    "teclat": {"ns": "skm0m84893ag0000lbv"},
-    "ratoli": {"ns": "skm0m84893ag0000r01"}
+    "pc": {
+      "ns": "ss4pl3948",
+      "switch": "SW-AMU139V0-10",
+      "portsw": "gi3"
+    },
+    "monitor": {
+      "ns": "sv305bk1m"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000lbv"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r01"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130cb"
+  },
   "edifici": "2",
   "planta": "-1B",
   "dept": "UCA",
   "lloc": "Laura",
   "elements": {
-    "pc": {"ns": "ss4pl3823"},
-    "monitor": {"ns": "sv305bk33"},
-    "teclat": {"ns": "skm0m84893ag0000pg4"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl3823"
+    },
+    "monitor": {
+      "ns": "sv305bk33"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pg4"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130cc"
+  },
   "edifici": "2",
   "planta": "-1B",
   "dept": "UCA",
   "lloc": "Nuria Martin",
   "elements": {
-    "pc": {"ns": "ss4pl3811"},
-    "monitor": {"ns": "sv305bk2h"},
-    "teclat": {"ns": "skm0m84893ag0000l4h"},
-    "ratoli": {"ns": "skm0m84893ag0000pkf"}
+    "pc": {
+      "ns": "ss4pl3811"
+    },
+    "monitor": {
+      "ns": "sv305bk2h"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000l4h"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000pkf"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130cd"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "LABORATORI",
   "lloc": "Eva Gomez",
   "elements": {
-    "pc": {"ns": "S4pl4060"},
-    "monitor": {"ns": "sv305bk2m"},
-    "teclat": {"ns": "skm0m84893ag0000lbt"},
-    "ratoli": {"ns": "skm0m84893ag0000le9"}
+    "pc": {
+      "ns": "S4pl4060"
+    },
+    "monitor": {
+      "ns": "sv305bk2m"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000lbt"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000le9"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130ce"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "LABORATORI",
   "lloc": "Laboratori",
   "elements": {
-    "pc": {"ns": "S4AU7096"},
-    "monitor": {"ns": "V902Z2MX"},
-    "teclat": {"ns": "KIT00874"}
+    "pc": {
+      "ns": "S4AU7096",
+      "switch": "SW-AMU139V0-31",
+      "portsw": "gi16"
+    },
+    "monitor": {
+      "ns": "V902Z2MX"
+    },
+    "teclat": {
+      "ns": "KIT00874"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130cf"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "LABORATORI",
   "lloc": "Marisa",
   "elements": {
-    "pc": {"ns": "S4AU7205"},
-    "monitor": {"ns": "V902Z30H"},
-    "teclat": {"ns": "KIT00890"}
+    "pc": {
+      "ns": "S4AU7205"
+    },
+    "monitor": {
+      "ns": "V902Z30H"
+    },
+    "teclat": {
+      "ns": "KIT00890"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130d0"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "LABORATORI",
   "lloc": "Sandra Mtnz",
   "elements": {
-    "pc": {"ns": "ss4pl4547"},
-    "monitor": {"ns": "sv305bk3n"},
-    "teclat": {"ns": "skm0m84893ag0000p8p"},
-    "ratoli": {"ns": "skm0m84893ag0000pnd"}
+    "pc": {
+      "ns": "ss4pl4547"
+    },
+    "monitor": {
+      "ns": "sv305bk3n"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000p8p"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000pnd"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130d1"
+  },
   "edifici": "1",
   "planta": "-2",
   "dept": "MAGATZEM",
   "lloc": "JM",
   "elements": {
-    "pc": {"ns": "ss4pl3807"},
-    "monitor": {"ns": "sv305bk29"},
-    "teclat": {"ns": "skm0m84893ag0000pft"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl3807",
+      "switch": "SW-AMU139V0-20",
+      "portsw": "gi9"
+    },
+    "monitor": {
+      "ns": "sv305bk29"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pft"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
-  "edifici": "1",
-  "planta": "-2",
-  "dept": "MAGATZEM",
-  "lloc": "Antonio Repiso",
-  "elements": {
-    "pc": {"ns": ""},
-    "monitor": {"ns": ""}
-  }
-},{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130d3"
+  },
   "edifici": "1",
   "planta": "-2",
   "dept": "MAGATZEM",
   "lloc": "3a estacio (polivalent)",
   "elements": {
-    "pc": {"ns": "S4AY2856"},
-    "monitor": {"ns": "V002Z400"},
-    "teclat": {"ns": "KIT00861"}
+    "pc": {
+      "ns": "S4AY2856",
+      "switch": "SW-AMU139V0-20",
+      "portsw": "gi12"
+    },
+    "monitor": {
+      "ns": "V002Z400"
+    },
+    "teclat": {
+      "ns": "KIT00861"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130d4"
+  },
   "edifici": "1",
   "planta": "-2",
   "dept": "CUINA",
   "lloc": "ISS",
   "elements": {
-    "pc": {"ns": "S4AY2878"},
-    "monitor": {"ns": "V902Z3ZM"},
-    "teclat": {"ns": "KIT00859"}
+    "pc": {
+      "ns": "S4AY2878",
+      "switch": "SW-AMU139V0-20",
+      "portsw": "gi15"
+    },
+    "monitor": {
+      "ns": "V902Z3ZM"
+    },
+    "teclat": {
+      "ns": "KIT00859"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130d5"
+  },
   "edifici": "1",
   "planta": "1",
   "dept": "UH1",
   "lloc": "DESPATX MEDIC",
   "elements": {
-    "pc": {"ns": "PC0A85PL"},
-    "monitor": {"ns": "V9023MPM"}
+    "pc": {
+      "ns": "PC0A85PL",
+      "switch": "SW-AMU139V0-23",
+      "portsw": "gi8"
+    },
+    "monitor": {
+      "ns": "V9023MPM"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130d6"
+  },
   "edifici": "2",
   "planta": "0",
   "dept": "ADMINISTRACIO",
   "lloc": "Molinos",
   "elements": {
-    "pc": {"ns": "ss4pl4527"},
-    "monitor": {"ns": "sv305bk34"},
-    "teclat": {"ns": "skm0m84893ag0000l4v"},
-    "ratoli": {"ns": "skm0m84893ag0000p90"}
+    "pc": {
+      "ns": "ss4pl4527",
+      "switch": "SW-AMU139V0-5",
+      "portsw": "gi17"
+    },
+    "monitor": {
+      "ns": "sv305bk34"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000l4v"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000p90"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130d7"
+  },
   "edifici": "2",
   "planta": "0",
   "dept": "ADMINISTRACIO",
   "lloc": "Jose Fdez",
   "elements": {
-    "pc": {"ns": "S4pl4059"},
-    "monitor": {"ns": "sv305bk3a"},
-    "teclat": {"ns": "skm0m84893ag0000l3y"},
-    "ratoli": {"ns": "skm0m84893ag0000pcp"}
+    "pc": {
+      "ns": "S4pl4059"
+    },
+    "monitor": {
+      "ns": "sv305bk3a"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000l3y"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000pcp"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130d8"
+  },
   "edifici": "2",
   "planta": "0",
   "dept": "ADMINISTRACIO",
   "lloc": "Miquel Solanelles",
   "elements": {
-    "pc": {"ns": "ss4pl4545"},
-    "monitor": {"ns": "sv305bk22"},
-    "teclat": {"ns": "skm0m84893ag0000r21"},
-    "ratoli": {"ns": "skm0m84893ag0000l3p"}
+    "pc": {
+      "ns": "ss4pl4545"
+    },
+    "monitor": {
+      "ns": "sv305bk22"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000r21"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000l3p"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130d9"
+  },
   "edifici": "2",
   "planta": "0",
   "dept": "ADMINISTRACIO",
   "lloc": "Polivalente",
   "elements": {
-    "pc": {"ns": "ss4pl5078"},
-    "monitor": {"ns": "sv305dfm2"},
-    "teclat": {"ns": "skm0m84893ag0000l9w"},
-    "ratoli": {"ns": "skm0m84893ag0000r2d"}
+    "pc": {
+      "ns": "ss4pl5078"
+    },
+    "monitor": {
+      "ns": "sv305dfm2"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000l9w"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r2d"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130da"
+  },
   "edifici": "2",
   "planta": "0",
   "dept": "ADMINISTRACIO",
   "lloc": "Nuria Illanes",
   "elements": {
-    "pc": {"ns": "S4PL2948"},
-    "monitor": {"ns": "V305BHNR"},
-    "teclat": {"ns": "skm0m84893ag0000pm7"},
-    "ratoli": {"ns": "ag0000pmt"}
+    "pc": {
+      "ns": "S4PL2948",
+      "switch": "SW-AMU139V0-5",
+      "portsw": "gi16"
+    },
+    "monitor": {
+      "ns": "V305BHNR"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pm7"
+    },
+    "ratoli": {
+      "ns": "ag0000pmt"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130db"
+  },
   "edifici": "2",
   "planta": "1",
   "dept": "DIRECCIO MEDICA",
   "lloc": "Dr. Gallardo",
   "elements": {
-    "pc": {"ns": "ss4pl4774"},
-    "monitor": {"ns": "sv305dfm3"},
-    "teclat": {"ns": "skm0m84893ag0000l6w"},
-    "ratoli": {"ns": "skm0m84893ag0000r22"}
+    "pc": {
+      "ns": "ss4pl4774",
+      "switch": "SW-AMU139V0-3",
+      "portsw": "gi13"
+    },
+    "monitor": {
+      "ns": "sv305dfm3"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000l6w"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r22"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130dc"
+  },
   "edifici": "2",
   "planta": "1",
   "dept": "DIRECCIO MEDICA",
   "lloc": "Dr. Comellas",
   "elements": {
-    "pc": {"ns": "S4pl3949"},
-    "monitor": {"ns": "sv305bk35"},
-    "teclat": {"ns": "skm0m84893ag0000ldw"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "S4pl3949"
+    },
+    "monitor": {
+      "ns": "sv305bk35"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000ldw"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130dd"
+  },
   "edifici": "2",
   "planta": "1",
   "dept": "DIRECCIO MEDICA",
   "lloc": "Dr. Dalmau",
   "elements": {
-    "pc": {"ns": "ss4pl4876"},
-    "monitor": {"ns": "sv305bk3l"},
-    "teclat": {"ns": "skm0m84893ag0000r24"},
-    "ratoli": {"ns": "skm0m84893ag0000pxp"}
+    "pc": {
+      "ns": "ss4pl4876",
+      "switch": "SW-AMU139V0-4",
+      "portsw": "gi2"
+    },
+    "monitor": {
+      "ns": "sv305bk3l"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000r24"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000pxp"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130de"
+  },
   "edifici": "2",
   "planta": "1",
   "dept": "DIRECCIO MEDICA",
   "lloc": "Noe",
   "elements": {
-    "pc": {"ns": "ss4pl3822"},
-    "monitor": {"ns": "sv305bk3t"},
-    "teclat": {"ns": "skm0m84893ag0000pgb"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl3822",
+      "switch": "SW-AMU139V0-4",
+      "portsw": "gi3"
+    },
+    "monitor": {
+      "ns": "sv305bk3t"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pgb"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130df"
+  },
   "edifici": "2",
   "planta": "1",
   "dept": "DIRECCIO MEDICA",
   "lloc": "Sense assignar",
   "elements": {
-    "pc": {"ns": "ss4pl4531"},
-    "monitor": {"ns": "sv305bfm8"},
-    "teclat": {"ns": "skm0m84893ag0000pha"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893 "}
+    "pc": {
+      "ns": "ss4pl4531",
+      "switch": "SW-AMU139V0-3",
+      "portsw": "gi15"
+    },
+    "monitor": {
+      "ns": "sv305bfm8"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pha"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893 "
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130e0"
+  },
   "edifici": "2",
   "planta": "1",
   "dept": "DIRECCIO MEDICA",
   "lloc": "Dr. Lavado",
   "elements": {
-    "pc": {"ns": "S4pl4075"},
-    "monitor": {"ns": "sv305bfmf"},
-    "teclat": {"ns": "skm0m84893ag0000pbp"},
-    "ratoli": {"ns": "skm0m84893ag0000ph0"}
+    "pc": {
+      "ns": "S4pl4075",
+      "switch": "SW-AMU139V0-3",
+      "portsw": "gi4"
+    },
+    "monitor": {
+      "ns": "sv305bfmf"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pbp"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000ph0"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130e1"
+  },
   "edifici": "2",
   "planta": "1",
   "dept": "DIRECCIO MEDICA",
   "lloc": "Carolina Caro",
   "elements": {
-    "pc": {"ns": "ss4pl4533"},
-    "monitor": {"ns": "sv305bfyg"},
-    "teclat": {"ns": "skm0m84893ag0000pfg"},
-    "ratoli": {"ns": "skm0m84893ag0000l5a"}
+    "pc": {
+      "ns": "ss4pl4533"
+    },
+    "monitor": {
+      "ns": "sv305bfyg"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pfg"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000l5a"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130e2"
+  },
   "edifici": "2",
   "planta": "1",
   "dept": "DIRECCIO MEDICA",
   "lloc": "Secretaria",
   "elements": {
-    "pc": {"ns": "s4ay2978"},
-    "monitor": {"ns": "v902z2xy"},
-    "teclat": {"ns": "1714LZ08M198"}
+    "pc": {
+      "ns": "s4ay2978",
+      "macTelf": "B4A8B969C9D7"
+    },
+    "monitor": {
+      "ns": "v902z2xy"
+    },
+    "teclat": {
+      "ns": "1714LZ08M198"
+    }
   }
 },{
-  "edifici": "1",
-  "planta": "0",
-  "dept": "CONSULTES EXTERNES",
-  "lloc": "Consulta 1 (infermera)",
-  "elements": {
-    "pc": {"ns": ""},
-    "monitor": {"ns": ""}
-  }
-},{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130e4"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 1 (metge)",
   "elements": {
-    "pc": {"ns": "SPL4868"},
-    "monitor": {"ns": "v305bk3r"},
-    "teclat": {"ns": "skm0m84893ag0000l4f"},
-    "ratoli": {"ns": "skm0m84893ag0000pgz"}
+    "pc": {
+      "ns": "SPL4868"
+    },
+    "monitor": {
+      "ns": "v305bk3r"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000l4f"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000pgz"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130e5"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 2 (infermera)",
   "elements": {
-    "pc": {"ns": ""},
-    "monitor": {"ns": ""}
+    "pc": {
+      "ns": ""
+    },
+    "monitor": {
+      "ns": ""
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130e6"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 2 (metge)",
   "elements": {
-    "pc": {"ns": "ss4pl3741"},
-    "monitor": {"ns": "sv305bha4"},
-    "teclat": {"ns": "skm0m84893ag0000lar"},
-    "ratoli": {"ns": "skm0m84893ag0000pz8"}
+    "pc": {
+      "ns": "ss4pl3741"
+    },
+    "monitor": {
+      "ns": "sv305bha4"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000lar"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000pz8"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130e7"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 3 (infermera)",
   "elements": {
-    "pc": {"ns": ""},
-    "monitor": {"ns": ""}
+    "pc": {
+      "ns": ""
+    },
+    "monitor": {
+      "ns": ""
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130e8"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 3 (metge)",
   "elements": {
-    "pc": {"ns": "ss4pl3945"},
-    "monitor": {"ns": "sv305bhan"},
-    "teclat": {"ns": "skm0m84893ag0000pfz"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl3945"
+    },
+    "monitor": {
+      "ns": "sv305bhan"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pfz"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
-  "edifici": "1",
-  "planta": "0",
-  "dept": "CONSULTES EXTERNES",
-  "lloc": "Consulta 4 (infermera)",
-  "elements": {
-    "pc": {"ns": ""},
-    "monitor": {"ns": ""}
-  }
-},{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130ea"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 4 (metge)",
   "elements": {
-    "pc": {"ns": "ss4pl3819"},
-    "monitor": {"ns": "sv305bham"},
-    "teclat": {"ns": "skm0m84893ag0000phr"},
-    "ratoli": {"ns": "skm0m84893ag0000r0h"}
+    "pc": {
+      "ns": "ss4pl3819",
+      "switch": "SW-AMU139V0-29",
+      "portsw": "gi16"
+    },
+    "monitor": {
+      "ns": "sv305bham"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000phr"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r0h"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130eb"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 5 (Infermera)",
   "elements": {
-    "pc": {"ns": ""},
-    "monitor": {"ns": ""}
+    "pc": {
+      "ns": ""
+    },
+    "monitor": {
+      "ns": ""
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130ec"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 5 (metge)",
   "elements": {
-    "pc": {"ns": "S4pl4716"},
-    "monitor": {"ns": "sv305bh9f"},
-    "teclat": {"ns": "skm0m84893ag0000pkp"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "S4pl4716",
+      "switch": "SW-AMU139V0-28",
+      "portsw": "gi5"
+    },
+    "monitor": {
+      "ns": "sv305bh9f"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pkp"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130ed"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 6 (infermera)",
   "elements": {
-    "pc": {"ns": ""},
-    "monitor": {"ns": ""}
+    "pc": {
+      "ns": ""
+    },
+    "monitor": {
+      "ns": ""
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130ee"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 6 (metge)",
   "elements": {
-    "pc": {"ns": "ss4pl3951"},
-    "monitor": {"ns": "sv305bhah"},
-    "teclat": {"ns": "skm0m84893ag0000lbk"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl3951",
+      "switch": "SW-AMU139V0-26",
+      "portsw": "gi9"
+    },
+    "monitor": {
+      "ns": "sv305bhah"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000lbk"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130ef"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 7 (infermera)",
   "elements": {
-    "pc": {"ns": ""},
-    "monitor": {"ns": ""}
+    "pc": {
+      "ns": ""
+    },
+    "monitor": {
+      "ns": ""
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130f0"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 7 (metge)",
   "elements": {
-    "pc": {"ns": "ss4pl3953"},
-    "monitor": {"ns": "sv305bh8y"},
-    "teclat": {"ns": "skm0m84893ag0000r4k"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl3953",
+      "switch": "SW-AMU139V0-28",
+      "portsw": "gi2"
+    },
+    "monitor": {
+      "ns": "sv305bh8y"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000r4k"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130f1"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 8 (infermera)",
   "elements": {
-    "pc": {"ns": ""},
-    "monitor": {"ns": ""}
+    "pc": {
+      "ns": ""
+    },
+    "monitor": {
+      "ns": ""
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130f2"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 8 (metge)",
   "elements": {
-    "pc": {"ns": "ss4pl4526"},
-    "monitor": {"ns": "sv305bhw9"},
-    "teclat": {"ns": "skm0m84893ag0000l9d"},
-    "ratoli": {"ns": "skm0m84893ag0000r19"}
+    "pc": {
+      "ns": "ss4pl4526"
+    },
+    "monitor": {
+      "ns": "sv305bhw9"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000l9d"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r19"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130f3"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 9 (infermera)",
   "elements": {
-    "pc": {"ns": ""},
-    "monitor": {"ns": ""}
+    "pc": {
+      "ns": ""
+    },
+    "monitor": {
+      "ns": ""
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130f4"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 9 (metge)",
   "elements": {
-    "pc": {"ns": "ss4pl3818"},
-    "monitor": {"ns": "sv305bhvv"},
-    "teclat": {"ns": "skm0m84893ag0000l8c"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl3818",
+      "switch": "SW-AMU139V0-26",
+      "portsw": "gi5"
+    },
+    "monitor": {
+      "ns": "sv305bhvv"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000l8c"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130f5"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 10 (infermera)",
   "elements": {
-    "pc": {"ns": "S4AU7135"},
-    "monitor": {"ns": "V902Z39V"},
-    "teclat": {"ns": "KIT00365"}
+    "pc": {
+      "ns": "S4AU7135"
+    },
+    "monitor": {
+      "ns": "V902Z39V"
+    },
+    "teclat": {
+      "ns": "KIT00365"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130f6"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 10 (metge)",
   "elements": {
-    "pc": {"ns": "ss4pl3933"},
-    "monitor": {"ns": "sv305bh9c"},
-    "teclat": {"ns": "skm0m84893ag0000pdf"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl3933",
+      "switch": "SW-AMU139V0-27",
+      "portsw": "gi11"
+    },
+    "monitor": {
+      "ns": "sv305bh9c"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pdf"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130f7"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 11 (infermera)",
   "elements": {
-    "pc": {"ns": ""},
-    "monitor": {"ns": ""}
+    "pc": {
+      "ns": ""
+    },
+    "monitor": {
+      "ns": ""
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130f8"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 11 (metge)",
   "elements": {
-    "pc": {"ns": "ss4pl4686"},
-    "monitor": {"ns": "sv305bhvn"},
-    "teclat": {"ns": "8sskm0m84893avlc03t905h"},
-    "ratoli": {"ns": "skm0m84893ag0000py7"}
+    "pc": {
+      "ns": "ss4pl4686"
+    },
+    "monitor": {
+      "ns": "sv305bhvn"
+    },
+    "teclat": {
+      "ns": "8sskm0m84893avlc03t905h"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000py7"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130f9"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 13 Metge",
   "elements": {
-    "pc": {"ns": "ss4pl4543"},
-    "monitor": {"ns": "sv305bha3"},
-    "teclat": {"ns": "skm0m84893ag0000l4b"},
-    "ratoli": {"ns": "skm0m84893ag0000l4a"}
+    "pc": {
+      "ns": "ss4pl4543"
+    },
+    "monitor": {
+      "ns": "sv305bha3"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000l4b"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000l4a"
+    }
   }
 },{
-  "edifici": "1",
-  "planta": "-1",
-  "dept": "CONSULTES EXTERNES",
-  "lloc": "Consulta 14 Infermera",
-  "elements": {
-    "pc": {"ns": ""},
-    "monitor": {"ns": ""}
-  }
-},{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130fb"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 14 Metge",
   "elements": {
-    "pc": {"ns": "S4pl4452"},
-    "monitor": {"ns": "sv305bhal"},
-    "teclat": {"ns": "skm0m84893ag0000lbx"},
-    "ratoli": {"ns": "skm0m84893ag0000r0b"}
+    "pc": {
+      "ns": "S4pl4452",
+      "switch": "SW-AMU139V0-31",
+      "portsw": "gi14"
+    },
+    "monitor": {
+      "ns": "sv305bhal"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000lbx"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r0b"
+    }
   }
 },{
-  "edifici": "1",
-  "planta": "-1",
-  "dept": "CONSULTES EXTERNES",
-  "lloc": "Consulta 15 Infermera",
-  "elements": {
-    "pc": {"ns": ""},
-    "monitor": {"ns": ""}
-  }
-},{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130fd"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 15 Metge",
   "elements": {
-    "pc": {"ns": "ss4pl4917"},
-    "monitor": {"ns": "sv305bhag"},
-    "teclat": {"ns": "skm0m84893ag0000l42"},
-    "ratoli": {"ns": "skm0m84893ag0000pla"}
+    "pc": {
+      "ns": "ss4pl4917",
+      "switch": "SW-AMU139V0-31",
+      "portsw": "gi2"
+    },
+    "monitor": {
+      "ns": "sv305bhag"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000l42"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000pla"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130fe"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "CONSULTES EXTERNES",
   "lloc": "Consulta 16",
   "elements": {
-    "pc": {"ns": "ss4pl4753"},
-    "monitor": {"ns": "sv305bhaf"},
-    "teclat": {"ns": "skm0m84893ag0000pg9"},
-    "ratoli": {"ns": "skm0m84893ag0000r20"}
+    "pc": {
+      "ns": "ss4pl4753"
+    },
+    "monitor": {
+      "ns": "sv305bhaf"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pg9"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r20"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd130ff"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "FARMACIA",
   "lloc": "Candido Ruiz",
   "elements": {
-    "pc": {"ns": "S4AU7298"},
-    "monitor": {"ns": "V902Z3AP"},
-    "teclat": {"ns": "1708LZ0J5508"}
+    "pc": {
+      "ns": "S4AU7298",
+      "switch": "SW-AMU139V0-34",
+      "portsw": "gi12"
+    },
+    "monitor": {
+      "ns": "V902Z3AP"
+    },
+    "teclat": {
+      "ns": "1708LZ0J5508"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13100"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "FARMACIA",
   "lloc": "Mireia",
   "elements": {
-    "pc": {"ns": "ss4pl4252"},
-    "monitor": {"ns": "sv305bh8b"},
-    "teclat": {"ns": "skm0m84893ag0000plh"},
-    "ratoli": {"ns": "skm0m84893ag0000pg4"}
+    "pc": {
+      "ns": "ss4pl4252"
+    },
+    "monitor": {
+      "ns": "sv305bh8b"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000plh"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000pg4"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13101"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "FARMACIA",
   "lloc": "Ma Jose Berges",
   "elements": {
-    "pc": {"ns": "ss4pl3746"},
-    "monitor": {"ns": "sv305bh8d"},
-    "teclat": {"ns": "skm0m84893ag0000pm1"},
-    "ratoli": {"ns": "skm0m84893ag0000php"}
+    "pc": {
+      "ns": "ss4pl3746",
+      "switch": "SW-AMU139V0-34",
+      "portsw": "gi9"
+    },
+    "monitor": {
+      "ns": "sv305bh8d"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pm1"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000php"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13102"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "FARMACIA",
   "lloc": "Chema",
   "elements": {
-    "pc": {"ns": "S4AY2882"},
-    "monitor": {"ns": "V902Z3ZT"},
-    "teclat": {"ns": "KIT00886"}
+    "pc": {
+      "ns": "S4AY2882",
+      "switch": "SW-AMU139V0-32",
+      "portsw": "gi8"
+    },
+    "monitor": {
+      "ns": "V902Z3ZT"
+    },
+    "teclat": {
+      "ns": "KIT00886"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13103"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "FARMACIA",
   "lloc": "Sala medicaments",
   "elements": {
-    "pc": {"ns": "S4AU7289"},
-    "monitor": {"ns": "V902Z3AB"}
+    "pc": {
+      "ns": "S4AU7289",
+      "switch": "SW-AMU139V0-32",
+      "portsw": "gi21"
+    },
+    "monitor": {
+      "ns": "V902Z3AB"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13104"
+  },
   "edifici": "1",
   "planta": "-2",
   "dept": "MANTENIMENT",
   "lloc": "Paco Herrera",
   "elements": {
-    "pc": {"ns": "ss4pl3942"},
-    "monitor": {"ns": "sv305bh9d"},
-    "teclat": {"ns": "skm0m84893ag0000p90"},
-    "ratoli": {"ns": "skm0m84893ag0000plm"}
+    "pc": {
+      "ns": "ss4pl3942",
+      "switch": "SW-AMU139V0-19",
+      "portsw": "gi1"
+    },
+    "monitor": {
+      "ns": "sv305bh9d"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000p90"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000plm"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13105"
+  },
   "edifici": "1",
   "planta": "-2",
   "dept": "MANTENIMENT",
   "lloc": "Jaime",
   "elements": {
-    "pc": {"ns": "S4AU7149"},
-    "monitor": {"ns": "V902Z3AC"},
-    "teclat": {"ns": "KIT00369"}
+    "pc": {
+      "ns": "S4AU7149",
+      "switch": "SW-AMU139V0-20",
+      "portsw": "gi11"
+    },
+    "monitor": {
+      "ns": "V902Z3AC"
+    },
+    "teclat": {
+      "ns": "KIT00369"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13106"
+  },
   "edifici": "1",
   "planta": "-2",
   "dept": "MANTENIMENT",
   "lloc": "Pedro / Juan",
   "elements": {
-    "pc": {"ns": "ss4pl3939"},
-    "monitor": {"ns": "sv305bh9y"},
-    "teclat": {"ns": "skm0m84893ag0000l9z"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl3939",
+      "switch": "SW-AMU139V0-19",
+      "portsw": "gi13"
+    },
+    "monitor": {
+      "ns": "sv305bh9y"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000l9z"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13107"
+  },
   "edifici": "1",
   "planta": "-2",
   "dept": "MANTENIMENT",
   "lloc": "Nuria Roch",
   "elements": {
-    "pc": {"ns": ""},
-    "monitor": {"ns": ""}
+    "pc": {
+      "ns": ""
+    },
+    "monitor": {
+      "ns": ""
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13108"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "RADIOLOGIA",
   "lloc": "CABINA DISPARO",
   "elements": {
-    "pc": {"ns": "ss4pl3873"},
-    "monitor": {"ns": "sv305bh8r"},
-    "teclat": {"ns": "skm0m84893ag0000l6t"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl3873"
+    },
+    "monitor": {
+      "ns": "sv305bh8r"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000l6t"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13109"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "RADIOLOGIA",
   "lloc": "CABINA DISPARO 2",
   "elements": {
-    "pc": {"ns": "S4AV0146"},
-    "monitor": {"ns": "V902Z3RK"},
-    "teclat": {"ns": "KIT00444"}
+    "pc": {
+      "ns": "S4AV0146"
+    },
+    "monitor": {
+      "ns": "V902Z3RK"
+    },
+    "teclat": {
+      "ns": "KIT00444"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1310a"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "RADIOLOGIA",
   "lloc": "Cabina TAC",
   "elements": {
-    "pc": {"ns": "S4AV0129"},
-    "monitor": {"ns": "V902Z3RW"},
-    "teclat": {"ns": "KIT00443"}
+    "pc": {
+      "ns": "S4AV0129"
+    },
+    "monitor": {
+      "ns": "V902Z3RW"
+    },
+    "teclat": {
+      "ns": "KIT00443"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1310b"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "RADIOLOGIA",
   "lloc": "Dr. Pinto",
   "elements": {
-    "pc": {"ns": ""},
-    "monitor": {"ns": ""}
+    "pc": {
+      "ns": ""
+    },
+    "monitor": {
+      "ns": ""
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1310c"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "RADIOLOGIA",
   "lloc": "MARISOL",
   "elements": {
-    "pc": {"ns": "S4AU7236"},
-    "monitor": {"ns": "V902Z39Y"},
-    "teclat": {"ns": "KIT00368"}
+    "pc": {
+      "ns": "S4AU7236",
+      "switch": "SW-AMU139V0-30",
+      "portsw": "gi12"
+    },
+    "monitor": {
+      "ns": "V902Z39Y"
+    },
+    "teclat": {
+      "ns": "KIT00368"
+    }
   }
 },{
-  "edifici": "1",
-  "planta": "0",
-  "dept": "RADIOLOGIA",
-  "lloc": "ECOGRAFIA",
-  "elements": {
-    "pc": {"ns": ""},
-    "monitor": {"ns": ""}
-  }
-},{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1310e"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "RADIOLOGIA",
   "lloc": "Supervisor",
   "elements": {
-    "pc": {"ns": "ss4pl3815"},
-    "monitor": {"ns": "sv305bh9z"},
-    "teclat": {"ns": "skm0m84893ag0000lap"},
-    "ratoli": {"ns": "skm0m84893ag0000pr3"}
+    "pc": {
+      "ns": "ss4pl3815"
+    },
+    "monitor": {
+      "ns": "sv305bh9z"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000lap"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000pr3"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1310f"
+  },
   "edifici": "2",
   "planta": "-1",
   "dept": "RMN",
   "lloc": "RMN General",
   "elements": {
-    "pc": {"ns": "S4AU6938"},
-    "monitor": {"ns": "V902Z39Z"},
-    "teclat": {"ns": "KIT00367"}
+    "pc": {
+      "ns": "S4AU6938",
+      "switch": "SW-AMU139V0-7",
+      "portsw": "gi9"
+    },
+    "monitor": {
+      "ns": "V902Z39Z"
+    },
+    "teclat": {
+      "ns": "KIT00367"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13110"
+  },
   "edifici": "2",
   "planta": "-1",
   "dept": "RMN",
   "lloc": "RMN Siemens",
   "elements": {
-    "pc": {"ns": "ss4pl4073"},
-    "monitor": {"ns": "sv305bg2c"},
-    "teclat": {"ns": "skm0m84893ag0000r1l"},
-    "ratoli": {"ns": "skm0m84893ag0000r1a"}
+    "pc": {
+      "ns": "ss4pl4073",
+      "switch": "SW-AMU139V0-7",
+      "portsw": "gi12"
+    },
+    "monitor": {
+      "ns": "sv305bg2c"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000r1l"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r1a"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13111"
+  },
   "edifici": "2",
   "planta": "-1",
   "dept": "RMN",
   "lloc": "Estacio P5000 (estava a Ecografia)",
   "elements": {
-    "pc": {"ns": "RETIRADA"},
-    "monitor": {"ns": ""}
+    "pc": {
+      "ns": "RETIRADA"
+    },
+    "monitor": {
+      "ns": ""
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13112"
+  },
   "edifici": "2",
   "planta": "-1B",
   "dept": "Histories Cliniques",
   "lloc": "CARMEN RODRIGUEZ",
   "elements": {
-    "pc": {"ns": "ss4pl3950"},
-    "monitor": {"ns": "sv305bhw5"},
-    "teclat": {"ns": "skm0m84893ag0000l3z"},
-    "ratoli": {"ns": "skm0m84893ag0000l3y"}
+    "pc": {
+      "ns": "ss4pl3950",
+      "switch": "SW-AMU139V0-9",
+      "portsw": "gi9"
+    },
+    "monitor": {
+      "ns": "sv305bhw5"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000l3z"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000l3y"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13113"
+  },
   "edifici": "2",
   "planta": "-1B",
   "dept": "Histories Cliniques",
   "lloc": "Alba Hermoso",
   "elements": {
-    "pc": {"ns": "s4ay2903"},
-    "monitor": {"ns": "v902z3xb"},
-    "teclat": {"ns": "1714LZ08NNY8"}
+    "pc": {
+      "ns": "s4ay2903",
+      "switch": "SW-AMU139V0-16",
+      "portsw": "gi9"
+    },
+    "monitor": {
+      "ns": "v902z3xb"
+    },
+    "teclat": {
+      "ns": "1714LZ08NNY8"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13114"
+  },
   "edifici": "2",
   "planta": "-1B",
   "dept": "Histories Cliniques",
   "lloc": "Davant Peixera",
   "elements": {
-    "pc": {"ns": "RETIRADO"},
-    "monitor": {"ns": ""}
+    "pc": {
+      "ns": "RETIRADO"
+    },
+    "monitor": {
+      "ns": ""
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13115"
+  },
   "edifici": "2",
   "planta": "-1B",
   "dept": "Histories Cliniques",
   "lloc": "Raquel Gonzalez",
   "elements": {
-    "pc": {"ns": "s4ay2968"},
-    "monitor": {"ns": "v902z401"}
+    "pc": {
+      "ns": "s4ay2968",
+      "switch": "SW-AMU139V0-13",
+      "portsw": "gi5"
+    },
+    "monitor": {
+      "ns": "v902z401"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13116"
+  },
   "edifici": "",
   "planta": "",
   "dept": "",
   "lloc": "",
   "elements": {
-    "pc": {"ns": ""},
-    "monitor": {"ns": ""}
+    "pc": {
+      "ns": ""
+    },
+    "monitor": {
+      "ns": ""
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13117"
+  },
   "edifici": "2",
   "planta": "-1B",
   "dept": "SPP",
   "lloc": "Dra. Costas",
   "elements": {
-    "pc": {"ns": "S4PL2866 "},
-    "monitor": {"ns": "V305BK1H "},
-    "teclat": {"ns": "SKM0M84893 "}
+    "pc": {
+      "ns": "S4PL2866 ",
+      "switch": "SW-AMU139V0-9",
+      "portsw": "gi12"
+    },
+    "monitor": {
+      "ns": "V305BK1H "
+    },
+    "teclat": {
+      "ns": "SKM0M84893 "
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13118"
+  },
   "edifici": "2",
   "planta": "-1B",
   "dept": "SPP",
   "lloc": "Ma Teresa Felipe",
   "elements": {
-    "pc": {"ns": "S4PL9025 "},
-    "monitor": {"ns": "V305BHAZ "},
-    "teclat": {"ns": "SKMOM84893 "}
+    "pc": {
+      "ns": "S4PL9025 ",
+      "switch": "SW-AMU139V0-9",
+      "portsw": "gi11"
+    },
+    "monitor": {
+      "ns": "V305BHAZ "
+    },
+    "teclat": {
+      "ns": "SKMOM84893 "
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13119"
+  },
   "edifici": "2",
   "planta": "-1B",
   "dept": "SPP",
   "lloc": "Juan Manuel Muñoz",
   "elements": {
-    "pc": {"ns": "S4PL3099 "},
-    "monitor": {"ns": "V305BHNW "},
-    "teclat": {"ns": "skm0m84893ag0000rab"},
-    "ratoli": {"ns": "skm0m84893ag0000r9b"}
+    "pc": {
+      "ns": "S4PL3099 ",
+      "switch": "SW-AMU139V0-9",
+      "portsw": "gi15"
+    },
+    "monitor": {
+      "ns": "V305BHNW "
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000rab"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r9b"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1311a"
+  },
   "edifici": "",
   "planta": "",
   "dept": "",
   "lloc": "",
   "elements": {
-    "pc": {"ns": ""},
-    "monitor": {"ns": ""}
+    "pc": {
+      "ns": ""
+    },
+    "monitor": {
+      "ns": ""
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1311b"
+  },
   "edifici": "2",
   "planta": "-1B",
   "dept": "Supervisor",
   "lloc": "MIQUEL A. SOLER",
   "elements": {
-    "pc": {"ns": "ss4pl8689"},
-    "monitor": {"ns": "sv305bfcv"},
-    "teclat": {"ns": "skm0m84893ag0000pxw"},
-    "ratoli": {"ns": "skm0m84893ag0000px8"}
+    "pc": {
+      "ns": "ss4pl8689",
+      "switch": "SW-AMU139V0-35",
+      "portsw": "gi13"
+    },
+    "monitor": {
+      "ns": "sv305bfcv"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pxw"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000px8"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1311c"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "ESTERILITZACIO",
   "lloc": "Esterilitzacio",
   "elements": {
-    "pc": {"ns": "S4AU7293"},
-    "monitor": {"ns": "V902Z3A2"},
-    "teclat": {"ns": "KIT00388"}
+    "pc": {
+      "ns": "S4AU7293"
+    },
+    "monitor": {
+      "ns": "V902Z3A2"
+    },
+    "teclat": {
+      "ns": "KIT00388"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1311d"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "SEGURETAT",
   "lloc": "GARITA",
   "elements": {
-    "pc": {"ns": "PC053VFB"},
-    "monitor": {"ns": ""}
+    "pc": {
+      "ns": "PC053VFB"
+    },
+    "monitor": {
+      "ns": ""
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1311e"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "SEGURETAT",
   "lloc": "SEGURETAT",
   "elements": {
-    "pc": {"ns": "M83"},
-    "monitor": {"ns": ""}
+    "pc": {
+      "ns": "M83"
+    },
+    "monitor": {
+      "ns": ""
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1311f"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "GRAN HERMANO",
   "lloc": "Dr. ?",
   "elements": {
-    "pc": {"ns": "S4pl4561"},
-    "monitor": {"ns": "sv305bhbh"},
-    "teclat": {"ns": "skm0m84893ag0000plb"},
-    "ratoli": {"ns": "skm0m84893ag0000pmz"}
+    "pc": {
+      "ns": "S4pl4561",
+      "switch": "SW-AMU139V0-31",
+      "portsw": "gi21"
+    },
+    "monitor": {
+      "ns": "sv305bhbh"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000plb"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000pmz"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13120"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "GRAN HERMANO",
   "lloc": "Dr. Bosch",
   "elements": {
-    "pc": {"ns": "ss4pl4698"},
-    "monitor": {"ns": "sv305bhvw"},
-    "teclat": {"ns": "skm0m84893ag0000l3r"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl4698"
+    },
+    "monitor": {
+      "ns": "sv305bhvw"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000l3r"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13121"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "GRAN HERMANO",
   "lloc": "Dr. Codina",
   "elements": {
-    "pc": {"ns": "S4pl4187"},
-    "monitor": {"ns": "sv305bhbp"},
-    "teclat": {"ns": "skm0m84893ag0000pke"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "S4pl4187"
+    },
+    "monitor": {
+      "ns": "sv305bhbp"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pke"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13122"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "GRAN HERMANO",
   "lloc": "Dr. Echevarria",
   "elements": {
-    "pc": {"ns": "ss4pl4077"},
-    "monitor": {"ns": "sv305bfmd"},
-    "teclat": {"ns": "skm0m84893ag0000l41"},
-    "ratoli": {"ns": "skm0m84893ag0000pke"}
+    "pc": {
+      "ns": "ss4pl4077"
+    },
+    "monitor": {
+      "ns": "sv305bfmd"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000l41"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000pke"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13123"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "GRAN HERMANO",
   "lloc": "Dr. Gallardo",
   "elements": {
-    "pc": {"ns": "ss4pl4066"},
-    "monitor": {"ns": "sv305bhbk"},
-    "teclat": {"ns": "skm0m84893ag0000l4c"},
-    "ratoli": {"ns": "skm0m84893ag0000pgf"}
+    "pc": {
+      "ns": "ss4pl4066",
+      "switch": "SW-AMU139V0-32",
+      "portsw": "gi18"
+    },
+    "monitor": {
+      "ns": "sv305bhbk"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000l4c"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000pgf"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13124"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "GRAN HERMANO",
   "lloc": "Dr. Granell",
   "elements": {
-    "pc": {"ns": "ss4pl4186"},
-    "monitor": {"ns": "sv305bhvr"},
-    "teclat": {"ns": "skm0m84893ag0000pg3"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl4186",
+      "switch": "SW-AMU139V0-32",
+      "portsw": "gi16"
+    },
+    "monitor": {
+      "ns": "sv305bhvr"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pg3"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13125"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "GRAN HERMANO",
   "lloc": "Dr. Montiel",
   "elements": {
-    "pc": {"ns": "ss4pl4467"},
-    "monitor": {"ns": "sv305bhbl"},
-    "teclat": {"ns": "skm0m84893ag0000p8g"},
-    "ratoli": {"ns": "skm0m84893ag0000laz"}
+    "pc": {
+      "ns": "ss4pl4467",
+      "switch": "SW-AMU139V0-32",
+      "portsw": "gi3"
+    },
+    "monitor": {
+      "ns": "sv305bhbl"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000p8g"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000laz"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13126"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "GRAN HERMANO",
   "lloc": "Dr. Panadero",
   "elements": {
-    "pc": {"ns": "ss4pl3738"},
-    "monitor": {"ns": "sv305bhbn"},
-    "teclat": {"ns": "skm0m84893ag0000l9a"},
-    "ratoli": {"ns": "skm0m84893ag0000pg2"}
+    "pc": {
+      "ns": "ss4pl3738",
+      "switch": "SW-AMU139V0-33",
+      "portsw": "gi8"
+    },
+    "monitor": {
+      "ns": "sv305bhbn"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000l9a"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000pg2"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13127"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "GRAN HERMANO",
   "lloc": "Dr. Prat",
   "elements": {
-    "pc": {"ns": "ss4pl4685"},
-    "monitor": {"ns": "sv305bg2b"},
-    "teclat": {"ns": "skm0m84893ag0000r67"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl4685"
+    },
+    "monitor": {
+      "ns": "sv305bg2b"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000r67"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13128"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "GRAN HERMANO",
   "lloc": "Dr. Raul Franco",
   "elements": {
-    "pc": {"ns": "ss4pl4221"},
-    "monitor": {"ns": "sv305bg24"},
-    "teclat": {"ns": "skm0m84893ag0000ph4"},
-    "ratoli": {"ns": "skm0m84893ag0000r53"}
+    "pc": {
+      "ns": "ss4pl4221"
+    },
+    "monitor": {
+      "ns": "sv305bg24"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000ph4"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r53"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13129"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "GRAN HERMANO",
   "lloc": "Dr. Ronda",
   "elements": {
-    "pc": {"ns": "ss4pl4188"},
-    "monitor": {"ns": "sv305bfbk"},
-    "teclat": {"ns": "skm0m84893ag0000r2y"},
-    "ratoli": {"ns": "skm0m84893ag0000r58"}
+    "pc": {
+      "ns": "ss4pl4188",
+      "switch": "SW-AMU139V0-33",
+      "portsw": "gi3"
+    },
+    "monitor": {
+      "ns": "sv305bfbk"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000r2y"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r58"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1312a"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "GRAN HERMANO",
   "lloc": "Dr. Sanchez",
   "elements": {
-    "pc": {"ns": "ss4pl4705"},
-    "monitor": {"ns": "sv305bfma"},
-    "teclat": {"ns": "skm0m84893ag0000r47"},
-    "ratoli": {"ns": "skm0m84893ag0000r52"}
+    "pc": {
+      "ns": "ss4pl4705",
+      "switch": "SW-AMU139V0-31",
+      "portsw": "gi5"
+    },
+    "monitor": {
+      "ns": "sv305bfma"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000r47"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r52"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1312b"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "GRAN HERMANO",
   "lloc": "Dr. Vega",
   "elements": {
-    "pc": {"ns": "ss4pl4713"},
-    "monitor": {"ns": "sv305bg23"},
-    "teclat": {"ns": "skm0m84893ag0000r45"},
-    "ratoli": {"ns": "skm0m84893ag0000r06"}
+    "pc": {
+      "ns": "ss4pl4713"
+    },
+    "monitor": {
+      "ns": "sv305bg23"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000r45"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r06"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1312c"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "GRAN HERMANO",
   "lloc": "Dr.Abellan",
   "elements": {
-    "pc": {"ns": "ss4pl4550"},
-    "monitor": {"ns": "sv305bhbm"},
-    "teclat": {"ns": "skm0m84893ag0000plk"},
-    "ratoli": {"ns": "skm0m84893ag0000phx"}
+    "pc": {
+      "ns": "ss4pl4550"
+    },
+    "monitor": {
+      "ns": "sv305bhbm"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000plk"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000phx"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1312d"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "GRAN HERMANO",
   "lloc": "Dra. Escola",
   "elements": {
-    "pc": {"ns": "ss4pl4534"},
-    "monitor": {"ns": "sv305bfmc"},
-    "teclat": {"ns": "skm0m84893ag0000pl9"},
-    "ratoli": {"ns": "skm0m84893ag0000l4v"}
+    "pc": {
+      "ns": "ss4pl4534",
+      "switch": "SW-AMU139V0-32",
+      "portsw": "gi17"
+    },
+    "monitor": {
+      "ns": "sv305bfmc"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pl9"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000l4v"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1312e"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "GRAN HERMANO",
   "lloc": "Dra. Lopez, Isabel",
   "elements": {
-    "pc": {"ns": "ss4pl8707"},
-    "monitor": {"ns": "sv305bfm0"},
-    "teclat": {"ns": "8sskm0m84893avlc03t9057"},
-    "ratoli": {"ns": "skm0m84893ag0000pz6"}
+    "pc": {
+      "ns": "ss4pl8707",
+      "switch": "SW-AMU139V0-32",
+      "portsw": "gi1"
+    },
+    "monitor": {
+      "ns": "sv305bfm0"
+    },
+    "teclat": {
+      "ns": "8sskm0m84893avlc03t9057"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000pz6"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1312f"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "GRAN HERMANO",
   "lloc": "Dra. Morales, Micaela",
   "elements": {
-    "pc": {"ns": "ss4pl4190"},
-    "monitor": {"ns": "sv305bfc0"},
-    "teclat": {"ns": "skm0m84893ag0000r4e"},
-    "ratoli": {"ns": "skm0m84893ag0000r56"}
+    "pc": {
+      "ns": "ss4pl4190",
+      "switch": "SW-AMU139V0-32",
+      "portsw": "gi4"
+    },
+    "monitor": {
+      "ns": "sv305bfc0"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000r4e"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r56"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13130"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "GRAN HERMANO",
   "lloc": "Dra. Perez Montoya",
   "elements": {
-    "pc": {"ns": "ss4pl4072"},
-    "monitor": {"ns": "sv305bg2d"},
-    "teclat": {"ns": "skm0m84893ag0000pk9"},
-    "ratoli": {"ns": "skm0m84893ag0000l67"}
+    "pc": {
+      "ns": "ss4pl4072",
+      "switch": "SW-AMU139V0-31",
+      "portsw": "gi3"
+    },
+    "monitor": {
+      "ns": "sv305bg2d"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pk9"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000l67"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13131"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "GRAN HERMANO",
   "lloc": "GH.22",
   "elements": {
-    "pc": {"ns": "S4PL4350"},
-    "monitor": {"ns": "V305BK18"}
+    "pc": {
+      "ns": "S4PL4350"
+    },
+    "monitor": {
+      "ns": "V305BK18"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13132"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "GRAN HERMANO",
   "lloc": "GH.23",
   "elements": {
-    "pc": {"ns": "S4PL3896"},
-    "monitor": {"ns": "V305BGHX"}
+    "pc": {
+      "ns": "S4PL3896",
+      "switch": "SW-AMU139V0-32",
+      "portsw": "gi2"
+    },
+    "monitor": {
+      "ns": "V305BGHX"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13133"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "UCI",
   "lloc": "DESPATX MEDIC",
   "elements": {
-    "pc": {"ns": "ss4pl3941"},
-    "monitor": {"ns": "V305BKL9"},
-    "teclat": {"ns": "skm0m84893ag0000pp6"},
-    "ratoli": {"ns": "skm0m84893ag0000py0"}
+    "pc": {
+      "ns": "ss4pl3941"
+    },
+    "monitor": {
+      "ns": "V305BKL9"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pp6"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000py0"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13134"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "UCI",
   "lloc": "DESPATX MEDIC2",
   "elements": {
-    "pc": {"ns": "ss4pl4482"},
-    "monitor": {"ns": "sv305bfm2"},
-    "teclat": {"ns": "skm0m84893ag0000pfp"},
-    "ratoli": {"ns": "skm0m84893ag0000r1r"}
+    "pc": {
+      "ns": "ss4pl4482",
+      "switch": "SW-AMU139V0-15",
+      "portsw": "gi6"
+    },
+    "monitor": {
+      "ns": "sv305bfm2"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pfp"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r1r"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13135"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "UCI",
   "lloc": "Supervisor",
   "elements": {
-    "pc": {"ns": "ss4pl4065"},
-    "monitor": {"ns": "sv305bg01"},
-    "teclat": {"ns": "skm0m84893ag0000pmv"},
-    "ratoli": {"ns": "skm0m84893ag0000lby"}
+    "pc": {
+      "ns": "ss4pl4065"
+    },
+    "monitor": {
+      "ns": "sv305bg01"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pmv"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000lby"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13136"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "UCI",
   "lloc": "MOSTRADOR DRET",
   "elements": {
-    "pc": {"ns": "ss4pl3938"},
-    "monitor": {"ns": "sv305bhak"},
-    "teclat": {"ns": "skm0m84893ag0000pt8"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl3938"
+    },
+    "monitor": {
+      "ns": "sv305bhak"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pt8"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13137"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "UCI",
   "lloc": "MOSTRADOR ESQUERRE",
   "elements": {
-    "pc": {"ns": "S4AV0105"},
-    "monitor": {"ns": "V902Z3RB"},
-    "teclat": {"ns": "KIT00442"}
+    "pc": {
+      "ns": "S4AV0105"
+    },
+    "monitor": {
+      "ns": "V902Z3RB"
+    },
+    "teclat": {
+      "ns": "KIT00442"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13138"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "REHABILITACIO",
   "lloc": "Sala Fisios 1",
   "elements": {
-    "pc": {"ns": "S4AU4974"},
-    "monitor": {"ns": "V902Z3WB"},
-    "teclat": {"ns": "KIT00019"},
-    "ratoli": {"ns": "KIT00019"}
+    "pc": {
+      "ns": "S4AU4974"
+    },
+    "monitor": {
+      "ns": "V902Z3WB"
+    },
+    "teclat": {
+      "ns": "KIT00019"
+    },
+    "ratoli": {
+      "ns": "KIT00019"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13139"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "REHABILITACIO",
   "lloc": "Despatx Guirao",
   "elements": {
-    "pc": {"ns": "S4pl4056"},
-    "monitor": {"ns": "sv305bha5"},
-    "teclat": {"ns": "201731563"},
-    "ratoli": {"ns": "skm0m84893ag0000l3f"}
+    "pc": {
+      "ns": "S4pl4056",
+      "switch": "SW-AMU139V0-28",
+      "portsw": "gi16"
+    },
+    "monitor": {
+      "ns": "sv305bha5"
+    },
+    "teclat": {
+      "ns": "201731563"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000l3f"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1313a"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "REHABILITACIO",
   "lloc": "Dr. Peret",
   "elements": {
-    "pc": {"ns": "ss4pl4559"},
-    "monitor": {"ns": "sv305bh9g"},
-    "teclat": {"ns": "201731563"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl4559",
+      "switch": "SW-AMU139V0-25",
+      "portsw": "gi8"
+    },
+    "monitor": {
+      "ns": "sv305bh9g"
+    },
+    "teclat": {
+      "ns": "201731563"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
-  "edifici": "1",
-  "planta": "0",
-  "dept": "REHABILITACIO",
-  "lloc": "ESCARLATA",
-  "elements": {
-    "pc": {"ns": ""},
-    "monitor": {"ns": ""}
-  }
-},{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1313c"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "REHABILITACIO",
   "lloc": "Manel Torello",
   "elements": {
-    "pc": {"ns": "ss4pl8703"},
-    "monitor": {"ns": "sv305dfm4"},
-    "teclat": {"ns": "8sskm0m84893avlc03t908k"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "ss4pl8703"
+    },
+    "monitor": {
+      "ns": "sv305dfm4"
+    },
+    "teclat": {
+      "ns": "8sskm0m84893avlc03t908k"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1313d"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "REHABILITACIO",
   "lloc": "Sala fisios 2",
   "elements": {
-    "pc": {"ns": "S4AU7258"},
-    "monitor": {"ns": "V9031DDN"},
-    "teclat": {"ns": "LZ527DJ37"},
-    "ratoli": {"ns": "LZ527DJ37"}
+    "pc": {
+      "ns": "S4AU7258",
+      "switch": "SW-AMU139V0-29",
+      "portsw": "gi12"
+    },
+    "monitor": {
+      "ns": "V9031DDN"
+    },
+    "teclat": {
+      "ns": "LZ527DJ37"
+    },
+    "ratoli": {
+      "ns": "LZ527DJ37"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1313e"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "REHABILITACIO",
   "lloc": "Sala fisios 3",
   "elements": {
-    "pc": {"ns": "S4AV0062"},
-    "monitor": {"ns": "V902YW97"},
-    "teclat": {"ns": "KIT00403"},
-    "ratoli": {"ns": "KIT00403"}
+    "pc": {
+      "ns": "S4AV0062"
+    },
+    "monitor": {
+      "ns": "V902YW97"
+    },
+    "teclat": {
+      "ns": "KIT00403"
+    },
+    "ratoli": {
+      "ns": "KIT00403"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1313f"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "REHABILITACIO",
   "lloc": "Sala fisios 4",
   "elements": {
-    "pc": {"ns": "S4AV0275"},
-    "monitor": {"ns": "V902V2X1"},
-    "teclat": {"ns": "LZ527DJ87"},
-    "ratoli": {"ns": "LZ527DJ87"}
+    "pc": {
+      "ns": "S4AV0275"
+    },
+    "monitor": {
+      "ns": "V902V2X1"
+    },
+    "teclat": {
+      "ns": "LZ527DJ87"
+    },
+    "ratoli": {
+      "ns": "LZ527DJ87"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13140"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "REHABILITACIO",
   "lloc": "Sala cardio 1",
   "elements": {
-    "pc": {"ns": "S4AU5155"},
-    "monitor": {"ns": "V902V2XT"},
-    "teclat": {"ns": "LZ516DJ03"},
-    "ratoli": {"ns": "LZ516DJ03"}
+    "pc": {
+      "ns": "S4AU5155"
+    },
+    "monitor": {
+      "ns": "V902V2XT"
+    },
+    "teclat": {
+      "ns": "LZ516DJ03"
+    },
+    "ratoli": {
+      "ns": "LZ516DJ03"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13141"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "REHABILITACIO",
   "lloc": "Sala cardio 2",
   "elements": {
-    "pc": {"ns": "S4AU5084"},
-    "monitor": {"ns": "V902V25V"},
-    "teclat": {"ns": "KIT00012"},
-    "ratoli": {"ns": "KIT00012"}
+    "pc": {
+      "ns": "S4AU5084",
+      "switch": "SW-AMU139V0-25",
+      "portsw": "gi18"
+    },
+    "monitor": {
+      "ns": "V902V25V"
+    },
+    "teclat": {
+      "ns": "KIT00012"
+    },
+    "ratoli": {
+      "ns": "KIT00012"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13142"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "REHABILITACIO",
   "lloc": "Sala Terapia Ocupacional 1",
   "elements": {
-    "pc": {"ns": "S4AU6671"},
-    "monitor": {"ns": "V902Y4HX"},
-    "teclat": {"ns": "KIT00500"},
-    "ratoli": {"ns": "KIT00500"}
+    "pc": {
+      "ns": "S4AU6671",
+      "switch": "SW-AMU139V0-25",
+      "portsw": "gi9"
+    },
+    "monitor": {
+      "ns": "V902Y4HX"
+    },
+    "teclat": {
+      "ns": "KIT00500"
+    },
+    "ratoli": {
+      "ns": "KIT00500"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13143"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "REHABILITACIO",
   "lloc": "Sala Terapia Ocupacional 2",
   "elements": {
-    "pc": {"ns": "S4AU7842"},
-    "monitor": {"ns": "V902V2Y1"},
-    "teclat": {"ns": "LZ525DJ44"},
-    "ratoli": {"ns": "LZ525DJ44"}
+    "pc": {
+      "ns": "S4AU7842"
+    },
+    "monitor": {
+      "ns": "V902V2Y1"
+    },
+    "teclat": {
+      "ns": "LZ525DJ44"
+    },
+    "ratoli": {
+      "ns": "LZ525DJ44"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13144"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "REHABILITACIO",
   "lloc": "Sala fisios 5",
   "elements": {
-    "pc": {"ns": "S4AV0482"},
-    "monitor": {"ns": "V902Z39M"},
-    "teclat": {"ns": "LZ527DJ30"},
-    "ratoli": {"ns": "LZ527DJ30"}
+    "pc": {
+      "ns": "S4AV0482",
+      "switch": "SW-AMU139V0-29",
+      "portsw": "gi8"
+    },
+    "monitor": {
+      "ns": "V902Z39M"
+    },
+    "teclat": {
+      "ns": "LZ527DJ30"
+    },
+    "ratoli": {
+      "ns": "LZ527DJ30"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13145"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "REHABILITACIO",
   "lloc": "Secretaria",
   "elements": {
-    "pc": {"ns": "S4AV0092"},
-    "monitor": {"ns": "V902Z30R"},
-    "teclat": {"ns": "KIT00196"},
-    "ratoli": {"ns": "KIT00196"}
+    "pc": {
+      "ns": "S4AV0092",
+      "switch": "SW-AMU139V0-25",
+      "portsw": "gi17"
+    },
+    "monitor": {
+      "ns": "V902Z30R"
+    },
+    "teclat": {
+      "ns": "KIT00196"
+    },
+    "ratoli": {
+      "ns": "KIT00196"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13146"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "URGENCIES",
   "lloc": "BOX 1",
   "elements": {
-    "pc": {"ns": "S4AU5118"},
-    "monitor": {"ns": "V902V2YL"},
-    "teclat": {"ns": "LZ527DJ46"},
-    "ratoli": {"ns": "LZ527DJ46"}
+    "pc": {
+      "ns": "S4AU5118"
+    },
+    "monitor": {
+      "ns": "V902V2YL"
+    },
+    "teclat": {
+      "ns": "LZ527DJ46"
+    },
+    "ratoli": {
+      "ns": "LZ527DJ46"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13147"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "URGENCIES",
   "lloc": "BOX 2",
   "elements": {
-    "pc": {"ns": "S4AU5004"},
-    "monitor": {"ns": "V902Z3WP"},
-    "teclat": {"ns": "KIT00022"},
-    "ratoli": {"ns": "KIT00022"}
+    "pc": {
+      "ns": "S4AU5004"
+    },
+    "monitor": {
+      "ns": "V902Z3WP"
+    },
+    "teclat": {
+      "ns": "KIT00022"
+    },
+    "ratoli": {
+      "ns": "KIT00022"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13148"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "URGENCIES",
   "lloc": "BOX 3",
   "elements": {
-    "pc": {"ns": "S4AU6862"},
-    "monitor": {"ns": "V902Z3EL"},
-    "teclat": {"ns": "KIT00584"},
-    "ratoli": {"ns": "KIT00584"}
+    "pc": {
+      "ns": "S4AU6862"
+    },
+    "monitor": {
+      "ns": "V902Z3EL"
+    },
+    "teclat": {
+      "ns": "KIT00584"
+    },
+    "ratoli": {
+      "ns": "KIT00584"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13149"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "URGENCIES",
   "lloc": "BOX 4",
   "elements": {
-    "pc": {"ns": "S4AU9088"},
-    "monitor": {"ns": "V902V2PE"},
-    "teclat": {"ns": "LZ527DJ64"},
-    "ratoli": {"ns": "LZ527DJ64"}
+    "pc": {
+      "ns": "S4AU9088"
+    },
+    "monitor": {
+      "ns": "V902V2PE"
+    },
+    "teclat": {
+      "ns": "LZ527DJ64"
+    },
+    "ratoli": {
+      "ns": "LZ527DJ64"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1314a"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "URGENCIES",
   "lloc": "BOX 5",
   "elements": {
-    "pc": {"ns": "S4AU9130"},
-    "monitor": {"ns": "V902V2WA"},
-    "teclat": {"ns": "LZ628DJ08"},
-    "ratoli": {"ns": "LZ628DJ08"}
+    "pc": {
+      "ns": "S4AU9130"
+    },
+    "monitor": {
+      "ns": "V902V2WA"
+    },
+    "teclat": {
+      "ns": "LZ628DJ08"
+    },
+    "ratoli": {
+      "ns": "LZ628DJ08"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1314b"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "URGENCIES",
   "lloc": "CONTROL INFERMERIA (dreta)",
   "elements": {
-    "pc": {"ns": "S4AV0542"},
-    "monitor": {"ns": "V902V2XY"},
-    "teclat": {"ns": "df81614sm"},
-    "ratoli": {"ns": "df81614sm"}
+    "pc": {
+      "ns": "S4AV0542"
+    },
+    "monitor": {
+      "ns": "V902V2XY"
+    },
+    "teclat": {
+      "ns": "df81614sm"
+    },
+    "ratoli": {
+      "ns": "df81614sm"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1314c"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "URGENCIES",
   "lloc": "Control infermeria (esquerre)",
   "elements": {
-    "pc": {"ns": "S4AU5144"},
-    "monitor": {"ns": "V0902V2PP"},
-    "teclat": {"ns": "KIT00028"},
-    "ratoli": {"ns": "KIT00028"}
+    "pc": {
+      "ns": "S4AU5144"
+    },
+    "monitor": {
+      "ns": "V0902V2PP"
+    },
+    "teclat": {
+      "ns": "KIT00028"
+    },
+    "ratoli": {
+      "ns": "KIT00028"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1314d"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "URGENCIES",
   "lloc": "DESPATX 1",
   "elements": {
-    "pc": {"ns": "S4PL3275"},
-    "monitor": {"ns": "V305BHTG"},
-    "teclat": {"ns": "8sskm0m4893avlc03t9083"},
-    "ratoli": {"ns": "skm0m84893ag0000r40"}
+    "pc": {
+      "ns": "S4PL3275"
+    },
+    "monitor": {
+      "ns": "V305BHTG"
+    },
+    "teclat": {
+      "ns": "8sskm0m4893avlc03t9083"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r40"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1314e"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "URGENCIES",
   "lloc": "Despatx 1. infermera",
   "elements": {
-    "pc": {"ns": "S4AU7801"},
-    "monitor": {"ns": "V902Z2V1"},
-    "teclat": {"ns": "KIT00356"},
-    "ratoli": {"ns": "KIT00356"}
+    "pc": {
+      "ns": "S4AU7801"
+    },
+    "monitor": {
+      "ns": "V902Z2V1"
+    },
+    "teclat": {
+      "ns": "KIT00356"
+    },
+    "ratoli": {
+      "ns": "KIT00356"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1314f"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "URGENCIES",
   "lloc": "DESPATX SUPERVISOR",
   "elements": {
-    "pc": {"ns": "S4PL9049"},
-    "monitor": {"ns": "V305BK1W"},
-    "teclat": {"ns": "8sskm0m84893avlc03t902b"},
-    "ratoli": {"ns": "KM0m848938sskm0m84893"}
+    "pc": {
+      "ns": "S4PL9049"
+    },
+    "monitor": {
+      "ns": "V305BK1W"
+    },
+    "teclat": {
+      "ns": "8sskm0m84893avlc03t902b"
+    },
+    "ratoli": {
+      "ns": "KM0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13150"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "URGENCIES",
   "lloc": "MOSTRADOR RECEPCIO",
   "elements": {
-    "pc": {"ns": "S4AY2926"},
-    "monitor": {"ns": "V902Z2M6"}
+    "pc": {
+      "ns": "S4AY2926",
+      "macTelf": "B4A8B969C8DC"
+    },
+    "monitor": {
+      "ns": "V902Z2M6"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13151"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "URGENCIES",
   "lloc": "MOSTRADOR RECEPCIO",
   "elements": {
-    "pc": {"ns": ""},
-    "monitor": {"ns": ""}
+    "pc": {
+      "ns": ""
+    },
+    "monitor": {
+      "ns": ""
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13152"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "URGENCIES",
   "lloc": "POLITRAUMA",
   "elements": {
-    "pc": {"ns": "S4AU9072"},
-    "monitor": {"ns": "V902V2PG"},
-    "teclat": {"ns": "LZ527DJ12"},
-    "ratoli": {"ns": "LZ527DJ12"}
+    "pc": {
+      "ns": "S4AU9072",
+      "switch": "SW-AMU139V0-27",
+      "portsw": "gi19"
+    },
+    "monitor": {
+      "ns": "V902V2PG"
+    },
+    "teclat": {
+      "ns": "LZ527DJ12"
+    },
+    "ratoli": {
+      "ns": "LZ527DJ12"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13153"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "URGENCIES",
   "lloc": "Quirofan",
   "elements": {
-    "pc": {"ns": "S4AU5133"},
-    "monitor": {"ns": "V902ZT15"},
-    "teclat": {"ns": "LZ516DJ28"},
-    "ratoli": {"ns": "LZ516DJ28"}
+    "pc": {
+      "ns": "S4AU5133"
+    },
+    "monitor": {
+      "ns": "V902ZT15"
+    },
+    "teclat": {
+      "ns": "LZ516DJ28"
+    },
+    "ratoli": {
+      "ns": "LZ516DJ28"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13154"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "URGENCIES",
   "lloc": "Sala estiudio - Telemedicina",
   "elements": {
-    "pc": {"ns": "ss4pl4067"},
-    "monitor": {"ns": "sv305bg2f"},
-    "teclat": {"ns": "skm0m84893ag0000ptr"},
-    "ratoli": {"ns": "skm0m84893ag0000l3d"}
+    "pc": {
+      "ns": "ss4pl4067",
+      "switch": "SW-AMU139V0-25",
+      "portsw": "gi5"
+    },
+    "monitor": {
+      "ns": "sv305bg2f"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000ptr"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000l3d"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13155"
+  },
   "edifici": "1",
   "planta": "0",
   "dept": "URGENCIES",
   "lloc": "SALA ESTUDIO1",
   "elements": {
-    "pc": {"ns": "S4AU7521"},
-    "monitor": {"ns": "V902Z31B"},
-    "teclat": {"ns": "LZ434AA10"},
-    "ratoli": {"ns": "LZ434AA10"}
+    "pc": {
+      "ns": "S4AU7521",
+      "switch": "SW-AMU139V0-46",
+      "portsw": "gi6"
+    },
+    "monitor": {
+      "ns": "V902Z31B"
+    },
+    "teclat": {
+      "ns": "LZ434AA10"
+    },
+    "ratoli": {
+      "ns": "LZ434AA10"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13156"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "QUIROFAN",
   "lloc": "Anestesia mostrador dret",
   "elements": {
-    "pc": {"ns": "S4PL5076"},
-    "monitor": {"ns": "V305BHBA"},
-    "teclat": {"ns": "8sskm0m4893avlc03t902p"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "S4PL5076"
+    },
+    "monitor": {
+      "ns": "V305BHBA"
+    },
+    "teclat": {
+      "ns": "8sskm0m4893avlc03t902p"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13157"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "QUIROFAN",
   "lloc": "Anestesia mostrador esquerre",
   "elements": {
-    "pc": {"ns": "S4AU7525"},
-    "monitor": {"ns": "V902Z30K"},
-    "teclat": {"ns": "LZ434AL05"},
-    "ratoli": {"ns": "LZ434AL05"}
+    "pc": {
+      "ns": "S4AU7525"
+    },
+    "monitor": {
+      "ns": "V902Z30K"
+    },
+    "teclat": {
+      "ns": "LZ434AL05"
+    },
+    "ratoli": {
+      "ns": "LZ434AL05"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13158"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "QUIROFAN",
   "lloc": "AntesalaQuir1",
   "elements": {
-    "pc": {"ns": "S4AV0600"},
-    "monitor": {"ns": "V902V2XX"},
-    "teclat": {"ns": "LZ527DJ43"},
-    "ratoli": {"ns": "LZ527DJ43"}
+    "pc": {
+      "ns": "S4AV0600"
+    },
+    "monitor": {
+      "ns": "V902V2XX"
+    },
+    "teclat": {
+      "ns": "LZ527DJ43"
+    },
+    "ratoli": {
+      "ns": "LZ527DJ43"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13159"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "QUIROFAN",
   "lloc": "AntesalaQuir1",
   "elements": {
-    "pc": {"ns": "S4PL8751"},
-    "monitor": {"ns": "V305BHAV"},
-    "teclat": {"ns": "skm0m84893ag0000l4x"},
-    "ratoli": {"ns": "skm0m84893ag0000r13"}
+    "pc": {
+      "ns": "S4PL8751",
+      "macDX": "DC774C952927"
+    },
+    "monitor": {
+      "ns": "V305BHAV"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000l4x"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r13"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1315a"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "QUIROFAN",
   "lloc": "AntesalaQuir2",
   "elements": {
-    "pc": {"ns": "S4AU9078"},
-    "monitor": {"ns": "V902V2XR"},
-    "teclat": {"ns": "LZ527DJ61"},
-    "ratoli": {"ns": "LZ527DJ61"}
+    "pc": {
+      "ns": "S4AU9078"
+    },
+    "monitor": {
+      "ns": "V902V2XR"
+    },
+    "teclat": {
+      "ns": "LZ527DJ61"
+    },
+    "ratoli": {
+      "ns": "LZ527DJ61"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1315b"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "QUIROFAN",
   "lloc": "AntesalaQuir2",
   "elements": {
-    "pc": {"ns": "S4PL5061"},
-    "monitor": {"ns": "V305BHLD"},
-    "teclat": {"ns": "skm0m84893ag0000pxc"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "S4PL5061"
+    },
+    "monitor": {
+      "ns": "V305BHLD"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000pxc"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1315c"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "QUIROFAN",
   "lloc": "AntesalaQuir3",
   "elements": {
-    "pc": {"ns": "S4AU7137"},
-    "monitor": {"ns": "V902Z39F"},
-    "teclat": {"ns": "KIT00389"},
-    "ratoli": {"ns": "KIT00389"}
+    "pc": {
+      "ns": "S4AU7137",
+      "switch": "SW-AMU139V0-36",
+      "portsw": "gi12"
+    },
+    "monitor": {
+      "ns": "V902Z39F"
+    },
+    "teclat": {
+      "ns": "KIT00389"
+    },
+    "ratoli": {
+      "ns": "KIT00389"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1315d"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "QUIROFAN",
   "lloc": "AntesalaQuir3",
   "elements": {
-    "pc": {"ns": "S4PL4595"},
-    "monitor": {"ns": "V305BK1Z"},
-    "teclat": {"ns": "8sskm0m84893avlc03t904h"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "S4PL4595"
+    },
+    "monitor": {
+      "ns": "V305BK1Z"
+    },
+    "teclat": {
+      "ns": "8sskm0m84893avlc03t904h"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1315e"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "QUIROFAN",
   "lloc": "AntesalaQuir4",
   "elements": {
-    "pc": {"ns": "S4AU7283"},
-    "monitor": {"ns": "V902Z3A8"},
-    "teclat": {"ns": "KIT00366"},
-    "ratoli": {"ns": "KIT00366"}
+    "pc": {
+      "ns": "S4AU7283",
+      "switch": "SW-AMU139V0-36",
+      "portsw": "gi7"
+    },
+    "monitor": {
+      "ns": "V902Z3A8"
+    },
+    "teclat": {
+      "ns": "KIT00366"
+    },
+    "ratoli": {
+      "ns": "KIT00366"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1315f"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "QUIROFAN",
   "lloc": "AntesalaQuir4",
   "elements": {
-    "pc": {"ns": "S4PL3110"},
-    "monitor": {"ns": "V305BHBB"},
-    "teclat": {"ns": "8sskm0m84893avlc03t9056"},
-    "ratoli": {"ns": "skm0m848938sskm0m84893"}
+    "pc": {
+      "ns": "S4PL3110",
+      "macTelf": "F87B204FFA2D"
+    },
+    "monitor": {
+      "ns": "V305BHBB"
+    },
+    "teclat": {
+      "ns": "8sskm0m84893avlc03t9056"
+    },
+    "ratoli": {
+      "ns": "skm0m848938sskm0m84893"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13160"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "QUIROFAN",
   "lloc": "Supervisor",
   "elements": {
-    "pc": {"ns": "S4PL3270"},
-    "monitor": {"ns": "V305BHLX"},
-    "teclat": {"ns": "8sskm0m84893avlc03t903z"},
-    "ratoli": {"ns": "skm0m84893ag0000r60"}
+    "pc": {
+      "ns": "S4PL3270"
+    },
+    "monitor": {
+      "ns": "V305BHLX"
+    },
+    "teclat": {
+      "ns": "8sskm0m84893avlc03t903z"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r60"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13161"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "QUIROFAN",
   "lloc": "REANIMACIO",
   "elements": {
-    "pc": {"ns": "S4PL3327"},
-    "monitor": {"ns": "V305BHLB"},
-    "teclat": {"ns": "skm0m84893ag0000r09"},
-    "ratoli": {"ns": "skm0m84893ag0000r0l"}
+    "pc": {
+      "ns": "S4PL3327",
+      "switch": "SW-AMU139V0-36",
+      "portsw": "gi19"
+    },
+    "monitor": {
+      "ns": "V305BHLB"
+    },
+    "teclat": {
+      "ns": "skm0m84893ag0000r09"
+    },
+    "ratoli": {
+      "ns": "skm0m84893ag0000r0l"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13162"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "QUIROFAN",
   "lloc": "REANIMACIO 2",
   "elements": {
-    "pc": {"ns": "S4AU7145"},
-    "monitor": {"ns": "V902Z3AA"},
-    "teclat": {"ns": "KIT00390"},
-    "ratoli": {"ns": "KIT00390"}
+    "pc": {
+      "ns": "S4AU7145",
+      "macTelf": "247E12BF5D85"
+    },
+    "monitor": {
+      "ns": "V902Z3AA"
+    },
+    "teclat": {
+      "ns": "KIT00390"
+    },
+    "ratoli": {
+      "ns": "KIT00390"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13163"
+  },
   "edifici": "1",
   "planta": "-1",
   "dept": "QUIROFAN",
   "lloc": "Secretaria Quirofan",
   "elements": {
-    "pc": {"ns": "S4AV0220"},
-    "monitor": {"ns": "V902Z3RV"},
-    "teclat": {"ns": "KIT00441"},
-    "ratoli": {"ns": "KIT00441"}
+    "pc": {
+      "ns": "S4AV0220"
+    },
+    "monitor": {
+      "ns": "V902Z3RV"
+    },
+    "teclat": {
+      "ns": "KIT00441"
+    },
+    "ratoli": {
+      "ns": "KIT00441"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13164"
+  },
   "edifici": "2",
   "planta": "0",
   "dept": "ADMISSIO",
   "lloc": "Juan Rodriguez Velasco",
   "elements": {
-    "pc": {"ns": "S4AY2918"},
-    "monitor": {"ns": "V902Z3ZB"}
+    "pc": {
+      "ns": "S4AY2918",
+      "switch": "SW-AMU139V0-6",
+      "portsw": "gi2"
+    },
+    "monitor": {
+      "ns": "V902Z3ZB"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13165"
+  },
   "edifici": "2",
   "planta": "0",
   "dept": "ADMINISTRACIO",
   "lloc": "Maria Muñiz",
   "elements": {
-    "pc": {"ns": "S4AY2857"},
-    "monitor": {"ns": "V902Z3Z8"}
+    "pc": {
+      "ns": "S4AY2857",
+      "switch": "SW-AMU139V0-17",
+      "portsw": "gi5"
+    },
+    "monitor": {
+      "ns": "V902Z3Z8"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13166"
+  },
   "edifici": "2",
   "planta": "0",
   "dept": "ADMINISTRACIO",
   "lloc": "Amparo Ortega",
   "elements": {
-    "pc": {"ns": "S4AY2996"},
-    "monitor": {"ns": "V902Z3RN"}
+    "pc": {
+      "ns": "S4AY2996",
+      "switch": "SW-AMU139V0-5",
+      "portsw": "gi5"
+    },
+    "monitor": {
+      "ns": "V902Z3RN"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13167"
+  },
   "edifici": "2",
   "planta": "0",
   "dept": "ADMISSIO",
   "lloc": "Alex Gallego",
   "elements": {
-    "pc": {"ns": "S4AY2861"},
-    "monitor": {"ns": "V902Z3ZV"}
+    "pc": {
+      "ns": "S4AY2861",
+      "switch": "SW-AMU139V0-5",
+      "portsw": "gi2"
+    },
+    "monitor": {
+      "ns": "V902Z3ZV"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13168"
+  },
   "edifici": "2",
   "planta": "0",
   "dept": "ADMISSIO",
   "lloc": "Marta Cherta",
   "elements": {
-    "pc": {"ns": "PC053VFC"}
+    "pc": {
+      "ns": "PC053VFC",
+      "switch": "SW-AMU139V0-5",
+      "portsw": "gi1"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd13169"
+  },
   "edifici": "2",
   "planta": "0",
   "dept": "ADMISSIO",
   "lloc": "Centraleta",
   "elements": {
-    "pc": {"ns": "S4AY2975"},
-    "monitor": {"ns": "V902Z3ZZ"}
+    "pc": {
+      "ns": "S4AY2975",
+      "macTelf": "009AD2F08AA2"
+    },
+    "monitor": {
+      "ns": "V902Z3ZZ"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1316a"
+  },
   "edifici": "2",
   "planta": "0",
   "dept": "ADMISSIO",
   "lloc": "Elisa Ruiz",
   "elements": {
-    "pc": {"ns": "S4AY2906"},
-    "monitor": {"ns": "V902Z3ZP"}
+    "pc": {
+      "ns": "S4AY2906",
+      "switch": "SW-AMU139V0-17",
+      "portsw": "gi2"
+    },
+    "monitor": {
+      "ns": "V902Z3ZP"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1316b"
+  },
   "edifici": "2",
   "planta": "0",
   "dept": "ADMINISTRACIO",
   "lloc": "Manel Fernandez",
   "elements": {
-    "pc": {"ns": "S4M80643"}
+    "pc": {
+      "ns": "S4M80643"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1316c"
+  },
   "edifici": "2",
   "planta": "0",
   "dept": "ADMISSIO",
   "lloc": "Mostrador dret",
   "elements": {
-    "pc": {"ns": "S4AY2908"},
-    "monitor": {"ns": "V902Z3N5"}
+    "pc": {
+      "ns": "S4AY2908"
+    },
+    "monitor": {
+      "ns": "V902Z3N5"
+    }
   }
 },{
+  "_id": {
+    "$oid": "620f66eb164d131a6bd1316d"
+  },
   "edifici": "2",
   "planta": "0",
   "dept": "ADMISSIO",
   "lloc": "Mostrador esquerre",
   "elements": {
-    "pc": {"ns": "S4AY2907"},
-    "monitor": {"ns": "V902Z3M9"}
+    "pc": {
+      "ns": "S4AY2907",
+      "switch": "SW-AMU139V0-5",
+      "portsw": "gi4"
+    },
+    "monitor": {
+      "ns": "V902Z3M9"
+    }
   }
 },{
-  "edifici": "a",
-  "planta": "a",
-  "dept": "aaa",
-  "lloc": "lloc aaa",
+  "_id": {
+    "$oid": "623da9611db5f42260bcdf84"
+  },
+  "edifici": "1",
+  "planta": "0",
+  "dept": "Seguretat",
+  "lloc": "control seguretat",
+  "elements": {
+    "pc": {
+      "ns": "PC053VFH",
+      "macTelf": "B4A8B969C86C"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "623daae31db5f42260bcdf85"
+  },
+  "edifici": "2",
+  "planta": "-1",
+  "dept": "RMN",
+  "lloc": "Radioleg 2",
+  "elements": {
+    "pc": {
+      "ns": "PC053VEM"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "623dacad1db5f42260bcdf86"
+  },
+  "edifici": "2",
+  "planta": "-1B",
+  "dept": "UCA",
+  "lloc": "Carolina Espuny",
+  "elements": {
+    "pc": {
+      "ns": "PC053VLA",
+      "macDX": "70B3171DE5F4"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "623daee51db5f42260bcdf87"
+  },
+  "edifici": "1",
+  "planta": "0",
+  "dept": "RADIOLOGIA",
+  "lloc": "Sala informes Ecograf",
+  "elements": {
+    "pc": {
+      "ns": "PC053V7Z",
+      "switch": "SW-AMU139V0-8",
+      "portsw": "gi12"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "623daf961db5f42260bcdf88"
+  },
+  "edifici": "1",
+  "planta": "2",
+  "dept": "PSICOLOGIA",
+  "lloc": "Marta Casanovas",
+  "elements": {
+    "pc": {
+      "ns": "S4J96760"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "623db05a1db5f42260bcdf89"
+  },
+  "edifici": "2",
+  "planta": "0",
+  "dept": "RRHH",
+  "lloc": "Oscar Larrosa",
+  "elements": {
+    "pc": {
+      "ns": "S4AY2987"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "623db1011db5f42260bcdf8a"
+  },
+  "edifici": "1",
+  "planta": "-2",
+  "dept": "MAGATZEM",
+  "lloc": "Antonio Repiso",
+  "elements": {
+    "pc": {
+      "ns": "S4AY2880",
+      "switch": "SW-AMU139V0-20",
+      "portsw": "gi17"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "623db1a51db5f42260bcdf8b"
+  },
+  "edifici": "2",
+  "planta": "0",
+  "dept": "RRHH",
+  "lloc": "Anna Garcia Zafra",
+  "elements": {
+    "pc": {
+      "ns": "PC053VJH",
+      "switch": "SW-AMU139V0-6",
+      "portsw": "gi4"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "623db5861db5f42260bcdf8c"
+  },
+  "edifici": "1",
+  "planta": "-2",
+  "dept": "MANTENIMENT",
+  "lloc": "Juan Luis Hidalgo",
+  "elements": {
+    "pc": {
+      "ns": "S4AU7423",
+      "switch": "SW-AMU139V0-19",
+      "portsw": "gi8"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6241618b15d49d43bc5c33bb"
+  },
+  "edifici": "1",
+  "planta": "1",
+  "dept": "UH2",
+  "lloc": "Mostrador esquerre",
+  "elements": {
+    "pc": {
+      "ns": "S4AY2961",
+      "switch": "SW-AMU139V0-24",
+      "portsw": "gi1"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "624161d515d49d43bc5c33bc"
+  },
+  "edifici": "2",
+  "planta": "0",
+  "dept": "ADMINISTRACIO",
+  "lloc": "junta de govern",
+  "elements": {
+    "pc": {
+      "ns": "PC053VDS"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6241623515d49d43bc5c33bd"
+  },
+  "edifici": "1",
+  "planta": "-1",
+  "dept": "CONSULTES EXERNES",
+  "lloc": "Consulta 14 infermera",
+  "elements": {
+    "pc": {
+      "ns": "PC0A85QB",
+      "macTelf": "B4A8B969CB30"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6241627615d49d43bc5c33be"
+  },
+  "edifici": "1",
+  "planta": "0",
+  "dept": "CONSULTES EXTERNES",
+  "lloc": "Consulta 4 (infermera)",
+  "elements": {
+    "pc": {
+      "ns": "S4AY2980",
+      "switch": "SW-AMU139V0-30",
+      "portsw": "gi21"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "624162bc15d49d43bc5c33bf"
+  },
+  "edifici": "1",
+  "planta": "0",
+  "dept": "REHABILITACIÓ",
+  "lloc": "Escarlata",
+  "elements": {
+    "pc": {
+      "ns": "PC053VBN"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6241631d15d49d43bc5c33c0"
+  },
+  "edifici": "2",
+  "planta": "-1B",
+  "dept": "UCA",
+  "lloc": "Aula 1",
+  "elements": {
+    "pc": {
+      "ns": "PC053VKB"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6241638b15d49d43bc5c33c1"
+  },
+  "edifici": "1",
+  "planta": "1",
+  "dept": "UH2",
+  "lloc": "Finestra (estacio kiosc)",
+  "elements": {
+    "pc": {
+      "ns": "S4AU7772"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "624163c815d49d43bc5c33c2"
+  },
+  "edifici": "2",
+  "planta": "1",
+  "dept": "DIRECCIO MEDICA",
+  "lloc": "Sala reunions",
+  "elements": {
+    "pc": {
+      "ns": "PC053VF6",
+      "switch": "SW-AMU139V0-3",
+      "portsw": "gi10"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6241641c15d49d43bc5c33c3"
+  },
+  "edifici": "2",
+  "planta": "-1",
+  "dept": "DPV",
+  "lloc": "Sala reunions",
+  "elements": {
+    "pc": {
+      "ns": "PC053V62"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "624164af15d49d43bc5c33c4"
+  },
+  "edifici": "1",
+  "planta": "-1",
+  "dept": "CONSULTES EXTERNES",
+  "lloc": "Consulta 15 Infermera",
+  "elements": {
+    "pc": {
+      "ns": "PC0A85PK"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6241650515d49d43bc5c33c5"
+  },
+  "edifici": "1",
+  "planta": "0",
+  "dept": "CONSULTES EXTERNES",
+  "lloc": "Consulta 1 (infermera)",
+  "elements": {
+    "pc": {
+      "ns": "S4AY2994"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6241657515d49d43bc5c33c6"
+  },
+  "edifici": "2",
+  "planta": "-1B",
+  "dept": "INFORMATICA",
+  "lloc": "Sala reunions",
   "elements": {}
 },{
-  "edifici": "yy",
-  "planta": "yy",
-  "dept": "yy",
-  "lloc": "yy",
+  "_id": {
+    "$oid": "624165f015d49d43bc5c33c7"
+  },
+  "edifici": "1",
+  "planta": "-2",
+  "dept": "MORGUE",
+  "lloc": "Sala reunions",
   "elements": {}
 }]

@@ -1,0 +1,1791 @@
+[{
+  "_id": {
+    "$oid": "623da8801db5f42260bcded1"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "PC053VFH",
+  "LLDP_RID1_SWITCH_PORTDESCR": "PC Port",
+  "LLDP_RID1_SWITCH_SYSNAME": "B4A8B969C86C",
+  "p4k_FREQUENT_USERS": "80734->46;84001->16;84005->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcded2"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AV0482",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi8",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-29",
+  "p4k_FREQUENT_USERS": "2349->30;24369->17;6074->16",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcded3"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4534",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi17",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-32",
+  "p4k_FREQUENT_USERS": "27443->19;26239->8;24673->3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcded4"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AU5084",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi18",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-25",
+  "p4k_FREQUENT_USERS": "9862->37;1251->22",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcded5"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4059",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "1358->29",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcded6"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL3941",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "23611->48;20623->36;25793->29",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcded7"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL8837",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "11214->18;6200->12;9937->12",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcded8"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4555",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "81921->3;81920->2;3021->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcded9"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AY3020",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "23613->7;3188->7;26937->5",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdeda"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AY2856",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi12",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-20",
+  "p4k_FREQUENT_USERS": "27083->58;22421->10;23913->9",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdedb"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL3741",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "80209->11;81249->10;13614->7",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdedc"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AY2986",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "1277->27;4070->27;27705->18",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdedd"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AV0146",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "12777->34;27729->30;14681->13",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdede"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "PC053VEM",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "24227->31;26589->30;80790->18",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdedf"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AV0105",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "9986->29;6186->27;15068->20",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdee0"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AY2961",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi1",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-24",
+  "p4k_FREQUENT_USERS": "9937->22;22389->6;23897->5",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdee1"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL3873",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "23415->29;27397->23;7305->22",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdee2"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4528",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "3511->20",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdee3"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AU6938",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi9",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-7",
+  "p4k_FREQUENT_USERS": "7305->20;15192->15;23415->12",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdee4"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AU7289",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi21",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-32",
+  "p4k_FREQUENT_USERS": "14545->33;24827->19;23331->14",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdee5"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AY2975",
+  "LLDP_RID1_SWITCH_PORTDESCR": "PC Port",
+  "LLDP_RID1_SWITCH_SYSNAME": "009AD2F08AA2",
+  "p4k_FREQUENT_USERS": "22421->100;27083->39;81828->2",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdee6"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AU7083",
+  "LLDP_RID1_SWITCH_PORTDESCR": "PC Port",
+  "LLDP_RID1_SWITCH_SYSNAME": "247E12BF778A",
+  "p4k_FREQUENT_USERS": "27413->20;1370->16;12853->13",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdee7"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL3938",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "11875->29;1305->28;11971->26",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdee8"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL3954",
+  "LLDP_RID1_SWITCH_PORTDESCR": "PC Port",
+  "LLDP_RID1_SWITCH_SYSNAME": "B4A8B969C80B",
+  "p4k_FREQUENT_USERS": "10379->20;6200->16;23897->6",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdee9"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AU7145",
+  "LLDP_RID1_SWITCH_PORTDESCR": "PC Port",
+  "LLDP_RID1_SWITCH_SYSNAME": "247E12BF5D85",
+  "p4k_FREQUENT_USERS": "15131->17;6934->6;7351->6",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdeea"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AY2908",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "10934->19;1370->16;23913->14",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdeeb"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AY2926",
+  "LLDP_RID1_SWITCH_PORTDESCR": "PC Port",
+  "LLDP_RID1_SWITCH_SYSNAME": "B4A8B969C8DC",
+  "p4k_FREQUENT_USERS": "1346->39;1349->32;23447->30",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdeec"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4073",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi12",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-7",
+  "p4k_FREQUENT_USERS": "6395->17;15192->10;12907->8",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdeed"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4060",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "5245->8;9986->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdeee"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL8689",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi13",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-35",
+  "p4k_FREQUENT_USERS": "7083->26",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdeef"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4561",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi21",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-31",
+  "p4k_FREQUENT_USERS": "26937->9;27333->4;23287->4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdef0"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4774",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi13",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-3",
+  "p4k_FREQUENT_USERS": "1366->34",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdef1"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AU7258",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi12",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-29",
+  "p4k_FREQUENT_USERS": "4003->36;6935->32;14457->7",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdef2"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4698",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "25747->32",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdef3"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AV0275",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "6877->45;23299->24;24369->21",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdef4"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4554",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi2",
+  "LLDP_RID1_SWITCH_SYSNAME": "SWITCH-INFORMATICA",
+  "p4k_FREQUENT_USERS": "1359->36",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdef5"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL8707",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi1",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-32",
+  "p4k_FREQUENT_USERS": "1288->35",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdef6"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "PC053VDS",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "3115->4;3167->2;22473->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdef7"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL9025",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi11",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-9",
+  "p4k_FREQUENT_USERS": "26201->9;1359->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdef8"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AY2861",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi2",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-5",
+  "p4k_FREQUENT_USERS": "12072->43;9952->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdef9"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AU4974",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "26481->39;25917->8;14457->6",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdefa"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4519",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi2",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-16",
+  "p4k_FREQUENT_USERS": "7343->5;9864->1;6186->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdefb"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AU9072",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi19",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-27",
+  "p4k_FREQUENT_USERS": "3860->10;26937->4;9755->4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdefc"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4705",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi5",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-31",
+  "p4k_FREQUENT_USERS": "22473->17",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdefd"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL3953",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi2",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-28",
+  "p4k_FREQUENT_USERS": "3280->12;1366->7;27479->5",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdefe"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL3896",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi2",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-32",
+  "p4k_FREQUENT_USERS": "27479->11;22473->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdeff"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AY2918",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi2",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-6",
+  "p4k_FREQUENT_USERS": "6454->74",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf00"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4559",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi8",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-25",
+  "p4k_FREQUENT_USERS": "26271->21;81904->4;27763->2",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf01"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AU7293",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "6061->23;10287->7;6947->3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf02"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "PC0A85QB",
+  "LLDP_RID1_SWITCH_PORTDESCR": "PC Port",
+  "LLDP_RID1_SWITCH_SYSNAME": "B4A8B969CB30",
+  "p4k_FREQUENT_USERS": "1254->12;1155->2",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf03"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4067",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi5",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-25",
+  "p4k_FREQUENT_USERS": "14621->12;27443->10;24673->9",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf04"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL3951",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi9",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-26",
+  "p4k_FREQUENT_USERS": "1288->10;3167->6;1369->4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf05"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4526",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "4324->9;11091->7;81241->7",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf06"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4553",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi2",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-24",
+  "p4k_FREQUENT_USERS": "80434->9",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf07"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AY2980",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi21",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-30",
+  "p4k_FREQUENT_USERS": "6074->13",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf08"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL8751",
+  "LLDP_RID1_SWITCH_PORTDESCR": "Port 2",
+  "LLDP_RID1_SWITCH_SYSNAME": "SEPDC774C952927",
+  "p4k_FREQUENT_USERS": "23613->5;25679->5;1350->4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf09"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4876",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi2",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-4",
+  "p4k_FREQUENT_USERS": "3167->14",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf0a"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AU7842",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "20069->42",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf0b"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL3822",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi3",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-4",
+  "p4k_FREQUENT_USERS": "7452->34",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf0c"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "PC053VFC",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi1",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-5",
+  "p4k_FREQUENT_USERS": "9952->29",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf0d"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL3814",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "21459->31",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf0e"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4917",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi2",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-31",
+  "p4k_FREQUENT_USERS": "23613->9;26303->9;25679->5",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf0f"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "PC053VLA",
+  "LLDP_RID1_SWITCH_PORTDESCR": "eth0",
+  "LLDP_RID1_SWITCH_SYSNAME": "SEP70B3171DE5F4",
+  "p4k_FREQUENT_USERS": "10572->15",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf10"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL3746",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi9",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-34",
+  "p4k_FREQUENT_USERS": "27095->37",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf11"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4686",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "26271->20;27763->17",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf12"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4065",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "6162->32;7083->5;6129->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf13"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AU7096",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi16",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-31",
+  "p4k_FREQUENT_USERS": "81091->25;81071->21;80400->6",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf14"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AU7137",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi12",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-36",
+  "p4k_FREQUENT_USERS": "81249->6;26239->5;3359->4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf15"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AV0092",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi17",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-25",
+  "p4k_FREQUENT_USERS": "15548->22;1370->7",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf16"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4545",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "3115->35",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf17"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL3826",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi11",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-10",
+  "p4k_FREQUENT_USERS": "12362->12",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf18"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL3819",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi16",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-29",
+  "p4k_FREQUENT_USERS": "3159->15;26271->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf19"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AU6671",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi9",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-25",
+  "p4k_FREQUENT_USERS": "1293->18;27389->14",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf1a"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL3933",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi11",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-27",
+  "p4k_FREQUENT_USERS": "1275->23;1254->5;1351->2",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf1b"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4190",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi4",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-32",
+  "p4k_FREQUENT_USERS": "27257->33",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf1c"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL8663",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "1220->27;10287->19;23311->12",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf1d"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4M80643",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "5095->27;1358->2",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf1e"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL3950",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi9",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-9",
+  "p4k_FREQUENT_USERS": "11631->13",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf1f"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4759",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi17",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-12",
+  "p4k_FREQUENT_USERS": "15611->22",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf20"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL3270",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "12391->23;6061->18;14043->15",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf21"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL8703",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "4222->31;26481->5;2349->3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf22"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL3942",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi1",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-19",
+  "p4k_FREQUENT_USERS": "1330->32",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf23"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4452",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi14",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-31",
+  "p4k_FREQUENT_USERS": "21979->8;12376->7;24273->6",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf24"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "PC053V7Z",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi12",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-8",
+  "p4k_FREQUENT_USERS": "24227->9;26589->6;80790->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf25"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4J96760",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "23691->28",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf26"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL5076",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "1230->14;24273->9;23613->3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf27"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "PC053VBN",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "6074->7;2349->2",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf28"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL3110",
+  "LLDP_RID1_SWITCH_PORTDESCR": "PC Port",
+  "LLDP_RID1_SWITCH_SYSNAME": "F87B204FFA2D",
+  "p4k_FREQUENT_USERS": "23613->3;26937->3;6257->3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf29"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AY2987",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "23715->42",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf2a"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL3327",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi19",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-36",
+  "p4k_FREQUENT_USERS": "20849->19;6425->16;1351->7",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf2b"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4531",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi15",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-3",
+  "p4k_FREQUENT_USERS": "6616->21",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf2c"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "PC0A85PL",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi8",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-23",
+  "p4k_FREQUENT_USERS": "1322->41",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf2d"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AU7298",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi12",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-34",
+  "p4k_FREQUENT_USERS": "1309->30;9747->21",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf2e"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AY2882",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi8",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-32",
+  "p4k_FREQUENT_USERS": "9747->35;23331->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf2f"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4597",
+  "LLDP_RID1_SWITCH_PORTDESCR": "PC Port",
+  "LLDP_RID1_SWITCH_SYSNAME": "2C0BE904935F",
+  "p4k_FREQUENT_USERS": "1340->37",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf30"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4595",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "6669->7;14350->5;23613->5",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf31"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AY2996",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi5",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-5",
+  "p4k_FREQUENT_USERS": "11483->34",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf32"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4373",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi6",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-12",
+  "p4k_FREQUENT_USERS": "1325->15",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf33"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AU7236",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi12",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-30",
+  "p4k_FREQUENT_USERS": "27061->31;9494->13;23415->7",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf34"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AY2903",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi9",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-16",
+  "p4k_FREQUENT_USERS": "26113->35",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf35"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4563",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "4324->19",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf36"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AY2968",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi5",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-13",
+  "p4k_FREQUENT_USERS": "27315->34",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf37"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AU7205",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "81073->37;80492->21",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf38"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "PC053VKB",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "27443->24;24673->7;26239->6",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf39"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL3827",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi13",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-23",
+  "p4k_FREQUENT_USERS": "3280->31",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf3a"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4543",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "1155->18;81755->5;81683->3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf3b"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4530",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi14",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-12",
+  "p4k_FREQUENT_USERS": "3048->24",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf3c"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4056",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi16",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-28",
+  "p4k_FREQUENT_USERS": "25595->36",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf3d"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL4539",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi4",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-12",
+  "p4k_FREQUENT_USERS": "4529->16",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf3e"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL3831",
+  "LLDP_RID1_SWITCH_PORTDESCR": "PC Port",
+  "LLDP_RID1_SWITCH_SYSNAME": "F87B204FBB03",
+  "p4k_FREQUENT_USERS": "6097->35",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf3f"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL3948",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi3",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-10",
+  "p4k_FREQUENT_USERS": "26251->20",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf40"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL5078",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi10",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-13",
+  "p4k_FREQUENT_USERS": "1374->14;3802->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf41"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL2948",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi16",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-5",
+  "p4k_FREQUENT_USERS": "1347->31",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf42"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AY2978",
+  "LLDP_RID1_SWITCH_PORTDESCR": "PC Port",
+  "LLDP_RID1_SWITCH_SYSNAME": "B4A8B969C9D7",
+  "p4k_FREQUENT_USERS": "1182->44",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf43"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4PL3815",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "6129->45",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf44"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AU7149",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi11",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-20",
+  "p4k_FREQUENT_USERS": "1336->41",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf45"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AV0220",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "6891->27;9124->14;25441->2",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf46"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AY2880",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi17",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-20",
+  "p4k_FREQUENT_USERS": "0838->29",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf47"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AY2907",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi4",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-5",
+  "p4k_FREQUENT_USERS": "1370->29;12487->2;27413->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf48"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AY2878",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi15",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-20",
+  "p4k_FREQUENT_USERS": "81866->25;81867->20;81910->16",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf49"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "PC053VFB",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "84005->52",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf4a"
+  },
+  "FECHAHORA": "25-01-2022",
+  "HARDWARE_NAME": "S4AU7521",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi6",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-46",
+  "p4k_FREQUENT_USERS": "9755->31;26809->7;26239->6",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf4b"
+  },
+  "FECHAHORA": "24-01-2022",
+  "HARDWARE_NAME": "S4AU7772",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "6615->3;26219->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf4c"
+  },
+  "FECHAHORA": "24-01-2022",
+  "HARDWARE_NAME": "S4PL4467",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi3",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-32",
+  "p4k_FREQUENT_USERS": "23877->7;23287->3;27333->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf4d"
+  },
+  "FECHAHORA": "24-01-2022",
+  "HARDWARE_NAME": "S4PL3854",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi5",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-23",
+  "p4k_FREQUENT_USERS": "3336->10",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf4e"
+  },
+  "FECHAHORA": "24-01-2022",
+  "HARDWARE_NAME": "S4AU5155",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "9862->11;24369->8;14457->3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf4f"
+  },
+  "FECHAHORA": "24-01-2022",
+  "HARDWARE_NAME": "PC053VF6",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi10",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-3",
+  "p4k_FREQUENT_USERS": "6616->6",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf50"
+  },
+  "FECHAHORA": "24-01-2022",
+  "HARDWARE_NAME": "S4PL4716",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi5",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-28",
+  "p4k_FREQUENT_USERS": "25747->6;22473->5;25397->4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf51"
+  },
+  "FECHAHORA": "24-01-2022",
+  "HARDWARE_NAME": "S4AU7283",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi7",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-36",
+  "p4k_FREQUENT_USERS": "23877->4;24273->3;21979->2",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf52"
+  },
+  "FECHAHORA": "24-01-2022",
+  "HARDWARE_NAME": "S4PL8838",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi7",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-12",
+  "p4k_FREQUENT_USERS": "4139->18",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf53"
+  },
+  "FECHAHORA": "24-01-2022",
+  "HARDWARE_NAME": "PC053VJH",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi4",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-6",
+  "p4k_FREQUENT_USERS": "12794->15",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf54"
+  },
+  "FECHAHORA": "24-01-2022",
+  "HARDWARE_NAME": "S4PL4753",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "1254->24;25433->3;24827->2",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf55"
+  },
+  "FECHAHORA": "24-01-2022",
+  "HARDWARE_NAME": "S4PL4527",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi17",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-5",
+  "p4k_FREQUENT_USERS": "4212->28",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf56"
+  },
+  "FECHAHORA": "24-01-2022",
+  "HARDWARE_NAME": "S4PL3807",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi9",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-20",
+  "p4k_FREQUENT_USERS": "9494->21;1336->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf57"
+  },
+  "FECHAHORA": "24-01-2022",
+  "HARDWARE_NAME": "S4AV0129",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "12777->3;23375->2;23063->2",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf58"
+  },
+  "FECHAHORA": "21-01-2022",
+  "HARDWARE_NAME": "S4PL4222",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "4037->15",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf59"
+  },
+  "FECHAHORA": "21-01-2022",
+  "HARDWARE_NAME": "S4PL8854",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "0968->28",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf5a"
+  },
+  "FECHAHORA": "21-01-2022",
+  "HARDWARE_NAME": "S4PL3818",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi5",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-26",
+  "p4k_FREQUENT_USERS": "27333->11;23877->5;80289->5",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf5b"
+  },
+  "FECHAHORA": "21-01-2022",
+  "HARDWARE_NAME": "S4PL4685",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "1230->6",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf5c"
+  },
+  "FECHAHORA": "21-01-2022",
+  "HARDWARE_NAME": "S4PL3810",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi5",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-11",
+  "p4k_FREQUENT_USERS": "12374->18",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf5d"
+  },
+  "FECHAHORA": "21-01-2022",
+  "HARDWARE_NAME": "S4AU6626",
+  "LLDP_RID1_SWITCH_PORTDESCR": "PC Port",
+  "LLDP_RID1_SWITCH_SYSNAME": "2C0BE904B2E3",
+  "p4k_FREQUENT_USERS": "23701->39;23571->5;3261->2",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf5e"
+  },
+  "FECHAHORA": "21-01-2022",
+  "HARDWARE_NAME": "S4PL2866",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi12",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-9",
+  "p4k_FREQUENT_USERS": "3013->35",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf5f"
+  },
+  "FECHAHORA": "21-01-2022",
+  "HARDWARE_NAME": "S4PL8693",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi10",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-12",
+  "p4k_FREQUENT_USERS": "3127->15",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf60"
+  },
+  "FECHAHORA": "21-01-2022",
+  "HARDWARE_NAME": "S4PL8588",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "5370->21",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf61"
+  },
+  "FECHAHORA": "21-01-2022",
+  "HARDWARE_NAME": "S4PL0174",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi16",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-13",
+  "p4k_FREQUENT_USERS": "10023->18",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf62"
+  },
+  "FECHAHORA": "20-01-2022",
+  "HARDWARE_NAME": "S4PL4550",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "3192->14",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf63"
+  },
+  "FECHAHORA": "20-01-2022",
+  "HARDWARE_NAME": "S4AY2965",
+  "LLDP_RID1_SWITCH_PORTDESCR": "PC Port",
+  "LLDP_RID1_SWITCH_SYSNAME": "247E12BE6F56",
+  "p4k_FREQUENT_USERS": "23415->8;14479->3;20781->2",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf64"
+  },
+  "FECHAHORA": "20-01-2022",
+  "HARDWARE_NAME": "S4PL4221",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "14621->21",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf65"
+  },
+  "FECHAHORA": "20-01-2022",
+  "HARDWARE_NAME": "S4PL8700",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi14",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-13",
+  "p4k_FREQUENT_USERS": "3802->25",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf66"
+  },
+  "FECHAHORA": "20-01-2022",
+  "HARDWARE_NAME": "S4PL4075",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi4",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-3",
+  "p4k_FREQUENT_USERS": "21979->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf67"
+  },
+  "FECHAHORA": "20-01-2022",
+  "HARDWARE_NAME": "S4PL3893",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi15",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU032V1-1",
+  "p4k_FREQUENT_USERS": "7320->21;23853->9;81723->2",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf68"
+  },
+  "FECHAHORA": "20-01-2022",
+  "HARDWARE_NAME": "PC053V62",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "84105->2;4142->1;3802->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf69"
+  },
+  "FECHAHORA": "20-01-2022",
+  "HARDWARE_NAME": "S4PL3167",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi16",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU010V1-18",
+  "p4k_FREQUENT_USERS": "12794->9;2254->2;22623->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf6a"
+  },
+  "FECHAHORA": "20-01-2022",
+  "HARDWARE_NAME": "S4PL3099",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi15",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-9",
+  "p4k_FREQUENT_USERS": "4540->24;7333->3;5039->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf6b"
+  },
+  "FECHAHORA": "20-01-2022",
+  "HARDWARE_NAME": "S4PL4183",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi2",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-13",
+  "p4k_FREQUENT_USERS": "3445->16",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf6c"
+  },
+  "FECHAHORA": "20-01-2022",
+  "HARDWARE_NAME": "S4PL9049",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "6341->39",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf6d"
+  },
+  "FECHAHORA": "19-01-2022",
+  "HARDWARE_NAME": "S4PL4072",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi3",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-31",
+  "p4k_FREQUENT_USERS": "13614->4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf6e"
+  },
+  "FECHAHORA": "19-01-2022",
+  "HARDWARE_NAME": "S4PL3738",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi8",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-33",
+  "p4k_FREQUENT_USERS": "23603->5",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf6f"
+  },
+  "FECHAHORA": "19-01-2022",
+  "HARDWARE_NAME": "S4PL4482",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi6",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-15",
+  "p4k_FREQUENT_USERS": "20623->9;1369->3;27257->2",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf70"
+  },
+  "FECHAHORA": "19-01-2022",
+  "HARDWARE_NAME": "S4PL4547",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "4923->14",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf71"
+  },
+  "FECHAHORA": "19-01-2022",
+  "HARDWARE_NAME": "S4PL4540",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "1363->18",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf72"
+  },
+  "FECHAHORA": "18-01-2022",
+  "HARDWARE_NAME": "PC0A85PK",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "23331->2;1254->1;1183->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf73"
+  },
+  "FECHAHORA": "18-01-2022",
+  "HARDWARE_NAME": "S4AY2857",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi5",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-17",
+  "p4k_FREQUENT_USERS": "1343->15",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf74"
+  },
+  "FECHAHORA": "17-01-2022",
+  "HARDWARE_NAME": "S4PL4066",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi18",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-32",
+  "p4k_FREQUENT_USERS": "25397->6",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf75"
+  },
+  "FECHAHORA": "17-01-2022",
+  "HARDWARE_NAME": "S4PL4868",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi20",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-26",
+  "p4k_FREQUENT_USERS": "23877->4;23287->3;27333->3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf76"
+  },
+  "FECHAHORA": "17-01-2022",
+  "HARDWARE_NAME": "S4PL4187",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "11091->2;27443->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf77"
+  },
+  "FECHAHORA": "17-01-2022",
+  "HARDWARE_NAME": "S4AY2994",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "25433->5;10194->2;13588->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf78"
+  },
+  "FECHAHORA": "14-01-2022",
+  "HARDWARE_NAME": "S4AY2906",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi2",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-17",
+  "p4k_FREQUENT_USERS": "23235->37",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf79"
+  },
+  "FECHAHORA": "13-01-2022",
+  "HARDWARE_NAME": "S4PL8754",
+  "LLDP_RID1_SWITCH_PORTDESCR": "PC Port",
+  "LLDP_RID1_SWITCH_SYSNAME": "2C0BE9050117",
+  "p4k_FREQUENT_USERS": "3273->47;23819->35;25727->8",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf7a"
+  },
+  "FECHAHORA": "12-01-2022",
+  "HARDWARE_NAME": "S4PL4355",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi15",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-13",
+  "p4k_FREQUENT_USERS": "81908->22",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf7b"
+  },
+  "FECHAHORA": "12-01-2022",
+  "HARDWARE_NAME": "S4PL4186",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi16",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-32",
+  "p4k_FREQUENT_USERS": "9033->21",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf7c"
+  },
+  "FECHAHORA": "11-01-2022",
+  "HARDWARE_NAME": "S4PL3945",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "81907->3;24273->1;1369->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf7d"
+  },
+  "FECHAHORA": "11-01-2022",
+  "HARDWARE_NAME": "S4PL0167",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi12",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-12",
+  "p4k_FREQUENT_USERS": "4142->20",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf7e"
+  },
+  "FECHAHORA": "10-01-2022",
+  "HARDWARE_NAME": "S4PL3179",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi21",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU141V0-13",
+  "p4k_FREQUENT_USERS": "27615->7;6215->1;20781->1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf7f"
+  },
+  "FECHAHORA": "10-01-2022",
+  "HARDWARE_NAME": "CZC1416KQW",
+  "LLDP_RID1_SWITCH_PORTDESCR": "-",
+  "LLDP_RID1_SWITCH_SYSNAME": "-",
+  "p4k_FREQUENT_USERS": "12712->15;27061->2",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf80"
+  },
+  "FECHAHORA": "09-01-2022",
+  "HARDWARE_NAME": "S4AU7423",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi8",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-19",
+  "p4k_FREQUENT_USERS": "1306->30",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf81"
+  },
+  "FECHAHORA": "07-01-2022",
+  "HARDWARE_NAME": "S4PL3939",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi13",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-19",
+  "p4k_FREQUENT_USERS": "6344->36",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf82"
+  },
+  "FECHAHORA": "05-01-2022",
+  "HARDWARE_NAME": "S4PL4188",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi3",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-33",
+  "p4k_FREQUENT_USERS": "1369->13",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623da8801db5f42260bcdf83"
+  },
+  "FECHAHORA": "03-01-2022",
+  "HARDWARE_NAME": "S4AV0238",
+  "LLDP_RID1_SWITCH_PORTDESCR": "gi11",
+  "LLDP_RID1_SWITCH_SYSNAME": "SW-AMU139V0-9",
+  "p4k_FREQUENT_USERS": "4141->38;26201->26;4540->1",
+  "__v": 0
+}]

@@ -1,13 +1,13 @@
 <template>
 	<q-page class="q-pa-lg">
-		<div class="col">
+		<div class="col wrap">
 
 			<!-- <q-uploader
         url="http://localhost:3001//api_inventari/dadesExternes/"
         style="max-width: 300px"
       /> -->
 
-      <q-file color="purple-12" v-model="fitxer" label="Label">
+      <q-file color="purple-12" v-model="fitxer" dense label="Seleccionar fitxer">
         <template v-slot:prepend>
           <q-icon name="attach_file" />
         </template>

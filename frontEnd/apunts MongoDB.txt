@@ -13,3 +13,7 @@ db.HospitalElements.insertOne( {edifici: "2", planta: "1", dept: "departament CC
 
 VERIFICAR SI EXISTEIX UNA PROPIETAT I QUE NO SIGUI NULA
 db.HospitalElements.find({"elements.pc.portSw": {$exists: true, $ne: null }})
+
+FER IMPORTACIONS DE FITXERS JSON EXPORTATS
+Des del shell:
+mongoimport -h=localhost --db=inventaridb --collection=HospitalElements --jsonArray --file=HospitalElements.json
