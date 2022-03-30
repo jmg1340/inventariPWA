@@ -59,8 +59,17 @@
 										@click="modificarRegistreInventariHospital(obj)" >
 											{{ obj[camp2].accio }}
 									</q-btn>	
-									<!-- <span v-else-if="camp2.accio === '' && camp2 === '_id'"> obj[camp2].accio  &nbsp; </span> -->
+
 									<span v-else-if="camp2 !== '_id'"> {{ obj[camp2].valor }} </span>
+
+									<q-tooltip 
+										v-if="camp2 === 'HARDWARE_NAME'"
+										class="bg-purple text-body2" 
+										:offset="[10, 10]"
+										>
+											<jmg_toolTipContent :idMongo="obj._id.valor" />
+									</q-tooltip>
+
 							</td>
 						</tr>
 					</tbody>
@@ -86,11 +95,11 @@
 
 <script>
 import jmg_formulari from "../components/inventariHospital/formulariDoc.vue";
-
+import jmg_toolTipContent from "../components/DadesExternes/toolTipContent.vue"
 
 
 export default {
-	components: { jmg_formulari },
+	components: { jmg_formulari, jmg_toolTipContent },
 
 	created() {
 		console.log("ESTIC A CREATED")
@@ -140,6 +149,7 @@ export default {
 				
 					if ( objResultat.error === undefined ){
 						const arrJSON = objResultat.arrJSON
+						console.log("DADESEXTERNES - importar - arrJSON", arrJSON)
 						// this.arrCamps = objResultat.arrCamps
 					} else {
 						console.log("Error a l'importar: ", objResultat.error)
@@ -187,6 +197,17 @@ export default {
 
 				// un cop recuperat, el modifiquem segons si s'han d'afegir/ modificar elements / propietats
 				console.log( "registreObtingut.elements", registreObtingut.elements)
+
+
+				// si no existeix o s'ha de modificar la propietat MONITOR.NS
+				if ( objRegistre.MONITOR_1_SN.accio === "afegir" ) {
+					registreObtingut.elements.monitor = {}	// creacio element monitor
+					registreObtingut.elements.monitor.ns = objRegistre.MONITOR_1_SN.valor  // creacio propietat ns
+				} else if (objRegistre.MONITOR_1_SN.accio === "modificar") {
+					registreObtingut.elements.monitor.ns = objRegistre.MONITOR_1_SN.valor  // modificacio prop ns
+				}
+
+
 
 				// si no existeix o s'ha de modificar la propietat PC.SWITCH
 				if ( objRegistre.LLDP_RID1_SWITCH_SYSNAME.accio === "afegir" || 
@@ -284,6 +305,19 @@ export default {
 						obj._id.valor = objTrobat._id 	// ens servirà despres per trobar el registre a la colecció inventariHospital
 						
 						// Ara cal mirar si la resta de camps equivalents existeixen o s'ha de modificar el seu valor
+						
+						
+						if (obj.MONITOR_1_SN.valor !== '0' && obj.MONITOR_1_SN.valor !== null ) {
+							if (objTrobat.elements.monitor === undefined){
+								obj.MONITOR_1_SN.accio = "afegir"
+
+							} else if (! objTrobat.elements.monitor.ns.toLowerCase().includes(obj.MONITOR_1_SN.valor.toLowerCase())) {
+								obj.MONITOR_1_SN.accio = "modificar"
+							}
+						}
+						
+						
+						
 						if (obj.LLDP_RID1_SWITCH_SYSNAME.valor !== '-') {
 
 							if ( /^SW-/.test(obj.LLDP_RID1_SWITCH_SYSNAME.valor) ) { 

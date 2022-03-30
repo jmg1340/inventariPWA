@@ -69,6 +69,7 @@ exports.inserirRegistresES = async (req, res) => {
 	console.log("Estic a controllerDadesExternes - inserir registres ES")
 	try {
 		const arr = JSON.parse(req.body.dades)
+		console.log("INSERIR REGISTRES ES - arr", arr[0])
 		
 		await modelES.insertMany(arr)
 		res.json({status: "S'han inserit " + arr.length + " docs"})	

@@ -66,6 +66,7 @@ export async function actGetCSV(context, fitxer) {
       if (indice === 0) {
         // a la primera linia hi ha els noms dels camps
         arrNomCamps = arrDades.map( (element) => element.replace(/["]+/g, '')); // treiem les " si en te
+        console.log("ACTIONS - actGetCSV - arrNomCamps", arrNomCamps)
       } else {
         // per cada dada, anem construint objecte on cada propietat sera un camp
         let obj = {};
@@ -111,16 +112,16 @@ export async function actGetCSV(context, fitxer) {
 
     // Aprofito per modificar la propietat on apareix al info del SW per a que quan sigui una mac de telf (*.asepeyo.site) modifiqui aquest valor per a que sigui nomes la mac (sense el 'SEP' i el '.asepeyo.site')
 
-    arrObjsDadesCSV.map(obj => {
-      if (/.asepeyo.site$/.test(obj.LLDP_RID1_SWITCH_SYSNAME)) {
-        obj.LLDP_RID1_SWITCH_SYSNAME = obj.LLDP_RID1_SWITCH_SYSNAME.split(
-          "."
-        )[0].substring(3);
-      }
-      return obj;
-    });
+    // arrObjsDadesCSV.map(obj => {
+    //   if (/.asepeyo.site$/.test(obj.LLDP_RID1_SWITCH_SYSNAME)) {
+    //     obj.LLDP_RID1_SWITCH_SYSNAME = obj.LLDP_RID1_SWITCH_SYSNAME.split(
+    //       "."
+    //     )[0].substring(3);
+    //   }
+    //   return obj;
+    // });
 
-    console.log("3. arrObjsDadesCSV", arrObjsDadesCSV);
+    // console.log("3. arrObjsDadesCSV", arrObjsDadesCSV);
 
 
 
@@ -131,14 +132,14 @@ export async function actGetCSV(context, fitxer) {
       const objResultat = await Axios.delete(
         server + "/api_inventari//eliminarRegistresES"
       );
-      console.log("objResultat eliminacio registres/docs ES: ", objResultat);
+      console.log("objResultat ELIMINACIO registres/docs ES: ", objResultat);
 
       // 2. Afegim noves dades de arrObjsDadesCSV a la colecció ES_registres
       const objResultat2 = await Axios.post(
         server + "/api_inventari/inserirRegistresES",
         { dades: JSON.stringify(arrObjsDadesCSV) }
       );
-      console.log("objResultat2 insercio de registres de Elastic Search", objResultat2);
+      console.log("objResultat2 INSERCIÓ registres/docs ES", objResultat2);
 
       return
 
