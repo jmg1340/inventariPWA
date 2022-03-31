@@ -112,16 +112,16 @@ export async function actGetCSV(context, fitxer) {
 
     // Aprofito per modificar la propietat on apareix al info del SW per a que quan sigui una mac de telf (*.asepeyo.site) modifiqui aquest valor per a que sigui nomes la mac (sense el 'SEP' i el '.asepeyo.site')
 
-    // arrObjsDadesCSV.map(obj => {
-    //   if (/.asepeyo.site$/.test(obj.LLDP_RID1_SWITCH_SYSNAME)) {
-    //     obj.LLDP_RID1_SWITCH_SYSNAME = obj.LLDP_RID1_SWITCH_SYSNAME.split(
-    //       "."
-    //     )[0].substring(3);
-    //   }
-    //   return obj;
-    // });
+    arrObjsDadesCSV.map(obj => {
+      if (/.asepeyo.site$/.test(obj.LLDP_RID1_SWITCH_SYSNAME)) {
+        obj.LLDP_RID1_SWITCH_SYSNAME = obj.LLDP_RID1_SWITCH_SYSNAME.split(
+          "."
+        )[0].substring(3);
+      }
+      return obj;
+    });
 
-    // console.log("3. arrObjsDadesCSV", arrObjsDadesCSV);
+    console.log("3. arrObjsDadesCSV", arrObjsDadesCSV);
 
 
 

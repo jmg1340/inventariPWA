@@ -63,7 +63,7 @@
 									<span v-else-if="camp2 !== '_id'"> {{ obj[camp2].valor }} </span>
 
 									<q-tooltip 
-										v-if="camp2 === 'HARDWARE_NAME'"
+										v-if="camp2 === 'HARDWARE_NAME' && obj._id.valor !== null"
 										class="bg-purple text-body2" 
 										:offset="[10, 10]"
 										>
@@ -289,7 +289,10 @@ export default {
 					Object.keys(obj).forEach( prop => obj[prop] = { valor: obj[prop], accio: "" })
 					
 					
-					const objTrobat = arrDocsHosp.find( objDocHosp => objDocHosp.elements.pc.ns.toLowerCase().includes(obj.HARDWARE_NAME.valor.toLowerCase()))
+					const objTrobat = arrDocsHosp.find( objDocHosp =>{ 
+						if ( objDocHosp.elements.pc !== undefined )
+							return objDocHosp.elements.pc.ns.toLowerCase().includes(obj.HARDWARE_NAME.valor.toLowerCase())
+					})
 					// console.log("objTrobat",objTrobat)
 					
 					if ( objTrobat === undefined) {
@@ -393,6 +396,7 @@ export default {
 				})
 				
 			} catch (error) {
+				console.log("arrJSON2 error:", error)
 				return []
 			}
 		}
