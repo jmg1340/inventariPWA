@@ -141,10 +141,16 @@ export async function actGetCSV(context, fitxer) {
       );
       console.log("objResultat2 INSERCIÓ registres/docs ES", objResultat2);
 
+
+			// 3. Eliminem el fitxer importat
+			const objEliminacioFitxer = await Axios.get( server + "/api_inventari/eliminarFitxerCSV/" + fitxer.name);
+
+			console.log("objEliminacioFitxer", objEliminacioFitxer)
+
       return
 
     } catch (error) {
-      console.log("error al eliminar / inserir a ES_registres");
+      console.log("error al eliminar fitxer CSV");
       console.log(error);
       return { error: error };
     }

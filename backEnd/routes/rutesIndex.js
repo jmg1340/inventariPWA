@@ -26,6 +26,7 @@ router.get("/dadesExternes/:fitxer", contrDadesExt.importar)
 router.delete("/eliminarRegistresES", contrDadesExt.eliminarRegistresES)
 router.post("/inserirRegistresES", contrDadesExt.inserirRegistresES)
 router.get("/llistarRegistresES", contrDadesExt.llistaTots)
+router.get("/eliminarFitxerCSV/:fitxer", contrDadesExt.eliminarFitxerCSV)
 
 
 module.exports = router;

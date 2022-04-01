@@ -89,3 +89,17 @@ exports.llistaTots = async  (req, res) => {
 		console.log(`nº registres: ${resultatInv.length}`)
     res.json(resultatInv)
 }
+
+
+
+exports.eliminarFitxerCSV = async (req, res) => {
+	console.log("CONTROLLER_DADESEXTERNES - eliminarFitxerCSV")
+	console.log("req.params.fitxer", req.params.fitxer)
+
+	try {
+		fs.unlinkSync('dadesExternes/' + req.params.fitxer)		// eliminació del fitxer
+		res.json({missatge: "fitxer eliminat"})
+	} catch (err) {
+		res.status(500).send(err);
+	}	
+}

@@ -39,8 +39,9 @@
 								v-for="(camp2, id) in Object.keys(obj)" 
 								:key="'id'+id"
 								:class="{ 
-													'bg-yellow': obj[camp2].accio == 'modificar' && camp2 !== '_id', 
-													'bg-red text-white': obj[camp2].accio == 'afegir' && camp2 !== '_id'
+													'bg-warning': obj[camp2].accio == 'modificar' && camp2 !== '_id', 
+													'bg-negative text-white': obj[camp2].accio == 'afegir' && camp2 !== '_id',
+													'text-bold': camp2 == 'HARDWARE_NAME'
 												}"
 								>
 									<q-btn 
@@ -321,7 +322,7 @@ export default {
 						
 						
 						
-						if (obj.LLDP_RID1_SWITCH_SYSNAME.valor !== '-') {
+						if (obj.LLDP_RID1_SWITCH_SYSNAME.valor !== '-' && obj.LLDP_RID1_SWITCH_SYSNAME.valor !== '(empty)') {
 
 							if ( /^SW-/.test(obj.LLDP_RID1_SWITCH_SYSNAME.valor) ) { 
 								// es tracta d'un switch   
@@ -386,7 +387,8 @@ export default {
 
 						// si hi ha alguna accio diferent de "", posar _id.accio = "modificar". Aixo fara que aparegui el boto "modificar"
 						if ( obj.LLDP_RID1_SWITCH_PORTDESCR.accio.length !== 0 ||
-								obj.LLDP_RID1_SWITCH_SYSNAME.accio.length   !== 0) {
+								obj.LLDP_RID1_SWITCH_SYSNAME.accio.length   !== 0 ||
+								obj.MONITOR_1_SN.accio.length   !== 0) {
 										obj._id.accio = "modificar"
 						}
 					}
