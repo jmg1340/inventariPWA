@@ -3,9 +3,140 @@ const server = "http://localhost:3001";
 
 
 
-/* DADES EXTERNES */
+/* DADES TELEFONS */
 
-export async function actLlistarDades ( context) {
+export async function actLlistarDadesTelefons ( context) {
+  console.log("context", context)
+  try {
+    const objResultat3 = await Axios.get( server + "/api_inventari/llistarRegistresTelefons" );
+    console.log("objResultat3", objResultat3);
+    const arrJSON = objResultat3.data;
+		console.log("arrJSON", arrJSON)
+    context.commit("mutGetDocsTelefons", arrJSON)
+    
+    return "Num documents Telefons recuperats: " + arrJSON.length;    
+  } catch (error) {
+    console.log("Error actLlistarDadesTelefons")
+    console.log(error)
+    // return "ERROR al recuperar documents de ES" + error
+  }
+
+}
+
+
+export async function actGetCSV_Telefons(context, obj) {
+  try {
+
+    let formData = new FormData();
+    formData.append("file", obj.fitxer);
+
+    // pujar el fitxer al servidor
+    const resultPujarFitxer = await Axios.post(
+      server + "/api_inventari/upload/", 
+      formData,
+      {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      }
+    );
+    
+    console.log("ACTIONS - actGetCSV_Telefons - resultPujarFitxer", resultPujarFitxer)
+
+    // Obtencio de les dades en brut del fitxer
+    console.log("ACTIONS - actGetCSV_Telefons - fitxer.name = ", obj.fitxer.name)
+    const result = await Axios.get(
+      server + "/api_inventari/importarDadesFitxer/" + obj.fitxer.name
+    );
+    const data = result.data;
+    console.log("ACTIONS - actGetCSV_Telefons - data = ", data)
+
+
+
+    // *** TRANSFORMACIO A FITXER JSON per despres importar-lo a la coleccio Telefons***
+
+    // 1. separem per linies
+    const arrLinies = data.split("\n");
+    // console.log("ACTIONS - actGetCSV - arrLinies", arrLinies);
+
+    // afegim la dada del model de telefon al principi:
+    arrLinies.push( obj.modelTelf )
+
+    let arrNomCamps = [];
+    let arrJSON = [];
+    // 2. per cada linia, seprarem per comes i creem objecte JSON amb les dades com a propietats
+    arrLinies.forEach((linia, indice) => {
+      const arrDades = linia.trim().split(",");
+
+      if (indice === 0) {
+        // a la primera linia hi ha els noms dels camps
+        arrNomCamps = arrDades.map( (element) => element.replace(/["]+/g, '')); // treiem les " si en te
+        arrNomCamps.push("model")   // afegim nom del camp 'model'
+
+        console.log("ACTIONS - actGetCSV_Telefons - arrNomCamps", arrNomCamps)
+      } else {
+        // per cada dada, anem construint objecte on cada propietat sera un camp
+        let obj = {};
+        arrDades.forEach((dada, index) => {
+          obj[arrNomCamps[index]] = dada.replace(/["]+/g, '');  // treiem les " si en te
+        });
+
+        // un cop construit l'objecte, l'afegim al array
+        arrJSON.push(obj);
+      }
+    });
+
+    console.log("ACTIONS - actGetCSV - arrJSON", arrJSON);
+
+ 
+
+    // GUARDAR LES DADES A LA COLECCIÓ "Telefons"
+
+    try {
+      // 1. Eliminar registres de "ES_registres"
+      const objResultat = await Axios.delete(
+        server + "/api_inventari/eliminarRegistresTelefons"
+      );
+      console.log("objResultat ELIMINACIO registres/docs Telefons: ", objResultat);
+
+      // 2. Afegim noves dades de arrObjsDadesCSV a la colecció ES_registres
+      const objResultat2 = await Axios.post(
+        server + "/api_inventari/inserirRegistresTelefons",
+        { dades: JSON.stringify(arrJSON) }
+      );
+      console.log("objResultat2 INSERCIÓ registres/docs ES", objResultat2);
+
+
+			// 3. Eliminem el fitxer importat
+			const objEliminacioFitxer = await Axios.get( server + "/api_inventari/eliminarFitxerCSV/" + fitxer.name);
+
+			console.log("objEliminacioFitxer", objEliminacioFitxer)
+
+      return
+
+    } catch (error) {
+      console.log("error al eliminar fitxer CSV dades Telefons");
+      console.log(error);
+      return { error: error };
+    }
+  } catch (error) {
+    console.log("error a actGetCSV_Telefons");
+    console.log(error);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* DADES ELASTIC SEARCH */
+
+export async function actLlistarDadesElasticSearch ( context) {
   console.log("context", context)
   try {
     const objResultat3 = await Axios.get( server + "/api_inventari/llistarRegistresES" );
@@ -24,7 +155,7 @@ export async function actLlistarDades ( context) {
 }
 
 
-export async function actGetCSV(context, fitxer) {
+export async function actGetCSV_ElasticSearch(context, fitxer) {
   try {
 
     let formData = new FormData();
@@ -46,7 +177,7 @@ export async function actGetCSV(context, fitxer) {
     // Obtencio de les dades en brut del fitxer
     console.log("ACTIONS - actGetCSV - fitxer.name = ", fitxer.name)
     const result = await Axios.get(
-      server + "/api_inventari/dadesExternes/" + fitxer.name
+      server + "/api_inventari/importarDadesFitxer/" + fitxer.name
     );
     const data = result.data;
     console.log("ACTIONS - actGetCSV - data = ", data)
@@ -130,7 +261,7 @@ export async function actGetCSV(context, fitxer) {
     try {
       // 1. Eliminar registres de "ES_registres"
       const objResultat = await Axios.delete(
-        server + "/api_inventari//eliminarRegistresES"
+        server + "/api_inventari/eliminarRegistresES"
       );
       console.log("objResultat ELIMINACIO registres/docs ES: ", objResultat);
 

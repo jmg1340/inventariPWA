@@ -2,6 +2,7 @@ export default function () {
   return {
     docs: [],
 		docsAsepeyo: [],
-    docsES: []
+    docsES: [],
+    docsTelefons: []
   }
 }

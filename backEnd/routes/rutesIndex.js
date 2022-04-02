@@ -3,7 +3,8 @@ const router = express.Router();
 
 const contrInvHosp = require("../controllers/controllerInventariHospital")
 const contrInvAsep = require("../controllers/controllerInventariAsepeyo")
-const contrDadesExt = require("../controllers/controllerDadesExternes")
+const contrDadesES = require("../controllers/controllerDadesElasticSearch")
+const contrDadesTelf = require("../controllers/controllerDadesTelefons")
 
 
 
@@ -20,13 +21,23 @@ router.delete("/hospital/:id", contrInvHosp.eliminaUn)
 router.get("/asepeyo", contrInvAsep.llistaTots)
 
 
-/* DADES EXTERNES */
-router.post("/upload", contrDadesExt.pujarFitxer)
-router.get("/dadesExternes/:fitxer", contrDadesExt.importar)
-router.delete("/eliminarRegistresES", contrDadesExt.eliminarRegistresES)
-router.post("/inserirRegistresES", contrDadesExt.inserirRegistresES)
-router.get("/llistarRegistresES", contrDadesExt.llistaTots)
-router.get("/eliminarFitxerCSV/:fitxer", contrDadesExt.eliminarFitxerCSV)
+/* pujar / eliminar / importar un fitxer al servidor */
+router.post("/upload", contrDadesES.pujarFitxer)
+router.get("/eliminarFitxerCSV/:fitxer", contrDadesES.eliminarFitxerCSV)
+router.get("/importarDadesFitxer/:fitxer", contrDadesES.importar)   // importa el contingut del fitxer
+
+
+/* DADES ELASTIC SEARCH */
+
+router.delete("/eliminarRegistresES", contrDadesES.eliminarRegistresES)
+router.post("/inserirRegistresES", contrDadesES.inserirRegistresES)
+router.get("/llistarRegistresES", contrDadesES.llistaTots)
+
+
+/* DADES TELEFONS */
+router.delete("/eliminarRegistresTelefons", contrDadesTelf.eliminarRegistresTelefons)
+router.post("/inserirRegistresTelefons", contrDadesTelf.inserirRegistresTelefons)
+router.get("/llistarRegistresTelefons", contrDadesTelf.llistaTots)
 
 
 module.exports = router;

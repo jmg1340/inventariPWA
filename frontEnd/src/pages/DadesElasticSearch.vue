@@ -1,20 +1,8 @@
 <template>
-	<q-page class="q-pa-lg">
-		<div class="col wrap">
-
-			<!-- <q-uploader
-        url="http://localhost:3001//api_inventari/dadesExternes/"
-        style="max-width: 300px"
-      /> -->
-
-      <q-file color="purple-12" v-model="fitxer" dense label="Seleccionar fitxer">
-        <template v-slot:prepend>
-          <q-icon name="attach_file" />
-        </template>
-      </q-file>
-
-			<q-btn color="teal" noCaps dense @click="importar()">Importar</q-btn>
-			<q-btn color="orange" noCaps dense @click="modificarTots()" class="q-ml-md">Modificar TOTS</q-btn>
+	<q-page class="q-pa-md">
+		<div class="row justify-between q-mb-md">
+			<q-btn class="col-1" size="sm" color="primary" noCaps dense @click="modificarTots()" >Modificar TOTS</q-btn>
+			<q-btn class="col-2" size="sm" noCaps label="importar dades Elastic Search" color="primary" @click="obrirDialogImportar = true" />
 		</div>
 
 		<div class="col text-h6">Dades Externes <span class="text-caption"> ( {{ arrJSON2.length }} registres )</span></div>
@@ -91,20 +79,28 @@
     />
 
 
+		<!-- IMPORTACIÓ DADES ELASTIC SEARCH -->
+
+		<q-dialog v-model="obrirDialogImportar">
+			<jmg_importarDialogFitxerContent dadesAImportar="dadesElasticSearch"/>
+		</q-dialog>
+
+
 	</q-page>
 </template>
 
 <script>
 import jmg_formulari from "../components/inventariHospital/formulariDoc.vue";
 import jmg_toolTipContent from "../components/DadesExternes/toolTipContent.vue"
+import jmg_importarDialogFitxerContent from "../components/importarFitxer.vue"
 
 
 export default {
-	components: { jmg_formulari, jmg_toolTipContent },
+	components: { jmg_formulari, jmg_toolTipContent, jmg_importarDialogFitxerContent },
 
 	created() {
 		console.log("ESTIC A CREATED")
-		this.$store.dispatch("modulInventari/actLlistarDades")
+		this.$store.dispatch("modulInventari/actLlistarDadesElasticSearch")
 		.then ( objResultat => {
 			this.$store.dispatch("modulInventari/actGetDocs")
 		}).catch ( err => {
@@ -116,7 +112,7 @@ export default {
 
 	data() {
 		return {
-			fitxer: null,
+			obrirDialogImportar: false,
 			arrJSON: [],
 			obrirFormulari: false,
 			objNouES: null     // utilitzat al formulariDoc.vue per als nous elements (ns de pc) que no estan a la coleccio HospitalElements
@@ -138,31 +134,6 @@ export default {
 		* @summary If the description is long, write your summary here. Otherwise, feel free to remove this.
 		* @param {String} fitxer - nom del fitxer a importar.
 		*/
-
-		importar () {
-			console.log("DADESEXTERNES - importar - fitxer", this.fitxer)
-
-			this.$store.dispatch("modulInventari/actGetCSV", this.fitxer)
-			.then ( () => {
-			
-				this.$store.dispatch("modulInventari/actLlistarDades")
-				.then ( objResultat => {
-				
-					if ( objResultat.error === undefined ){
-						const arrJSON = objResultat.arrJSON
-						console.log("DADESEXTERNES - importar - arrJSON", arrJSON)
-						// this.arrCamps = objResultat.arrCamps
-					} else {
-						console.log("Error a l'importar: ", objResultat.error)
-					}
-				}).catch ( error  => {
-					console.log( "Error 1", error )
-				})
-
-			}).catch ( error  => {
-				console.log( "no ha pillat les dades", error )
-			})
-		},
 
 
 
@@ -301,6 +272,7 @@ export default {
 						obj._id.valor = ""
 						obj._id.accio = "afegir"
 						obj.HARDWARE_NAME.accio = "afegir"
+						obj.MONITOR_1_SN.accio =   (obj.MONITOR_1_SN.valor === '-') ? "" : "afegir"
 						obj.LLDP_RID1_SWITCH_SYSNAME.accio =   (obj.LLDP_RID1_SWITCH_SYSNAME.valor === '-') ? "" : "afegir"
 						obj.LLDP_RID1_SWITCH_PORTDESCR.accio = ( /^gi/.test(obj.LLDP_RID1_SWITCH_PORTDESCR.valor) ) ? "afegir" : ""
 					

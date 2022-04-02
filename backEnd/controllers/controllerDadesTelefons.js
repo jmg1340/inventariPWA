@@ -1,0 +1,56 @@
+const modelTelf = require('../models/modelTelefons')
+const fs = require('fs');
+
+
+
+
+
+// eliminar tots els documents de la col·leccio 'ES_registres'
+exports.eliminarRegistresTelefons = async (req, res) => {
+	console.log("Estic controllerDadesExternes - eliminar registres ES")
+	const resultatInv = await modelTelf.deleteMany()
+	res.json({status: "S'han eliminat tots els docs de la colecció 'Telefons'"})
+}
+
+
+
+
+// inserir documents a la coleccio 'ES_registres'
+exports.inserirRegistresTelefons = async (req, res) => {
+	console.log("Estic a controllerDadesExternes - inserir registres Telefons")
+	try {
+		const arr = JSON.parse(req.body.dades)
+		console.log("INSERIR REGISTRES Telefons - arr", arr)
+		
+		await modelTelf.insertMany(arr)
+		res.json({status: "S'han inserit " + arr.length + " docs"})	
+	} catch (error) {
+		console.log("ERROR insercio dades a colecció Telefons: \n" + error)
+		res.json({status: "Hi ha hagut un problema al inserir dades a colecció 'Telefons' \n " + error})	
+	}
+
+
+}
+
+
+
+// llistat de tots els documents de ES_registres
+exports.llistaTots = async  (req, res) => {
+    const resultatInv = await modelES.find({})
+		console.log(`nº registres: ${resultatInv.length}`)
+    res.json(resultatInv)
+}
+
+
+
+exports.eliminarFitxerCSV = async (req, res) => {
+	console.log("CONTROLLER_DADESEXTERNES - eliminarFitxerCSV")
+	console.log("req.params.fitxer", req.params.fitxer)
+
+	try {
+		fs.unlinkSync('dadesExternes/' + req.params.fitxer)		// eliminació del fitxer
+		res.json({missatge: "fitxer eliminat"})
+	} catch (err) {
+		res.status(500).send(err);
+	}	
+}

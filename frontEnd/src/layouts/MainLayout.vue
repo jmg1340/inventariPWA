@@ -1,7 +1,7 @@
 <template>
   <q-layout view="hHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar>
+      <q-toolbar class="bg-grey-9">
         <q-btn
           flat
           dense
@@ -26,13 +26,13 @@
       content-class="bg-grey-1"
 			overlay
     >
-      <q-list>
-        <q-item-label
+      <q-list  :style="{ backgroundColor: '#eee', color: 'blue'}">
+        <!-- <q-item-label
           header
           class="text-grey-8"
         >
-          Essential Links
-        </q-item-label>
+          Essential links
+        </q-item-label> -->
         <!-- <EssentialLink
           v-for="link in essentialLinks"
           :key="link.title"
@@ -49,13 +49,22 @@
 					</q-item-section>
 				</q-item>
 
-				<q-item to="/dadesExternes">
+        <q-separator></q-separator>
+
+        <div class="text-white bg-red-10 text-center">
+          Dades externes
+        </div>
+
+        <q-separator></q-separator>
+
+
+				<q-item to="/dadesElasticSearch">
 					<q-item-section avatar>
 						<q-icon name="code" />
 					</q-item-section>
 					<q-item-section>
-						<q-item-label>Dades Externes</q-item-label>
-						<q-item-label caption>Incorporació de dades externes</q-item-label>
+						<q-item-label>Dades ELASTIC SEARCH</q-item-label>
+						<q-item-label caption>Incorporació de dades d'Elastic Search</q-item-label>
 					</q-item-section>
 				</q-item>
 
@@ -67,6 +76,16 @@
 					<q-item-section>
 						<q-item-label>Inventari Asepeyo</q-item-label>
 						<q-item-label caption>Inventari oficial Asepeyo</q-item-label>
+					</q-item-section>
+				</q-item>
+
+				<q-item to="/telefons">
+					<q-item-section avatar>
+						<q-icon name="code" />
+					</q-item-section>
+					<q-item-section>
+						<q-item-label>Telèfons fixes</q-item-label>
+						<q-item-label caption>Telèfons CP8811 i CP901</q-item-label>
 					</q-item-section>
 				</q-item>
 

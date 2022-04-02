@@ -8,10 +8,10 @@ const routes = [
     ]
   },
   {
-    path: '/dadesExternes',
+    path: '/dadesElasticSearch',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/DadesExternes.vue') }
+      { path: '', component: () => import('pages/DadesElasticSearch.vue') }
     ]
   },
   {
@@ -19,6 +19,13 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/indexAsepeyo.vue') }
+    ]
+  },
+  {
+    path: '/telefons',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Telefons.vue') }
     ]
   },
 

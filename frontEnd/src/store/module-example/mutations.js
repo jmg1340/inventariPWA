@@ -23,3 +23,10 @@ export function mutGetDocsES(state, data) {
 }
 
 
+export function mutGetDocsTelefons(state, data) {
+  console.log("Estic a mutGetDocsTelefons")
+  console.log("data", data)
+  state.docsTelefons = data;
+}
+
+
