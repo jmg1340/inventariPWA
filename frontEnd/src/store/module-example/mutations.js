@@ -14,7 +14,7 @@ export function mutGetDocsAsepeyo(state, data) {
 }
 
 
-/*  DADES EXTERNES */
+/*  DADES ELASTIC SEARCH */
 
 export function mutGetDocsES(state, data) {
   console.log("Estic a mutGetDocsES")
@@ -22,6 +22,7 @@ export function mutGetDocsES(state, data) {
   state.docsES = data;
 }
 
+/*  DADES ELASTIC SEARCH */
 
 export function mutGetDocsTelefons(state, data) {
   console.log("Estic a mutGetDocsTelefons")

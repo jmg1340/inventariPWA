@@ -6,7 +6,7 @@ const server = "http://localhost:3001";
 /* DADES TELEFONS */
 
 export async function actLlistarDadesTelefons ( context) {
-  console.log("context", context)
+  // console.log("context", context)
   try {
     const objResultat3 = await Axios.get( server + "/api_inventari/llistarRegistresTelefons" );
     console.log("objResultat3", objResultat3);
@@ -14,11 +14,9 @@ export async function actLlistarDadesTelefons ( context) {
 		console.log("arrJSON", arrJSON)
     context.commit("mutGetDocsTelefons", arrJSON)
     
-    return "Num documents Telefons recuperats: " + arrJSON.length;    
+    return  arrJSON;    
   } catch (error) {
-    console.log("Error actLlistarDadesTelefons")
-    console.log(error)
-    // return "ERROR al recuperar documents de ES" + error
+    console.log("Error actLlistarDadesTelefons", error)
   }
 
 }
@@ -70,19 +68,25 @@ export async function actGetCSV_Telefons(context, obj) {
 
       if (indice === 0) {
         // a la primera linia hi ha els noms dels camps
-        arrNomCamps = arrDades.map( (element) => element.replace(/["]+/g, '')); // treiem les " si en te
+        arrNomCamps = arrDades.map( (element) => {
+					element.replace(/["]+/g, '')  // treiem les " si en te
+					if (element === "DEVICE NAME") element = "DEVICE_NAME"
+					return element
+				}); 
         arrNomCamps.push("model")   // afegim nom del camp 'model'
+				console.log("arrNomCamps", arrNomCamps)
 
         console.log("ACTIONS - actGetCSV_Telefons - arrNomCamps", arrNomCamps)
       } else {
         // per cada dada, anem construint objecte on cada propietat sera un camp
-        let obj = {};
+        let obj2 = {};
         arrDades.forEach((dada, index) => {
-          obj[arrNomCamps[index]] = dada.replace(/["]+/g, '');  // treiem les " si en te
+          obj2[arrNomCamps[index]] = dada.replace(/["]+/g, '');  // treiem les " si en te
         });
+				obj2.model = obj.modelTelf   // afegim el model de Telefon
 
         // un cop construit l'objecte, l'afegim al array
-        arrJSON.push(obj);
+        arrJSON.push(obj2);
       }
     });
 
@@ -93,21 +97,23 @@ export async function actGetCSV_Telefons(context, obj) {
     // GUARDAR LES DADES A LA COLECCIÓ "Telefons"
 
     try {
-      // 1. Eliminar registres de "ES_registres"
+      // 1. Eliminar registres de "Telefons"
       const objResultat = await Axios.delete(
         server + "/api_inventari/eliminarRegistresTelefons"
       );
       console.log("objResultat ELIMINACIO registres/docs Telefons: ", objResultat);
 
-      // 2. Afegim noves dades de arrObjsDadesCSV a la colecció ES_registres
+      // 2. Afegim noves dades de arrObjsDadesCSV a la colecció Telefons
       const objResultat2 = await Axios.post(
         server + "/api_inventari/inserirRegistresTelefons",
         { dades: JSON.stringify(arrJSON) }
       );
       console.log("objResultat2 INSERCIÓ registres/docs ES", objResultat2);
 
+			// 3. Comprovar recuperaio de dades i modificar state.docsTelefons
+			context.dispatch("modulInventari/actLlistarDadesTelefons")
 
-			// 3. Eliminem el fitxer importat
+			// 4. Eliminem el fitxer importat
 			const objEliminacioFitxer = await Axios.get( server + "/api_inventari/eliminarFitxerCSV/" + fitxer.name);
 
 			console.log("objEliminacioFitxer", objEliminacioFitxer)

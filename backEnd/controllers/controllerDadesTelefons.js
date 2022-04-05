@@ -8,8 +8,14 @@ const fs = require('fs');
 // eliminar tots els documents de la col·leccio 'ES_registres'
 exports.eliminarRegistresTelefons = async (req, res) => {
 	console.log("Estic controllerDadesExternes - eliminar registres ES")
-	const resultatInv = await modelTelf.deleteMany()
-	res.json({status: "S'han eliminat tots els docs de la colecció 'Telefons'"})
+	try {
+		const resultatInv = await modelTelf.deleteMany()
+		res.json({status: "S'han eliminat tots els docs de la colecció 'Telefons'"})
+	} catch (error) {
+		console.log("Error al eliminar registres de Telefons:", error)
+		res.json({status: "Error al eliminar registres de Telefons:"})
+	}
+
 }
 
 
@@ -21,7 +27,7 @@ exports.inserirRegistresTelefons = async (req, res) => {
 	try {
 		const arr = JSON.parse(req.body.dades)
 		console.log("INSERIR REGISTRES Telefons - arr", arr)
-		
+
 		await modelTelf.insertMany(arr)
 		res.json({status: "S'han inserit " + arr.length + " docs"})	
 	} catch (error) {
@@ -36,9 +42,15 @@ exports.inserirRegistresTelefons = async (req, res) => {
 
 // llistat de tots els documents de ES_registres
 exports.llistaTots = async  (req, res) => {
-    const resultatInv = await modelES.find({})
-		console.log(`nº registres: ${resultatInv.length}`)
-    res.json(resultatInv)
+		console.log("controllerDadesTelefons - llistaTots")
+    try {
+			const resultatInv = await modelTelf.find({})
+			console.log(`nº registres: ${resultatInv.length}`)
+			res.json(resultatInv)			
+		} catch (error) {
+			res.json(error)
+		}
+
 }
 
 

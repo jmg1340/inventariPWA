@@ -50,7 +50,7 @@ export default {
       modelTelf: {label: null, value: null},
       opcionsModelsTelefon: [
         {label: "CP8811", value: "CP8811"},
-        {label: "CP901",  value: "CP901"}
+        {label: "CP6901",  value: "CP6901"}
       ]
     }
   },
@@ -103,20 +103,7 @@ export default {
 
 			this.$store.dispatch("modulInventari/actGetCSV_Telefons", {fitxer: this.fitxer, modelTelf: model})
 			.then ( () => {
-			
-				this.$store.dispatch("modulInventari/actLlistarDades")
-				.then ( objResultat => {
-				
-					if ( objResultat.error === undefined ){
-						const arrJSON = objResultat.arrJSON
-						console.log("DADESEXTERNES - importar - arrJSON", arrJSON)
-						// this.arrCamps = objResultat.arrCamps
-					} else {
-						console.log("Error a l'importar: ", objResultat.error)
-					}
-				}).catch ( error  => {
-					console.log( "Error 1", error )
-				})
+				console.log("Dades telefons importades a la base de dades")
 
 			}).catch ( error  => {
 				console.log( "no ha pillat les dades", error )
