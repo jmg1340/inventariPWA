@@ -57,14 +57,16 @@ export async function actGetCSV_Telefons(context, obj) {
     const arrLinies = data.split("\n");
     // console.log("ACTIONS - actGetCSV - arrLinies", arrLinies);
 
-    // afegim la dada del model de telefon al principi:
-    arrLinies.push( obj.modelTelf )
 
     let arrNomCamps = [];
     let arrJSON = [];
     // 2. per cada linia, seprarem per comes i creem objecte JSON amb les dades com a propietats
-    arrLinies.forEach((linia, indice) => {
-      const arrDades = linia.trim().split(",");
+    console.log("arrLinies", arrLinies)
+		arrLinies.forEach((linia, indice) => {
+			console.log("actGetCSV_Telefons - linia:" + linia)
+			if (linia.trim().length === 0) return   // si una linia no te dades, processar següent linia
+      
+			const arrDades = linia.trim().split(",");
 
       if (indice === 0) {
         // a la primera linia hi ha els noms dels camps
@@ -110,8 +112,8 @@ export async function actGetCSV_Telefons(context, obj) {
       );
       console.log("objResultat2 INSERCIÓ registres/docs ES", objResultat2);
 
-			// 3. Comprovar recuperaio de dades i modificar state.docsTelefons
-			context.dispatch("modulInventari/actLlistarDadesTelefons")
+			// 3. Comprovar recuperaio de dades de la bdd i modificar state.docsTelefons
+			context.dispatch("actLlistarDadesTelefons")
 
 			// 4. Eliminem el fitxer importat
 			const objEliminacioFitxer = await Axios.get( server + "/api_inventari/eliminarFitxerCSV/" + fitxer.name);
