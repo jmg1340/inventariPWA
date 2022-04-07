@@ -35,7 +35,7 @@ router.get("/llistarRegistresES", contrDadesES.llistaTots)
 
 
 /* DADES TELEFONS */
-router.delete("/eliminarRegistresTelefons", contrDadesTelf.eliminarRegistresTelefons)
+router.delete("/eliminarRegistresTelefons/:model", contrDadesTelf.eliminarRegistresTelefons)
 router.post("/inserirRegistresTelefons", contrDadesTelf.inserirRegistresTelefons)
 router.get("/llistarRegistresTelefons", contrDadesTelf.llistaTots)
 

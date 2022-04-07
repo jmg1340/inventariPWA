@@ -49,6 +49,16 @@
 					</q-item-section>
 				</q-item>
 
+				<q-item to="/switchs">
+					<q-item-section avatar>
+						<q-icon name="code" />
+					</q-item-section>
+					<q-item-section>
+						<q-item-label>Switchs</q-item-label>
+						<q-item-label caption>Coses connectadesa als switchs</q-item-label>
+					</q-item-section>
+				</q-item>
+
         <q-separator></q-separator>
 
         <div class="text-white bg-red-10 text-center">

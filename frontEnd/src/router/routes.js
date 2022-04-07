@@ -8,6 +8,13 @@ const routes = [
     ]
   },
   {
+    path: '/switchs',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Switchs.vue') }
+    ]
+  },
+  {
     path: '/dadesElasticSearch',
     component: () => import('layouts/MainLayout.vue'),
     children: [

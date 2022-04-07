@@ -7,15 +7,16 @@ const fs = require('fs');
 
 // eliminar tots els documents de la col·leccio 'ES_registres'
 exports.eliminarRegistresTelefons = async (req, res) => {
-	console.log("Estic controllerDadesExternes - eliminar registres ES")
+	// console.log("Estic conrollerDadesTelefons - eliminarRegistresTelefons")
 	
 	let resultatInv = null
 	const strModel = req.params.model
+	console.log("conrollerDadesTelefons -  eliminarRegistresTelefons - strModel", strModel)
 
 	try {
 		switch (strModel){
 			case "CP8811":
-			case "CP9601":
+			case "CP6901":
 				resultatInv = await modelTelf.deleteMany({ model: strModel })
 				break
 			case "TOTS":

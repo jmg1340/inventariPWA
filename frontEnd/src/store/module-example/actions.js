@@ -99,11 +99,11 @@ export async function actGetCSV_Telefons(context, obj) {
     // GUARDAR LES DADES A LA COLECCIÓ "Telefons"
 
     try {
-      // 1. Eliminar registres de "Telefons"
-      const objResultat = await Axios.delete(
-        server + "/api_inventari/eliminarRegistresTelefons"
-      );
-      console.log("objResultat ELIMINACIO registres/docs Telefons: ", objResultat);
+      // // 1. Eliminar registres de "Telefons"
+      // const objResultat = await Axios.delete(
+      //   server + "/api_inventari/eliminarRegistresTelefons"
+      // );
+      // console.log("objResultat ELIMINACIO registres/docs Telefons: ", objResultat);
 
       // 2. Afegim noves dades de arrObjsDadesCSV a la colecció Telefons
       const objResultat2 = await Axios.post(
@@ -134,9 +134,24 @@ export async function actGetCSV_Telefons(context, obj) {
 }
 
 
+export async function actEliminar_Telefons(context, model) {
+      // 1. Eliminar registres de "Telefons"
+			console.log("actEliminar_Telefons - model: ", model)
+      let objResultat = null
+			try {
+				objResultat = await Axios.delete(server + "/api_inventari/eliminarRegistresTelefons/" + model)
+				context.dispatch("actLlistarDadesTelefons")
+			} catch (error) {
+				console.log("actEliminar_Telefons - ERROR:", error)
+			}
+			
+			
+			
+			
+			
+      console.log("objResultat ELIMINACIO registres/docs Telefons: ", objResultat);
 
-
-
+}
 
 
 

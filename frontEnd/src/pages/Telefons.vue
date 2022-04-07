@@ -123,6 +123,9 @@ export default {
     },
 
     columns() {
+			console.log("this.rows[0]", this.rows[0])
+			if (this.rows[0] === undefined ) return [];
+			
       const arr = Object.keys(this.rows[0]).map((prop) => {
         return {
           name: prop,
@@ -141,7 +144,8 @@ export default {
 
 	methods: {
 		eliminar() { 
-			this.$store.dispatch("modulInventari/actGetDocs", this.modelTelf2.value)
+			console.log("method 'eliminar'")
+			this.$store.dispatch("modulInventari/actEliminar_Telefons", this.modelTelf2.value)
 		}
 	}
 };
