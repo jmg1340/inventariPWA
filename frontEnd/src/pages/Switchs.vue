@@ -1,7 +1,25 @@
 <template>
 	<div>
-		<div>tamany: {{ dadesSwitchs.length }}</div>
-		<pre>{{hospitalElements}}</pre>
+
+		<q-card 
+			v-for="(objSW, idx) in dadesSwitchs" :key="idx"
+			class="q-ma-xl q-pa-sm bg-grey  text-caption"
+			>
+			<q-table
+				:title="objSW.nom"
+				separator="cell"
+				dense
+				:pagination="paginacio"
+				:columns="columnes"
+				:data="objSW.ports"
+				:table-header-style="{ color: 'red' }"
+			>
+
+			</q-table>
+		</q-card>
+
+		<!-- <div>tamany: {{ dadesSwitchs.length }}</div>
+		<pre>{{dadesSwitchs}}</pre> -->
 	</div>
 </template>
 
@@ -16,10 +34,26 @@ export default {
 		this.$store.dispatch("modulInventari/actLlistarDadesTelefons");
 	},
 
+	data () {
+		return {
+			columnes: [
+				{nom: "port", label: "Port", field: "port", align:"center", headerStyle: "background-color: black; color: white"},
+				{nom: "tfmodel", label: "Tf_Model", field: "telf_Model", align:"center", headerStyle: "background-color: black; color: white"},
+				{nom: "tfMac", label: "Tf_MAC", field: "telf_Mac", align:"center", headerStyle: "background-color: black; color: white"},
+				{nom: "tfDescr", label: "Tf_Descrip", field: "telf_Description", align:"left", headerStyle: "background-color: black; color: white"},
+				{nom: "lloc", label: "Lloc", field: "ubicacio_lloc", align:"left", headerStyle: "background-color: black; color: white"},
+				{nom: "dept", label: "Dept", field: "ubicacio_dept", align:"left", headerStyle: "background-color: black; color: white"},
+				{nom: "planta", label: "Planta", field: "ubicacio_planta", align:"center", headerStyle: "background-color: black; color: white"},
+				{nom: "edifici", label: "Edifici", field: "ubicacio_Edifici", align:"center", headerStyle: "background-color: black; color: white"},
+			],
+			paginacio:{rowsPerPage:0}
+		}
+	},
+
 	computed: {
 		telefons() {
 			/* 
-				Dades que necessito de la coleccio Telefons: model, description, sw, pto
+				Dades que necessito de la coleccio Telefons: model, description, mac, sw, pto
 			 */
 
 			const arrTelfs = this.$store.state.modulInventari.docsTelefons || [];
@@ -28,6 +62,7 @@ export default {
 			return arrTelfs.map( objTelf => {
 				return {
 					model: objTelf.model,
+					MAC: objTelf.MAC,
 					DESCRIPTION: objTelf.DESCRIPTION,
 					SW: objTelf.SW,
 					PTO: objTelf.PTO
@@ -82,19 +117,21 @@ export default {
 				estructura de les dades
 				[
 					{
-						switch:
+						nom: "xxxxxx",
+						numero: x
+						ports: 
 							{
-								port: XX
-								
-								telf_Model: xxxxx,
-								telf_Mac: xxxxx,
-								telf_Description: xxxxx
-								
-								ubicacio_Edifici: xxxxx,
-								ubicacio_planta: xxxxx,
-								ubicacio_dept: xxxxx,
-								ubicacio_lloc: xxxxx
-								
+								"XX": {
+									telf_Model: xxxxx,
+									telf_Mac: xxxxx,
+									telf_Description: xxxxx
+									
+									ubicacio_Edifici: xxxxx,
+									ubicacio_planta: xxxxx,
+									ubicacio_dept: xxxxx,
+									ubicacio_lloc: xxxxx
+
+								}
 							}
 					}
 				] 
@@ -109,30 +146,80 @@ export default {
 			arrSw = arrSw.concat(arrSwTelfs)
 			
 			// 2 ... que nomes tingui valors únics
-			const arrSwUnics = arrSw.reduce((acc,item)=>{
-				if(!acc.includes(item)){
-					acc.push(item);
+			let arrSwUnics = arrSw.reduce((acc,item, index)=>{
+				if (acc.length === 0) {
+					acc.push({nom: item, numero: parseInt(item.substring(12))});
+
+				} else if (! acc.find( obj => obj.numero === parseInt(item.substring(12))) ) {
+					acc.push({nom: item, numero: parseInt(item.substring(12))});
+
 				}
 				return acc;
-			},[])
+
+			},[]).sort( (a,b) => a.numero - b.numero )
 			
+
+			// per cada switch afegir la propietat ports. El seu valor sera un objecte on cada propietat sera el numero del port (del 1 al 24)
+			arrSwUnics.forEach( (objSW => {
+				objSW.ports = []
+				for (let num of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]) {
+					objSW.ports[num-1] = Object.assign({port: num}, this.comprovarDadesCoincidents(objSW.nom, "gi"+num) )
+					
+				}
+			}))
+
+			return arrSwUnics
+
+		}
+	},
+
+
+	methods: {
+		comprovarDadesCoincidents(sw, port) {
+
+			const objARetornar = {
+					telf_Model: null,
+					telf_Mac: null,
+					telf_Description: null,
+					
+					ubicacio_Edifici: null,
+					ubicacio_planta: null,
+					ubicacio_dept: null,
+					ubicacio_lloc: null
+			}
+
+
+			// comencem a buscar dades coincidents dels Telefons
+			const telfTrobat = this.telefons.find ( objTelf => objTelf.SW === sw && objTelf.PTO === port )
 			
-			// per cada switch mirar les dades coincidents de 'telefons' i 'hospitalElements'
-			let objSwitchs = {}
-			arrSwUnics.forEach( sw => {
-				objSwitchs[sw] = {}
-				objSwitchs[sw].telefons = this.telefons.filter( objTelf => objTelf.SW === sw) || []
-				objSwitchs[sw].hospElem_sw = this.hospitalElements.filter( objHE => objHE.switch === sw) || []
-			})
+			if ( telfTrobat !== undefined ) {
+				objARetornar.telf_Model = telfTrobat.model
+				objARetornar.telf_Mac = telfTrobat.MAC
+				objARetornar.telf_Description = telfTrobat.DESCRIPTION
 
-			// Ara cal veure els registres de hospitalElements que tinguin macTelf (d'en comptes de switch i portsw)
+				// busquem a hospitalElements si hi ha alguna algun lloc que tingui informada 'macTelf'. Cas de que sí, afegim les dades de la ubicació
+				const hospElemTrobat2 = this.hospitalElements.find ( oHE => (oHE.macTelf === telfTrobat.MAC)  )
+				if ( hospElemTrobat2 !== undefined ){
+					objARetornar.ubicacio_Edifici = hospElemTrobat2.edifici,
+					objARetornar.ubicacio_planta = hospElemTrobat2.planta,
+					objARetornar.ubicacio_dept = hospElemTrobat2.dept,
+					objARetornar.ubicacio_lloc = hospElemTrobat2.lloc
+				}
+			}
 
-			
-			
-			return objSwitchs
+
+			// Per a hospitalElements hem de mirar primer si existeixen les dades de switch i portsw. Si no existeixen, hem de mirar si existeix la mactelf
+			const hospElemTrobat = this.hospitalElements.find ( oHE => (oHE.switch === sw && oHE.portsw === port)  )
+
+			if ( hospElemTrobat !== undefined ){
+				objARetornar.ubicacio_Edifici = hospElemTrobat.edifici,
+				objARetornar.ubicacio_planta = hospElemTrobat.planta,
+				objARetornar.ubicacio_dept = hospElemTrobat.dept,
+				objARetornar.ubicacio_lloc = hospElemTrobat.lloc
+			}
 
 
-
+			return objARetornar
 		}
 	}
 
