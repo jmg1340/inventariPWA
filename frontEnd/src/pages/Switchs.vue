@@ -3,7 +3,7 @@
 
 		<q-card 
 			v-for="(objSW, idx) in dadesSwitchs" :key="idx"
-			class="q-ma-xl q-pa-sm bg-grey  text-caption"
+			class="q-ma-xl q-pa-sm bg-brown-2  text-caption"
 			>
 			<q-table
 				:title="objSW.nom"
@@ -12,7 +12,8 @@
 				:pagination="paginacio"
 				:columns="columnes"
 				:data="objSW.ports"
-				:table-header-style="{ color: 'red' }"
+				hide-bottom
+				:table-class="{ 'bg-yellow-1': true }"
 			>
 
 			</q-table>
@@ -37,14 +38,14 @@ export default {
 	data () {
 		return {
 			columnes: [
-				{nom: "port", label: "Port", field: "port", align:"center", headerStyle: "background-color: black; color: white"},
-				{nom: "tfmodel", label: "Tf_Model", field: "telf_Model", align:"center", headerStyle: "background-color: black; color: white"},
-				{nom: "tfMac", label: "Tf_MAC", field: "telf_Mac", align:"center", headerStyle: "background-color: black; color: white"},
-				{nom: "tfDescr", label: "Tf_Descrip", field: "telf_Description", align:"left", headerStyle: "background-color: black; color: white"},
-				{nom: "lloc", label: "Lloc", field: "ubicacio_lloc", align:"left", headerStyle: "background-color: black; color: white"},
-				{nom: "dept", label: "Dept", field: "ubicacio_dept", align:"left", headerStyle: "background-color: black; color: white"},
-				{nom: "planta", label: "Planta", field: "ubicacio_planta", align:"center", headerStyle: "background-color: black; color: white"},
-				{nom: "edifici", label: "Edifici", field: "ubicacio_Edifici", align:"center", headerStyle: "background-color: black; color: white"},
+				{nom: "port", label: "Port", field: "port", align:"center", headerStyle: "background-color: #383838; color: white"},
+				{nom: "tfmodel", label: "Tf_Model", field: "telf_Model", align:"center", headerStyle: "background-color: #383838; color: white"},
+				{nom: "tfMac", label: "Tf_MAC", field: "telf_Mac", align:"center", headerStyle: "background-color: #383838; color: white"},
+				{nom: "tfDescr", label: "Tf_Descrip", field: "telf_Description", align:"left", headerStyle: "background-color: #383838; color: white"},
+				{nom: "lloc", label: "Lloc", field: "ubicacio_lloc", align:"left", headerStyle: "background-color: #383838; color: white"},
+				{nom: "dept", label: "Dept", field: "ubicacio_dept", align:"left", headerStyle: "background-color: #383838; color: white"},
+				{nom: "planta", label: "Planta", field: "ubicacio_planta", align:"center", headerStyle: "background-color: #383838; color: white"},
+				{nom: "edifici", label: "Edifici", field: "ubicacio_Edifici", align:"center", headerStyle: "background-color: #383838; color: white"},
 			],
 			paginacio:{rowsPerPage:0}
 		}
@@ -197,7 +198,7 @@ export default {
 				objARetornar.telf_Mac = telfTrobat.MAC
 				objARetornar.telf_Description = telfTrobat.DESCRIPTION
 
-				// busquem a hospitalElements si hi ha alguna algun lloc que tingui informada 'macTelf'. Cas de que sí, afegim les dades de la ubicació
+				// Per al telefon trobat, busquem a hospitalElements si hi ha alguna algun PC que tingui informada 'macTelf'. Cas de que sí, afegim les dades de la ubicació
 				const hospElemTrobat2 = this.hospitalElements.find ( oHE => (oHE.macTelf === telfTrobat.MAC)  )
 				if ( hospElemTrobat2 !== undefined ){
 					objARetornar.ubicacio_Edifici = hospElemTrobat2.edifici,
@@ -208,7 +209,7 @@ export default {
 			}
 
 
-			// Per a hospitalElements hem de mirar primer si existeixen les dades de switch i portsw. Si no existeixen, hem de mirar si existeix la mactelf
+			// Per a hospitalElements hem de mirar primer si existeixen les dades de switch i portsw. 
 			const hospElemTrobat = this.hospitalElements.find ( oHE => (oHE.switch === sw && oHE.portsw === port)  )
 
 			if ( hospElemTrobat !== undefined ){
@@ -231,5 +232,11 @@ export default {
 
 
 <style>
-
+.q-table__title {
+    font-size: 20px;
+    letter-spacing: 0.005em;
+    font-weight: 400;
+    color: red;
+		font-weight: bold;
+}
 </style>
