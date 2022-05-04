@@ -76,7 +76,7 @@ export default {
 			this.$store.dispatch("modulInventari/actGetCSV_ElasticSearch", this.fitxer)
 			.then ( () => {
 			
-				this.$store.dispatch("modulInventari/actLlistarDades")
+				this.$store.dispatch("modulInventari/actLlistarDadesElasticSearch")
 				.then ( objResultat => {
 				
 					if ( objResultat.error === undefined ){
